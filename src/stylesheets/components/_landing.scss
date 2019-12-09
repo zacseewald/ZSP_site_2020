@@ -1,0 +1,13 @@
+// Imports the global colors
+@import './_colors.scss';
+
+// Function that maps throught the global color object to make the color designation simpler below.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+
+// scss styles for the main component page
+body {
+    background: color(bg)
+}

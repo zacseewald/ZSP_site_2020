@@ -1,0 +1,73 @@
+// This scss file is associatied witht eh test.js component. All styles in this section should be relative to this component only.
+
+// Imports the global colors
+@import './_colors.scss';
+// Function that maps throught the global color object to make the color designation simpler below.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+// Imports the global fonts
+@import url('https://fonts.googleapis.com/css?family=Dosis:800|Montserrat:400,900|Overpass:400,900|Rubik+Mono+One|Rubik:400,900');
+
+// font family variables
+$rubik: 'Rubik', sans-serif;
+$rubik-mono: 'Rubik Mono One', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$overpass: 'Overpass', sans-serif;
+$dosis: 'Dosis', sans-serif;
+
+// Classname of the parent element
+.parent-testTwo {
+    
+// tag and id of the first child element
+    h1#h1-testTwo {
+        color: color(primary-light);
+        text-align: center;
+        font-family: $dosis;
+        text-shadow: 0px 4px 36px -5px rgba(0,0,0,1);
+    }
+// tag of the second child element
+    button#ex-btn {
+        position: absolute;
+        display: block;
+        top: 1em;
+        left: 1em;
+        border: 2px solid color(primary-light);
+        border-radius: 1em;
+        background: color(buttons);
+        text-align: center;
+        padding: .5em;
+        color: color(primary-light);
+        font-size: 1.3em;
+        -webkit-box-shadow: 0px 4px 36px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 36px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 36px -5px rgba(0,0,0,0.75);
+        font-family: $overpass;
+    }
+}
+
+// Modal styles
+div#modal-parent {
+    display: grid;
+    position: relative;
+    background: color(bg-modal);
+    height: 50%;
+    width: 70%;
+    margin: 2% auto;
+    padding: 10%;
+    z-index: 1000;
+
+    h1#modal-child {
+        color: orange;
+        font-family: $montserrat;
+    }
+    button#modal-close {
+        background: color(buttons);
+        border: 2px solid color(primary-light);
+        border-radius: 1em;
+        color: color(primary-light);
+        font-size:  15px;
+        padding: .5em 1em;
+    }
+}

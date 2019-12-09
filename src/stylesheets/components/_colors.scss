@@ -1,0 +1,19 @@
+// All global app colors can live here. They are imported to each individual scss file to be used at will. This is for ease of orginization.
+
+$colors: (
+    bg: black,
+    primary: white,
+    primary-light: lighten(#646C79, 40%),
+    primary-dark: darken(#646C79, 40%),
+    accent: #FB9039,
+    text-p-color: #1F3044,
+    bg-modal: #646C79,
+     // Gradients:
+    buttons: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 60%,#d24b5a 60%,#ba2737 65%,#f18e99 100%), /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    gradient-bg: linear-gradient(50deg, darken(#646C79, 10%) 10%,#1F3044 90%),
+    font-color: rgb(219, 219, 219),
+);
+
+//background: linear-gradient(#1F3044,,#646C79);
+// Note, other general/global styles can be stored here as well. The file name will need to reflect a global nature. Also, there will need to be a map function associated with each variable object. But, it is a nice way to store style variables as you scale.
