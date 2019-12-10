@@ -5,8 +5,9 @@
 
 
 import React, { Component } from 'react'
-import BGImage from './utilities/images/ShertzAquadicCenter.jpg';
-import Logo from'./utilities/graffics/Logo.gif'
+import BGImage from './utilities/images/landing/ShertzAquadicCenter_e1.jpg';
+import Logo from'./utilities/graffics/landing/ZSPwebLogo.png';
+import PhotographyLogo from'./utilities/graffics/landing/Photography.png';
 
 export class logo extends Component {
   render() {
@@ -14,8 +15,10 @@ export class logo extends Component {
       <div className="body-box">
 // This is the static background image. Needs to rotate through a select group of images in thenfinal version
         <img className="bgImage" src={BGImage} />
-
-        <img className="logoGif" src={Logo} />
+        <div className="logoBox">
+          <img className="logo" src={Logo} />
+          <img className="PhotographyLogo" src={PhotographyLogo} />
+        </div>
        
       </div>
     )
