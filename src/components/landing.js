@@ -7,7 +7,7 @@
 import React, { Component } from 'react'
 import BGImage from './utilities/images/landing/ShertzAquadicCenter_e1.jpg';
 import Logo from'./utilities/graffics/landing/ZSPwebLogo.png';
-import ZS_Logo from'./utilities/graffics/landing/ZACSEEWALD.png';
+import ZS_Logo from'./utilities/graffics/landing/ZACSEEWALD.svg';
 import PhotographyLogo from'./utilities/graffics/landing/Photography.png';
 import ArchitectureLogo from'./utilities/graffics/landing/architecture.png';
 import DroneLogo from'./utilities/graffics/landing/drone.png';
@@ -24,16 +24,14 @@ export class logo extends Component {
 
       {/* Box containing the ZSP logo and animated text. */}
         <div className="logoBox">
-          {/* ZSP logo */}
-          <img className="logo" src={Logo} />
-          {/* zac seewald logo */}
-          <img className="ZS-Logo" src={ZS_Logo} />
-          {/* photography txt logo */}
-          <img className="PhotographyLogo" src={PhotographyLogo} />
+          {/* ZSP logo in plain text */}
+          <div className="ZS-logoBox-text">ZSP</div>
 
-          <img className="ArchitectureLogo" src={ArchitectureLogo} />
+          {/* zac seewald logo in plain text */}
+          <div className="ZS-Logo-text">ZAC SEEWALD</div>
+          {/* photography logo in plain text */}
+          <div className="photography-logo-text">PHOTOGRAPHY</div>
 
-          <img className="DroneLogo" src={DroneLogo} />
 
         </div>
        

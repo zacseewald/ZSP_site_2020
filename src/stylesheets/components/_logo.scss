@@ -6,7 +6,15 @@
     @return map-get($colors, $color-name)
 };
 
-
+// font family variables
+$rubik: 'Rubik', sans-serif;
+$rubik-mono: 'Rubik Mono One', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$overpass: 'Overpass', sans-serif;
+$dosis: 'Dosis', sans-serif;
+$righteous: 'Righteous', cursive;
+$beasNueve: 'Bebas Neue', cursive;
+$confortaa: 'Comfortaa', cursive;
 // scss styles for the logo component page
 div.body-box {
     left: 0px;
@@ -30,24 +38,38 @@ div.body-box {
             // background: rgba($color: #000000, $alpha: 0.2);
             padding: 10px;
 
-            // ZSP logo
-            img.ZS-Logo {
-                width: 30vw;
-                margin-top: 0vw;
+            
+            // ZSP logo in plain text
+            div.ZS-logoBox-text {
+                background-color: color(accent);
+                font-family: Righteous;
+                font-size: 11vw;
+                color: color(primary);
+                border: 1.2vw solid color(primary);
+                padding-left: 3vw;
+                padding-right: 2.5vw;
+                padding-bottom: 0vw;
+                -webkit-font-smoothing: antialiased;
             }
-            //  zac seewald text
-            img.logo {
-                width: 30vw;
-                margin-top: 0vw;
-                position: relative;
-            } 
+
+            // zac seewald logo in plain text 
+            div.ZS-Logo-text {
+                font-size: 4vw;
+                color: color(primary);
+                text-align: center;
+                letter-spacing: .25vw;
+                font-family: Righteous;
+                -webkit-font-smoothing: antialiased;
+            }
             // styles for photography logo text
-            img.PhotographyLogo {
-                width: 30vw;
-                position: absolute;
-                margin-top: 3.7vw;
-                left: 9px;
-                animation:  fadeIn 4s; /* This sets the duration length of the entire fade sequence */
+            div.photography-logo-text {
+                font-size: 4vw;
+                color: color(accent);
+                font-family: Righteous;
+                text-align: center;
+                margin-top: -1.3vw;
+                -webkit-font-smoothing: antialiased;
+                animation: fadeIn 2.5s; /* This sets the duration length of the entire fade sequence */
             }
             img.ArchitectureLogo {
                 position: absolute;
