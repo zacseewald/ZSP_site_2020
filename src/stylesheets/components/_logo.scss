@@ -27,17 +27,68 @@ div.body-box {
             position: absolute;
             left: 35vw;
             top: 16vw;
-            background: rgba($color: #000000, $alpha: 0.2);
+            // background: rgba($color: #000000, $alpha: 0.2);
             padding: 10px;
 
-            img.logo {
-                position: absolute;
+            // ZSP logo
+            img.ZS-Logo {
                 width: 30vw;
+                margin-top: 0vw;
             }
+            //  zac seewald text
+            img.logo {
+                width: 30vw;
+                margin-top: 0vw;
+                position: relative;
+            } 
+            // styles for photography logo text
             img.PhotographyLogo {
                 width: 30vw;
-                margin-top: 17vw;
+                position: absolute;
+                margin-top: 3.7vw;
+                left: 9px;
+                animation:  fadeIn 4s; /* This sets the duration length of the entire fade sequence */
             }
+            img.ArchitectureLogo {
+                position: absolute;
+                width: 30vw;
+                margin-top: 3.7vw;
+                left: 9px;
+                opacity: 0;
+                animation: blinkArchitecture .5s; /* This sets the duration length of the entire fade sequence */
+            }
+            img.DroneLogo {
+                position: absolute;
+                width: 30vw;
+                margin-top: 3.7vw;
+                left: 9px;
+                opacity: 0;
+                animation: blinkDrone .5s; /* This sets the duration length of the entire fade sequence */
+            }
+            
+            // Photography logo fade sequence
+            @keyframes fadeIn { 
+                /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+              0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+              50%{opacity: 0;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+              100%{opacity: 1}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+            }
+     // word 2 logo blinking
+             @keyframes blinkDrone { 
+                    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+                0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+                10%{opacity: 1;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                50%{opacity: 1;}
+                100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+            }
+                // word logo blinking
+                @keyframes blinkArchitecture { 
+                    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+                  0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+                  50%{opacity: 1;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                  90%{opacity: 1;}
+                  100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+                }
         }
 
 }
