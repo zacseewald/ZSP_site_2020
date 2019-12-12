@@ -1,6 +1,6 @@
 // This is where all the partial scss files need to be imported. This file is exported to utils/main.scss and sent from the as a compiled css file for total app styling.
 
-// @import './test';
-// @import './testTwo';
+
 @import './landing';
 @import './logo';
+@import '_navButton.scss';
