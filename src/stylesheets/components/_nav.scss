@@ -1,0 +1,89 @@
+// Imports the global colors
+@import './_colors.scss';
+
+// Function that maps throught the global color object to make the color designation simpler below.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+div.nav-page {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 900;
+
+    a {
+        font-weight: 900;
+        font-family: 'Rubik', sans-serif;
+    }
+    div.link-body {
+        margin-top: 13vh;
+    }
+    h1.link-nav-Home a {
+        position: relative;
+        color: color(accent);
+        margin-top: 50vh;
+        text-decoration: none;
+        font-size: 1.8em;
+        &:hover {
+            color: color( nav-text-hover);
+        }
+    }
+
+}
+// .link-nav-Contact {
+//     margin-top: 20px;
+// }
+// .link-nav-Contact a {
+//     text-align: center;
+//     position: relative;
+//     color: #2ef8f5;
+//     text-decoration: none;
+//     font-size: 1.8em;
+// }
+// .link-nav-Contact a:hover {
+//     position: relative;
+//     color: red;
+//     text-decoration: none;
+//     font-size: 1.8em;
+// }
+div.button-border {
+    position: absolute;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    // border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    border: 2px solid white;
+    z-index: 1000;
+
+/* Button hamburger lines */
+    div.button-line-top {
+        position: relative;
+        margin: auto;
+        margin-top: 33%;
+        border-radius: 15%;
+    }
+
+   div .button-line-center {
+        position: relative;
+        margin: auto;
+        margin-top: .34em;
+        border-radius: 15%;
+    }
+    div.button-line-bottum {
+        position: relative;
+        margin: auto;
+        margin-top: .34em;
+        border-radius: 15%;
+    }
+}
+// @media only screen 
+//   and (min-device-width: 375px) 
+//   and (max-device-width: 667px) 
+//   and (-webkit-min-device-pixel-ratio: 2) { 
+//  .btn-nav {
+//     padding: 0em;
+//  }
+// }

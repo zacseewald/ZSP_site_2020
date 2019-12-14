@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import Landing from './components/landing';
-import NavButton from './components/navButton';
-// import X from './components/testTwo';
-/* Note, there is no stylesheet import here. It is imported drectly into the index.js file.
-All links to the different components live here
-*/
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from './components/landing';
+ import Nav from './components/nav.js';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavButton />
-        <Landing/>
         
+        <Router>
+          <Nav />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                </Switch>
+              </Router>
       </div>
     );
   }

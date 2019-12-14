@@ -1,13 +1,15 @@
 // All global app colors can live here. They are imported to each individual scss file to be used at will. This is for ease of orginization.
 
 $colors: (
+    // Solids
     bg: black,
     primary: #fff,
-    primary-light: lighten(#646C79, 40%),
-    primary-dark: darken(#646C79, 40%),
     accent: #91f1f9,
-    text-p-color: #1F3044,
+    nav-text-hover: #c23c3e,
+    text-p-color: #b8d4bf,
     bg-modal: #646C79,
+    // primary-light: lighten(#646C79, 40%),
+    // primary-dark: darken(yellow, 40%),
      // Gradients:
     buttons: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 60%,#d24b5a 60%,#ba2737 65%,#f18e99 100%), /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
