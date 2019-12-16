@@ -45,7 +45,7 @@ div.body-box {
                 font-size: 11vw;
                 color: color(primary);
                 border: 1.2vw solid color(primary);
-                padding-left: 3vw;
+                padding-left: 3.55vw;
                 padding-right: 2.5vw;
                 padding-bottom: 0vw;
                 -webkit-font-smoothing: antialiased;
@@ -68,15 +68,18 @@ div.body-box {
                 text-align: center;
                 margin-top: -1.3vw;
                 -webkit-font-smoothing: antialiased;
-                animation: fadeIn 2.5s; /* This sets the duration length of the entire fade sequence */
+                animation: fadeIn 3.5s; /* This sets the duration length of the entire fade sequence */
             }
-            img.ArchitectureLogo {
-                position: absolute;
-                width: 30vw;
-                margin-top: 3.7vw;
-                left: 9px;
+            div.architectural-logo-text {
+                font-size: 4vw;
+                color: color(primary);
                 opacity: 0;
-                animation: blinkArchitecture .5s; /* This sets the duration length of the entire fade sequence */
+                letter-spacing: -.2vw;
+                font-family: Righteous;
+                text-align: center;
+                margin-top: -5vw;
+                -webkit-font-smoothing: antialiased;
+                animation: fadeOut 2s; /* This sets the duration length of the entire fade sequence */
             }
             img.DroneLogo {
                 position: absolute;
@@ -95,11 +98,10 @@ div.body-box {
               100%{opacity: 1}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
             }
      // word 2 logo blinking
-             @keyframes blinkDrone { 
+             @keyframes fadeOut { 
                     /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
-                0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-                10%{opacity: 1;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
-                50%{opacity: 1;}
+                0%{opacity: 1} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+                80%{opacity: 1;}
                 100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
             }
                 // word logo blinking

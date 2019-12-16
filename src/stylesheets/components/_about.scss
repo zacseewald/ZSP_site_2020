@@ -1,0 +1,16 @@
+// Imports the global colors
+@import './_colors.scss';
+
+// Function that maps throught the global color object to make the color designation simpler below.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+div.about-text {
+    font-size: 100px;
+    color: yellow;
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    background: pink;
+}
