@@ -5,30 +5,34 @@
 
 
 import React, { Component } from 'react'
-import BGImage from './utilities/images/landing/ShertzAquadicCenter_e1.jpg';
+import BGImageOne from './utilities/images/landing/ShertzAquadicCenter_e1.jpg';
+import BGImageTwo from './utilities/images/landing/98SanJacinto_1404_e2.jpg';
 
 
 export class landing extends Component {
 
 state = {
-  word: "dig that",
-  thing: "one fox",
+  imageLocation: [ BGImageOne, BGImageTwo], // array of images for the background
 };
 
-handleWord = (e) => {
-  console.log(this.state.word);
+// This function handles the rotating background image. It is envoked when the page loads and runs as long as the viewer has the landing page open
+handleBackgroundImageRotation = (e) => {
+// onload it should show image 1
+// should have a fade transition that lasts a second or so
+// should rotate through to the next image ie = index[current] + 1
+// should check to see if there are any more indexes available 
+// if its at the last image, it should return to image 1 and repeat the cycle
+
+  const img = this.state.imageLocation[0];
+  return img;
 };
 
-
-handleThing = (e) => {
-  console.log(this.state.thing);
-};
 
 
 componentDidMount() {
 // can run functions in here that I only want to happen when the page loads, also can load variables: see console examples below
-const that = "thats";
-console.log(that);
+// const that = "thats";
+// console.log(that);
 };
 
 
@@ -37,13 +41,13 @@ console.log(that);
     return (
 
       // can call functions here that are defined above, however - "this." must come first.
-     this.handleThing(),
+     
   
       
       // box for the top half of the landing page. contains the rotating image and the animated logo.
       <div className="body-box">
           {/* This is the static background image. Needs to rotate through a select group of images in thenfinal version. */}
-         <img className="bgImage" src={BGImage} />
+         <img className="bgImage" src={this.handleBackgroundImageRotation()} />
          {/* Box containing the ZSP logo and animated text. */}
           <div className="logoBox">
           {/* ZSP logo in plain text */}
@@ -54,6 +58,9 @@ console.log(that);
               <div className="photography-logo-text">PHOTOGRAPHY</div>
                {/* architectural logo in plain text */}
               <div className="architectural-logo-text">ARCHITECTURAL</div>
+              
+              {/* <div className="imageLocationTest">{this.state.imageLocation[0]}</div> */}
+
         </div>
       </div>
     )
