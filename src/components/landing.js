@@ -6,11 +6,40 @@
 
 import React, { Component } from 'react'
 import BGImage from './utilities/images/landing/ShertzAquadicCenter_e1.jpg';
-// import About from './about.js';
+
 
 export class landing extends Component {
+
+state = {
+  word: "dig that",
+  thing: "one fox",
+};
+
+handleWord = (e) => {
+  console.log(this.state.word);
+};
+
+
+handleThing = (e) => {
+  console.log(this.state.thing);
+};
+
+
+componentDidMount() {
+// can run functions in here that I only want to happen when the page loads, also can load variables: see console examples below
+const that = "thats";
+console.log(that);
+};
+
+
+
   render() {
     return (
+
+      // can call functions here that are defined above, however - "this." must come first.
+     this.handleThing(),
+  
+      
       // box for the top half of the landing page. contains the rotating image and the animated logo.
       <div className="body-box">
           {/* This is the static background image. Needs to rotate through a select group of images in thenfinal version. */}
