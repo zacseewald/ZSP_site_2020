@@ -7,47 +7,45 @@
 };
 
 div.nav-page {
-    position: fixed;
+    // // position: fixed;
+    // position: relative;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     text-align: center;
-    z-index: 900;
-
-    a {
-        font-weight: 900;
-        font-family: 'Rubik', sans-serif;
-    }
+    z-index: 900;  
+   
+    // fix the hieght issue on the nav background
+    
     div.link-body {
         margin-top: 13vh;
     }
+// Link Styles
+    a {
+        font-weight: 900;
+        font-family: 'Rubik', sans-serif;
+        color: color(accent);
+        font-size: 6vw;
+        
+        text-decoration: none;
+    }
+// Home link Styles
     h1.link-nav-Home a {
         position: relative;
-        color: color(accent);
-        margin-top: 50vh;
-        text-decoration: none;
-        font-size: 1.8em;
+        &:hover {
+            color: color( nav-text-hover);
+        }
+    }
+    // General link styles
+    h1.link-nav-BTN a {
+        position: relative;
         &:hover {
             color: color( nav-text-hover);
         }
     }
 
 }
-// .link-nav-Contact {
-//     margin-top: 20px;
-// }
-// .link-nav-Contact a {
-//     text-align: center;
-//     position: relative;
-//     color: #2ef8f5;
-//     text-decoration: none;
-//     font-size: 1.8em;
-// }
-// .link-nav-Contact a:hover {
-//     position: relative;
-//     color: red;
-//     text-decoration: none;
-//     font-size: 1.8em;
-// }
+
 div.button-border {
     position: absolute;
     margin-left: 1.5em;

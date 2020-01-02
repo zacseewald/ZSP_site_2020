@@ -5,25 +5,25 @@
 
 
 import React, { Component } from 'react'
-import BGImageOne from './utilities/images/landing/ShertzAquadicCenter_e1.jpg';
-import BGImageTwo from './utilities/images/landing/98SanJacinto_1404_e2.jpg';
-
+import BGImageOne from './utilities/images/landing/LandingOne.jpg';
+import BGImageTwo from './utilities/images/landing/LandingTwo.jpg';
+import BGImageThree from './utilities/images/landing/LandingThree.jpg';
+import BGImageFour from './utilities/images/landing/LandingFour.jpg';
+import BGImageFive from './utilities/images/landing/LandingFive.jpg';
+import BGImageSix from './utilities/images/landing/LandingSix.jpg';
 
 export class landing extends Component {
 
 state = {
-  imageLocation: [ BGImageOne, BGImageTwo], // array of images for the background
+  imageLocation: [ BGImageOne, BGImageTwo, BGImageThree, BGImageFour, BGImageFive, BGImageSix], // array of images for the background
 };
 
 // This function handles the rotating background image. It is envoked when the page loads and runs as long as the viewer has the landing page open
 handleBackgroundImageRotation = (e) => {
-// onload it should show image 1
-// should have a fade transition that lasts a second or so
-// should rotate through to the next image ie = index[current] + 1
-// should check to see if there are any more indexes available 
-// if its at the last image, it should return to image 1 and repeat the cycle
-
-  const img = this.state.imageLocation[0];
+// randomely selects the index number from the above imageLocation array
+  const imgFile = Math.floor(Math.random() * Math.floor(this.state.imageLocation.length + 1));;
+// Sets image location index number location to define the image that is shoen
+  const img = this.state.imageLocation[imgFile];
   return img;
 };
 
