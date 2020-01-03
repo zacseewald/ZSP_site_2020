@@ -7,15 +7,10 @@
 };
 
 div.nav-page {
-    // // position: fixed;
-    // position: relative;
     position: absolute;
     width: 100vw;
-    height: 100vh;
     text-align: center;
     z-index: 900;  
-   
-    // fix the hieght issue on the nav background
     
     div.link-body {
         margin-top: 13vh;
@@ -26,7 +21,6 @@ div.nav-page {
         font-family: 'Rubik', sans-serif;
         color: color(accent);
         font-size: 6vw;
-        
         text-decoration: none;
     }
 // Home link Styles
@@ -47,13 +41,13 @@ div.nav-page {
 }
 
 div.button-border {
-    position: absolute;
+    position: fixed;
     margin-left: 1.5em;
     margin-top: 1.5em;
-    // border-radius: 50%;
-    width: 4em;
-    height: 4em;
-    border: 2px solid white;
+    background: color(btnBackground);
+    width: 3em;
+    height: 3em;
+    border: 1px solid white;
     z-index: 1000;
 
 /* Button hamburger lines */

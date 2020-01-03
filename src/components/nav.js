@@ -4,11 +4,11 @@ export class Nav extends Component {
   state = {
             isClicked: true, //nav
             displayNav: "none", // nav
-            navBtnPosition: "absolute", //nav
+            // navBtnPosition: "absolute", //nav
            // need to fix the height of the background for the nav when clicked
-            backgroundColor: "transparent",
-            lineH: ".18em",
-            lineW: "30px",
+            // backgroundColor: "transparent",
+            lineH: "1px",
+            lineW: "20px",
             isClickedBTN: false,// nav btn
             display: "block", // nav btn
             centerBarmargin: ".34em",
@@ -21,12 +21,12 @@ export class Nav extends Component {
         this.setState({
           isClickedBTN: true,
           centerBarmargin: ".34em",
-          lineH: ".18em",
-          lineW: "30px",
+          lineH: "1px",
+          lineW: "20px",
           isClicked: true,
           displayNav: "none",
-          navBtnPosition: "absolute", //nav
-          backgroundColor: "transparent",
+          // navBtnPosition: "absolute", //nav
+          // backgroundColor: "transparent",
           display: "block",
         })
         :
@@ -34,11 +34,11 @@ export class Nav extends Component {
           display: "none",
           isClickedBTN: false,
           centerBarmargin: "25%",
-          lineH: "30px",
-          lineW: ".19em",
+          lineH: "20px",
+          lineW: "1px",
           isClicked: false,
           displayNav: "block",
-          navBtnPosition: "fixed",
+          // navBtnPosition: "fixed",
           backgroundColor: "rgba(000, 000, 000, .85)",
         });
       }
@@ -47,10 +47,10 @@ export class Nav extends Component {
         this.setState({ 
           isClicked: true, //nav
           displayNav: "none", // nav
-          backgroundColor: "transparent",
+          // backgroundColor: "transparent",
           // bgColor: "pink",
-          lineH: ".18em",
-          lineW: "30px",
+          lineH: "1px",
+          lineW: "20px",
           isClickedBTN: false,// nav btn
           display: "block", // nav btn
           centerBarmargin: ".34em",

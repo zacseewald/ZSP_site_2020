@@ -15,6 +15,10 @@ $colors: (
 
     gradient-bg: linear-gradient(50deg, darken(#646C79, 10%) 10%,#1F3044 90%),
     font-color: rgb(219, 219, 219),
+
+    //partially transparent colors
+    btnBackground: rgba(0,0,0,.3),
+    // whitePercent: rgba(255,255,255),
 );
 
 //background: linear-gradient(#1F3044,,#646C79);

@@ -17,25 +17,21 @@ $beasNueve: 'Bebas Neue', cursive;
 $confortaa: 'Comfortaa', cursive;
 // scss styles for the logo component page
 div.body-box {
-    left: 0px;
-    top: 0px;
-    position: relative;
-    width: 200px;
-
+    display: block;
+    position: fixed;
+    background: color(btnBackground);
 
 // styles for the background image. should rotate through a special selected group in the final version
         img.bgImage {
             width: 100vw;
+            height: auto;
             position: absolute;
-            top: 0px;
-            left: 0px;
         }
 
         div.logoBox {
             position: absolute;
             left: 35vw;
             top: 16vw;
-            // background: rgba($color: #000000, $alpha: 0.2);
             padding: 10px;
 
             
@@ -44,21 +40,12 @@ div.body-box {
                 font-family: Righteous;
                 font-size: 11vw;
                 color: color(primary);
+                background: color(btnBackground);
                 border: 1.2vw solid color(primary);
                 padding-left: 3.55vw;
                 padding-right: 2.5vw;
                 padding-bottom: 0vw;
                 -webkit-font-smoothing: antialiased;
-            }
-
-
-
-
-            div.imageLocationTest {
-                color:  pink;
-                font-size: 120px;
-                position: relative;
-                z-index: 1001;
             }
 
             // zac seewald logo in plain text 
