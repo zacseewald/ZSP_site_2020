@@ -94,7 +94,7 @@ export class Nav extends Component {
           <div className="link-body">
             <h1 className="link-nav-Home"><a href="/">Home</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Commercial</a></h1>
-            <h1 className="link-nav-BTN"><a href="#">Residencial</a></h1>
+            <h1 className="link-nav-BTN"><a href="/houses">Residencial</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Drone</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Sky Rise</a></h1>
             <h1 className="link-nav-BTN"><a href="#">About</a></h1>
