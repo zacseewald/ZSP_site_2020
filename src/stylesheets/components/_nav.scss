@@ -19,22 +19,22 @@ div.nav-page {
     a {
         font-weight: 900;
         font-family: 'Rubik', sans-serif;
-        color: color(accent);
-        font-size: 6vw;
+        color: color(primary-blue);
+        font-size: 4vw;
         text-decoration: none;
     }
 // Home link Styles
     h1.link-nav-Home a {
         position: relative;
         &:hover {
-            color: color( nav-text-hover);
+            color: color(primary-red);
         }
     }
     // General link styles
     h1.link-nav-BTN a {
         position: relative;
         &:hover {
-            color: color( nav-text-hover);
+            color: color(primary-red);
         }
     }
 
@@ -47,7 +47,7 @@ div.button-border {
     background: color(btnBackground);
     width: 3em;
     height: 3em;
-    border: 1px solid white;
+    border: 1px solid color(primary-white);
     z-index: 1000;
 
 /* Button hamburger lines */

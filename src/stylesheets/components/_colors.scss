@@ -3,22 +3,31 @@
 $colors: (
     // Solids
     bg: black,
-    primary: #fff,
-    accent: #91f1f9,
-    nav-text-hover: #c23c3e,
+    background-white: #fff,
+    primary-red: #c23c3e,
+    primary-brown: #d85d38,
+    primary-green: #b8d4bf,
+    primary-white: #fff,
+    primary-blue: #91f1f9,
+    accent-orange: #f4a647,
+    accent-green: #788a6c,
+    // nav-text-hover: #c23c3e,
     text-p-color: #b8d4bf,
     bg-modal: #646C79,
     // primary-light: lighten(#646C79, 40%),
     // primary-dark: darken(yellow, 40%),
+
+
      // Gradients:
     buttons: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 60%,#d24b5a 60%,#ba2737 65%,#f18e99 100%), /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
     gradient-bg: linear-gradient(50deg, darken(#646C79, 10%) 10%,#1F3044 90%),
     font-color: rgb(219, 219, 219),
 
-    //partially transparent colors
+    //semi-tranlucent colors
+    translucent-black: rgba(0,0,0,.3),
+    translucent-white: rgba(255, 255, 255, 0.3),
     btnBackground: rgba(0,0,0,.3),
-    // whitePercent: rgba(255,255,255),
 );
 
 //background: linear-gradient(#1F3044,,#646C79);

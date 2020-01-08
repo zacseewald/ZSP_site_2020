@@ -46,6 +46,9 @@ componentDidMount() {
       
       // box for the top half of the landing page. contains the rotating image and the animated logo.
       <div className="body-box">
+
+        <div className="image-coverGreenBox"></div>
+        <div className="image-coverBlackBox"></div>
           {/* This is the static background image. Needs to rotate through a select group of images in thenfinal version. */}
          <img className="bgImage" src={this.handleBackgroundImageRotation()} />
          {/* Box containing the ZSP logo and animated text. */}

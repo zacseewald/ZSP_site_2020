@@ -13,7 +13,7 @@ div.button-border {
     border-radius: 50%;
     width: 7vw;
     height: 7vw;
-    border: .4vw solid color(primary);
+    border: .4vw solid color(primary-white);
     z-index: 1000;
 
 /* Button hamburger lines */
@@ -22,20 +22,20 @@ div.button-border {
         margin: auto;
         margin-top: 33%;
         border-radius: 10%;
-        background: color(primary);
+        background: color(primary-white);
     }
     div.button-line-center {
         position: relative;
         margin: auto;
         margin-top: 0.6vw;
         border-radius: 10%;
-        background: color(primary);
+        background: color(primary-white);
     }
     div.button-line-bottum {
         position: relative;
         margin: auto;
         margin-top: 0.6vw;
         border-radius: 10%;
-        background: color(primary);
+        background: color(primary-white);
     }
 }

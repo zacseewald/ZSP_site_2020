@@ -4,6 +4,7 @@ import Home from './components/landing';
 import Houses from './components/carousel';
 import Nav from './components/nav.js';
 import About from './components/about';
+import Footer from './components/footer';
 
 
 
@@ -14,12 +15,13 @@ class App extends Component {
         
         <Router>
           <Nav />
+          <Footer />
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/houses" component={Houses} />
                 </Switch>
-              </Router>
+            </Router>
       </div>
     );
   }

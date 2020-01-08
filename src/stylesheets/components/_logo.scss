@@ -18,9 +18,27 @@ $confortaa: 'Comfortaa', cursive;
 // scss styles for the logo component page
 div.body-box {
     display: block;
-    position: fixed;
+    position: absolute;
     background: color(btnBackground);
 
+    div.image-coverGreenBox {
+        position: fixed;
+        background: color(text-p-color);
+        height: 100vh;
+        width: 100vw;
+        z-index: 2;
+        animation: fadeOut 3.5s;
+        opacity: 0;
+    }
+    div.image-coverBlackBox {
+        position: fixed;
+        background: color(bg);
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+        animation: fadeOut 5.5s;
+        opacity: 0;
+    }
 // styles for the background image. should rotate through a special selected group in the final version
         img.bgImage {
             width: 100vw;
@@ -33,15 +51,16 @@ div.body-box {
             left: 35vw;
             top: 16vw;
             padding: 10px;
+            z-index: 500;
 
             
             // ZSP logo in plain text
             div.ZS-logoBox-text {
                 font-family: Righteous;
                 font-size: 11vw;
-                color: color(primary);
+                color: color(primary-white);
                 background: color(btnBackground);
-                border: 1.2vw solid color(primary);
+                border: 1.2vw solid color(primary-white);
                 padding-left: 3.55vw;
                 padding-right: 2.5vw;
                 padding-bottom: 0vw;
@@ -51,7 +70,7 @@ div.body-box {
             // zac seewald logo in plain text 
             div.ZS-Logo-text {
                 font-size: 4vw;
-                color: color(primary);
+                color: color(primary-white);
                 text-align: center;
                 letter-spacing: .25vw;
                 font-family: Righteous;
@@ -60,7 +79,7 @@ div.body-box {
             // styles for photography logo text
             div.photography-logo-text {
                 font-size: 4vw;
-                color: color(accent);
+                color: color(primary-blue);
                 font-family: Righteous;
                 text-align: center;
                 margin-top: -1.3vw;
@@ -69,7 +88,7 @@ div.body-box {
             }
             div.architectural-logo-text {
                 font-size: 4vw;
-                color: color(primary);
+                color: color(primary-brown);
                 opacity: 0;
                 letter-spacing: -.2vw;
                 font-family: Righteous;
@@ -98,15 +117,15 @@ div.body-box {
              @keyframes fadeOut { 
                     /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
                 0%{opacity: 1} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-                80%{opacity: 1;}
+                60%{opacity: 1;}
                 100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
             }
                 // word logo blinking
-                @keyframes blinkArchitecture { 
+                @keyframes fadeInOut { 
                     /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
                   0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-                  50%{opacity: 1;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
-                  90%{opacity: 1;}
+                  20%{opacity: 1;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                  60%{opacity: 1;}
                   100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
                 }
         }

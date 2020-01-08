@@ -9,32 +9,7 @@
 
 // scss styles for the main component page
 body {
-    background: color(bg);
+    background: color(background-white);
     margin: 0px;
-
-    div.about-box {
-        position: absolute;
-        margin-top: 150vh;
-        width: 100vh;
-        h1.about-titleBlock {
-            position: absolute;
-            color: color(accent);
-            margin-top: 0px;
-            text-align: center;
-            width: 100vw;
-        }
-        div.textBox {
-            position: absolute;
-            width: 100vw;
-            padding-right: 30px;
-            p.about-paragrapheBlock {
-                position: absolute;
-                color: yellow;
-                // padding: 1vw;
-                width: 100%;
-                text-align: justify;
-            }
-        }
-    }
 }
 
