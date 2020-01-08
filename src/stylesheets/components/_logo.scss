@@ -23,7 +23,7 @@ div.body-box {
 
     div.image-coverGreenBox {
         position: fixed;
-        background: color(text-p-color);
+        background: color(primary-green);
         height: 100vh;
         width: 100vw;
         z-index: 2;
@@ -58,12 +58,19 @@ div.body-box {
             div.ZS-logoBox-text {
                 font-family: Righteous;
                 font-size: 11vw;
-                color: color(primary-white);
-                background: color(btnBackground);
-                border: 1.2vw solid color(primary-white);
+                color: color(primary-blue);
+                animation: easeColorIn 3.5s;
+                background: color(primary-red);
+                border: 1.2vw solid color(primary-blue);
                 padding-left: 3.55vw;
                 padding-right: 2.5vw;
                 padding-bottom: 0vw;
+               &:hover {
+                    background: color(translucent-black);
+                    border-color: color(primary-white);
+                    color: color(primary-white);
+                    
+               }
                 -webkit-font-smoothing: antialiased;
             }
 
@@ -74,6 +81,7 @@ div.body-box {
                 text-align: center;
                 letter-spacing: .25vw;
                 font-family: Righteous;
+            
                 -webkit-font-smoothing: antialiased;
             }
             // styles for photography logo text
@@ -121,12 +129,24 @@ div.body-box {
                 100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
             }
                 // word logo blinking
-                @keyframes fadeInOut { 
+                @keyframes easeColorIn { 
                     /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
-                  0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-                  20%{opacity: 1;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
-                  60%{opacity: 1;}
-                  100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+                  0%{
+                      color: color(primary-white); 
+                      background: color(translucent-black);
+                      border-color: color(primary-white);
+                    } /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+                  50%{  
+                    color: color(primary-white); 
+                    background: color(translucent-black);
+                    border-color: color(primary-white);
+                }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                
+                  100%{  
+                    color: color(primary-blue);
+                    background: color(primary-red);
+                    border-color: color(primary-blue);
+                }/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
                 }
         }
 

@@ -32,9 +32,10 @@ div.info-button-parent-box {
         border-bottom: 3px solid color(bg);
         border-left: none;
         border-top: none;
-        background: color(gradient-primary-red);
+        background: color(gradient-primary-black);
         width: 100vw;
-        height: 3em;
+        height: 5em;
+        animation: fadeIn 5s; // fades in the info button and bar accross the bottom of the viewport
 
         a.info-button-text {
             position: absolute;
@@ -45,7 +46,6 @@ div.info-button-parent-box {
             font-family: $confortaa;
             margin: .10em 2.2em;
             padding: .2em .1em 0em .1em;
-            // padding-top: .125em;
             z-index: 800;
             border: 2px solid color(primary-blue);
             border-radius: 50%;
@@ -54,9 +54,17 @@ div.info-button-parent-box {
             left: 0px;
             bottom: 2px;
             &:hover {
-                color: color(primary-green);
-                border-color: color(primary-green);
+                border-color: color(primary-red);
+                background: color(primary-red);
             }
         }
     }
 };
+
+
+@keyframes fadeIn { 
+    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+  0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+  50%{opacity: 0;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+  100%{opacity: 1}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+}

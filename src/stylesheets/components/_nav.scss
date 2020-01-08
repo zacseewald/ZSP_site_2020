@@ -40,37 +40,7 @@ div.nav-page {
 
 }
 
-div.button-border {
-    position: fixed;
-    margin-left: 1.5em;
-    margin-top: 1.5em;
-    background: color(btnBackground);
-    width: 3em;
-    height: 3em;
-    border: 1px solid color(primary-white);
-    z-index: 1000;
 
-/* Button hamburger lines */
-    div.button-line-top {
-        position: relative;
-        margin: auto;
-        margin-top: 33%;
-        border-radius: 15%;
-    }
-
-   div .button-line-center {
-        position: relative;
-        margin: auto;
-        margin-top: .34em;
-        border-radius: 15%;
-    }
-    div.button-line-bottum {
-        position: relative;
-        margin: auto;
-        margin-top: .34em;
-        border-radius: 15%;
-    }
-}
 // @media only screen 
 //   and (min-device-width: 375px) 
 //   and (max-device-width: 667px) 

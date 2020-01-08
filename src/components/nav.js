@@ -59,7 +59,7 @@ export class Nav extends Component {
     
   render() {
     return (
-      <div style={{ background: this.state.backgroundColor }}>
+      <div className="nav-btn-parent" style={{ background: this.state.backgroundColor }}>
         <div onClick={this.handleNavButton}>
 
         <div className="button-border" onClick={this.handleNavButton} style={{

@@ -22,14 +22,13 @@ div.footer-box {
     right: -10px;
     z-index: 1000;
     height: 24px;
-    background: color(translucent-white);
     padding-left: 20px;
-    padding-bottom: 10px;
-    padding-right:  10px;
-    border: solid 1px color(primary-blue);
+    padding-bottom: 16px;
+    padding-right:  16px;
     border-radius: 13px;
 
     div.footer{
+        animation: fadeIn 5s;
         p.copyright-text {
             font-family: $confortaa;
             text-align: right;
@@ -38,4 +37,12 @@ div.footer-box {
             font-size: 10px;
         }
     }
+};
+
+
+@keyframes fadeIn { 
+    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+  0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+  50%{opacity: 0;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+  100%{opacity: 1}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
 }
