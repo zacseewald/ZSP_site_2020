@@ -4,9 +4,9 @@ export class infoButton extends Component {
     render() {
         return (
             <div className="info-button-parent-box" >
-                <div className="into-button-child-border">
-                    <p className="info-button-text" >i</p>
-                </div>
+                <button className="into-button-child-border">
+                    <a className="info-button-text" >i</a>
+                </button>
             </div>
         )
     }

@@ -11,6 +11,7 @@ $colors: (
     primary-blue: #91f1f9,
     accent-orange: #f4a647,
     accent-green: #788a6c,
+    accent-gray: #646C79,
     // nav-text-hover: #c23c3e,
     text-p-color: #b8d4bf,
     bg-modal: #646C79,
@@ -23,6 +24,7 @@ $colors: (
 
     gradient-bg: linear-gradient(50deg, darken(#646C79, 10%) 10%,#1F3044 90%),
     font-color: rgb(219, 219, 219),
+    gradient-primary-red: linear-gradient(0deg, color(bg), transparent 90%),
 
     //semi-tranlucent colors
     translucent-black: rgba(0,0,0,.3),
