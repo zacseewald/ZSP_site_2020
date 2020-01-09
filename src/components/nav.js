@@ -4,9 +4,6 @@ export class Nav extends Component {
   state = {
             isClicked: true, //nav
             displayNav: "none", // nav
-            // navBtnPosition: "absolute", //nav
-           // need to fix the height of the background for the nav when clicked
-            // backgroundColor: "transparent",
             lineH: "1px",
             lineW: "20px",
             isClickedBTN: false,// nav btn
@@ -25,8 +22,6 @@ export class Nav extends Component {
           lineW: "20px",
           isClicked: true,
           displayNav: "none",
-          // navBtnPosition: "absolute", //nav
-          // backgroundColor: "transparent",
           display: "block",
         })
         :
@@ -38,7 +33,6 @@ export class Nav extends Component {
           lineW: "1px",
           isClicked: false,
           displayNav: "block",
-          // navBtnPosition: "fixed",
           backgroundColor: "rgba(000, 000, 000, .85)",
         });
       }
@@ -89,7 +83,10 @@ export class Nav extends Component {
             </div>
           </div>    
 
-        <div className="nav-page" style={{ backgroundColor: this.state.backgroundColor, display: this.state.displayNav }}>
+        <div className="nav-page" style={{ 
+            backgroundColor: this.state.backgroundColor, 
+            display: this.state.displayNav 
+          }}>
            
           <div className="link-body">
             <h1 className="link-nav-Home"><a href="/">Home</a></h1>

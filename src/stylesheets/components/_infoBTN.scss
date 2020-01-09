@@ -21,7 +21,7 @@ div.info-button-parent-box {
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 500;
+    z-index: 800;
     width: 100vw;
     height: 100vh;
     border: none;
@@ -57,6 +57,51 @@ div.info-button-parent-box {
                 border-color: color(primary-red);
                 background: color(primary-red);
             }
+        }
+    }
+    div.info-container {
+        background: color(gradient-bg);
+        position: absolute;
+        bottom: 0;
+        padding: 30px;
+
+        h2.image-title-main {
+            color: color(primary-blue);
+            font-family: $montserrat;
+        }
+        h3 {
+            color: color(primary-blue);
+            font-family: $montserrat;
+        }
+        p {
+            color: color(primary-blue);
+            font-family: $montserrat;
+        }
+        div.image-archtect {
+            position: relative;
+            h3.title-architect {
+                position: absolute;
+            }
+            h3.name-architect {
+                position: absolute;
+                margin-left: 14vw;
+            }
+        }
+        div.image-location {
+            position: relative;
+            h3.title-location {
+                position: absolute;
+            }
+            h3.name-location {
+                position: absolute;
+                margin-left: 14vw;
+            }
+        }
+        h3.image-title-story {
+            position: relative;
+        }
+        p.image-story {
+            position: relative;
         }
     }
 };

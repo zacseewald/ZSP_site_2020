@@ -1,9 +1,9 @@
 // All global app colors can live here. They are imported to each individual scss file to be used at will. This is for ease of orginization.
 
 $colors: (
+
     // Solids
     bg: black,
-    background-white: #fff,
     primary-red: #c23c3e,
     primary-brown: #d85d38,
     primary-green: #b8d4bf,
@@ -12,25 +12,29 @@ $colors: (
     accent-orange: #f4a647,
     accent-green: #788a6c,
     accent-gray: #646C79,
-    // nav-text-hover: #c23c3e,
-    text-p-color: #b8d4bf,
-    bg-modal: #646C79,
-    // primary-light: lighten(#646C79, 40%),
-    // primary-dark: darken(yellow, 40%),
 
+
+    // colors lighten
+    primary-green-light: lighten(#b8d4bf, 10%),
+
+    // colors darkened
+    primary-green-dark: darken(#b8d4bf, 20%),
+    
 
      // Gradients:
     buttons: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 60%,#d24b5a 60%,#ba2737 65%,#f18e99 100%), /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-    gradient-bg: linear-gradient(50deg, darken(#646C79, 10%) 10%,#1F3044 90%),
+    gradient-bg: linear-gradient(180deg, darken( rgba(109, 178, 187, .5), 10%) 10%, rgba(109, 178, 187, .5) 20%, rgba(31, 48, 68, 1) 95%),
     font-color: rgb(219, 219, 219),
+
     gradient-primary-black: linear-gradient(0deg, color(bg), transparent 80%),
+    gradient-primary-black-info: linear-gradient(0deg, color(bg), transparent 98%),
+    gradient-primary-green: radial-gradient(ellipse at center, color(primary-green-light) 0%, color(primary-green-dark) 100%),
 
     //semi-tranlucent colors
     translucent-black: rgba(0,0,0,.3),
     translucent-white: rgba(255, 255, 255, 0.3),
+    tranlucent-accent-green: rgba(184, 212, 191, 0.8),
     btnBackground: rgba(0,0,0,.3),
 );
 
-//background: linear-gradient(#1F3044,,#646C79);
-// Note, other general/global styles can be stored here as well. The file name will need to reflect a global nature. Also, there will need to be a map function associated with each variable object. But, it is a nice way to store style variables as you scale.

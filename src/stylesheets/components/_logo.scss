@@ -23,7 +23,7 @@ div.body-box {
 
     div.image-coverGreenBox {
         position: fixed;
-        background: color(primary-green);
+        background: color(gradient-primary-green);
         height: 100vh;
         width: 100vw;
         z-index: 2;
@@ -66,10 +66,10 @@ div.body-box {
                 padding-right: 2.5vw;
                 padding-bottom: 0vw;
                &:hover {
-                    background: color(translucent-black);
-                    border-color: color(primary-white);
-                    color: color(primary-white);
-                    
+                    // background: color(translucent-black);
+                    // border-color: color(primary-white);
+                    // color: color(primary-white);
+                    opacity: 50%;
                }
                 -webkit-font-smoothing: antialiased;
             }
