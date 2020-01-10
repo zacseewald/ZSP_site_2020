@@ -64,44 +64,50 @@ div.info-button-parent-box {
         position: absolute;
         bottom: 0;
         padding: 30px;
-
+;
         h2.image-title-main {
             color: color(primary-blue);
             font-family: $montserrat;
+            font-size: 14px;
+            display: inline;    
         }
         h3 {
             color: color(primary-blue);
             font-family: $montserrat;
+            font-size: 12px;
         }
         p {
             color: color(primary-blue);
             font-family: $montserrat;
+            font-size: 9px;
         }
         div.image-archtect {
-            position: relative;
             h3.title-architect {
-                position: absolute;
+                display: inline-block;
             }
             h3.name-architect {
-                position: absolute;
-                margin-left: 14vw;
+                margin-left: 1vw;
+                display: inline-block;
             }
         }
         div.image-location {
-            position: relative;
             h3.title-location {
-                position: absolute;
+                display: inline-block;
             }
             h3.name-location {
-                position: absolute;
-                margin-left: 14vw;
+                margin-left: 1vw;
+                display: inline-block;
             }
         }
-        h3.image-title-story {
-            position: relative;
-        }
-        p.image-story {
-            position: relative;
+
+        div.image-story {
+            h3.image-title-story {
+                display: inline-block;
+            }
+            p.image-story {
+                display: block;
+                
+            }
         }
     }
 };
