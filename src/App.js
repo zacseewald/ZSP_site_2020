@@ -9,13 +9,14 @@ import InfoBtn from './components/infoButton';
 
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         
         <Router>
           <Nav />
-          <InfoBtn />
+          <InfoBtn  />
           <Footer />
           
                 <Switch>

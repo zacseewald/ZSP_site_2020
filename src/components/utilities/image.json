@@ -1,0 +1,95 @@
+{
+    "landing": [
+            {
+                "id": 1,
+                "image_fileName": "LandingOne.jpg", 
+                "architect_name": "Arch name 0",
+                "architect_site": "www.cusimano-architects.com",    
+                "location_city": "Houston",
+                "location_state": "TX"
+            },
+            {
+                "id": 2,
+                "image_fileName": "LandingTwo.jpg", 
+                "architect_name": "Arch name 1",
+                "architect_site": "www.marmonmokarchitects.com",    
+                "location_city": "San Antonio",
+                "location_state": "TX"
+            },
+            {
+                "id": 3,
+                "image_fileName": "LandingThree.jpg", 
+                "architect_name": "Arch name 2",
+                "architect_site": "www.cusimano-architects.com",    
+                "location_city": "Houston",
+                "location_state": "TX"
+            },
+            {
+                "id": 4,
+                "image_fileName": "LandingFour.jpg", 
+                "architect_name": "Arch name 3",
+                "architect_site": "www.marmonmokarchitects.com",    
+                "location_city": "San Antonio",
+                "location_state": "TX"
+            },
+            {
+                "id": 5,
+                "image_fileName": "LandingFive.jpg", 
+                "architect_name": "Arch name 4",
+                "architect_site": "www.cusimano-architects.com",    
+                "location_city": "Houston",
+                "location_state": "TX"
+            },
+            {
+                "id": 6,
+                "image_fileName": "LandingSix.jpg", 
+                "architect_name": "Arch name 6",
+                "architect_site": "www.cusimano-architects.com",    
+                "location_city": "Houston",
+                "location_state": "TX"
+            }
+    ],
+
+    "houses": [
+        {
+            "id": 1,
+            "image": "./utilities/images/landing/One.jpg", 
+            "architect_name": "Cusimano Architect",
+            "architect_site": "www.cusimano-architects.com",    
+            "location_city": "Houston",
+            "location_state": "TX"
+        },
+        {
+            "id": 2,
+            "image": "./utilities/images/landing/Two.jpg", 
+            "architect_name": "Marmon Mok Architect",
+            "architect_site": "www.marmonmokarchitects.com",    
+            "location_city": "San Antonio",
+            "location_state": "TX"
+        },
+        {
+            "id": 3,
+            "image": "./utilities/images/landing/Three.jpg", 
+            "architect_name": "Cusimano Architect",
+            "architect_site": "www.cusimano-architects.com",    
+            "location_city": "Houston",
+            "location_state": "TX"
+        },
+        {
+            "id": 4,
+            "image": "./utilities/images/landing/Four.jpg", 
+            "architect_name": "Marmon Mok Architect",
+            "architect_site": "www.marmonmokarchitects.com",    
+            "location_city": "San Antonio",
+            "location_state": "TX"
+        },
+        {
+            "id": 5,
+            "image": "./utilities/images/landing/Five.jpg", 
+            "architect_name": "Cusimano Architect",
+            "architect_site": "www.cusimano-architects.com",    
+            "location_city": "Houston",
+            "location_state": "TX"
+        }
+    ]
+}

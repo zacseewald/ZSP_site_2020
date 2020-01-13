@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 
 
 export class infoButton extends Component {
-
-    state = {
-        opacity: 0,
-        isClicked: false,
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+            opacity: 0,
+            isClicked: false,
+        }
     }
-
     handleInfoBtnClick = (e) => {
         e.preventDefault();
         !this.state.isClicked 
@@ -22,11 +24,13 @@ export class infoButton extends Component {
             opacity: "0",
             isClicked: false,
         });
-    
     }
-    
+    componentDidMount() {
+        
+    }
     render() {
         return (
+
             <div className="info-button-parent-box" >
                 <button className="into-button-child-border" onClick={this.handleInfoBtnClick} >
                     <a className="info-button-text" >i</a>
