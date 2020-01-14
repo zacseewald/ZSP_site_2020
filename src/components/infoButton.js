@@ -26,7 +26,7 @@ export class infoButton extends Component {
         });
     }
     componentDidMount() {
-        
+        console.log(this.props);
     }
     render() {
         return (

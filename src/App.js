@@ -5,7 +5,7 @@ import Houses from './components/carousel';
 import Nav from './components/nav.js';
 import About from './components/about';
 import Footer from './components/footer';
-import InfoBtn from './components/infoButton';
+// import InfoBtn from './components/infoButton';
 
 
 class App extends Component {
@@ -16,7 +16,6 @@ class App extends Component {
         
         <Router>
           <Nav />
-          <InfoBtn  />
           <Footer />
           
                 <Switch>

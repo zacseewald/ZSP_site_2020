@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
+import InfoBtn from './infoButton';
 
 export class landing extends Component {
 state = {
       imageIndexNumber: Math.floor(Math.random() * (ImgInfo.landing.length)), // manages the randome number for image path
       imagePath: '',
+      testProp: "I can see the prop",
       // imageID: this.state.imageIndexNumber,
     };
   
@@ -24,9 +26,11 @@ componentDidMount() {
   render() {
     
     return (
-
+      
       <div className="body-box">
-
+        <InfoBtn 
+          id={this.state.testProp}
+        />
         <div className="image-coverGreenBox"></div>
         <div className="image-coverBlackBox"></div>
           {/* This is the static background image. Needs to rotate through a select group of images in thenfinal version. */}
