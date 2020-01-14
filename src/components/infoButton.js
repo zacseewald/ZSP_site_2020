@@ -6,9 +6,14 @@ export class infoButton extends Component {
   state = {
             opacity: 0,
             isClicked: false,
-            imgIndexValue: this.props.index,
+            // Lets the page know which image is being loaded into the background.
+            imgIndexValue: this.props.index, 
+            // Image details that get loading into the approproate locations in the page below.
             archName: ImgInfo.landing[this.props.index]["architect_name"],
-            imgLocation: ImgInfo.landing[this.props.index]["location_city"],
+            archSite: ImgInfo.landing[this.props.index]["architect_site"],
+            imgLocation: ImgInfo.landing[this.props.index]["location_city_state"],
+            imgStory: ImgInfo.landing[this.props.index]["story"],
+
         }
     
     handleInfoBtnClick = (e) => {
@@ -43,30 +48,34 @@ export class infoButton extends Component {
                         bottom: this.state.bottom,
                     }}>
 
-
-                    
                     <h2 className="image-title-main" 
                         style={{
                                 color: this.state.color,
                                 opacity: this.state.opacity,
-                            }}>Image Info:</h2>
+                            }}>IMAGE INFO</h2>
 
                     <div className="image-archtect"
-                     style={{
-                            color: this.state.color,
-                            opacity: this.state.opacity,
-                        }}>
-                                <h3 className="title-architect" >ARCHITECT: </h3>
-                    <h3 className="name-architect" >{this.state.archName}</h3>
-                            </div>
+                        style={{
+                                color: this.state.color,
+                                opacity: this.state.opacity,
+                            }}>
+                                    <h3 className="title-architect" >ARCHITECT: </h3>
+                                    <h3 className="name-architect" >
+                                        <a href={this.state.archSite} >
+                                            {this.state.archName}
+                                            </a>
+                                    </h3>
+                    </div>
+
+                   
 
                     <div className="image-location"
                       style={{
                             color: this.state.color,
                             opacity: this.state.opacity,
                         }}>
-                                <h3 className="title-location" >LOCATION: </h3>
-                    <h3 className="name-location" >{this.state.imgLocation}</h3>
+                            <h3 className="title-location" >LOCATION: </h3>
+                            <h3 className="name-location" >{this.state.imgLocation}</h3>
                         </div>
 
                     <div className="image-story"
@@ -75,9 +84,8 @@ export class infoButton extends Component {
                             opacity: this.state.opacity,
                         }}>
 
-                        <h3 className="image-title-story">Story:</h3>
-
-                        <p className="image-story">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h3 className="image-title-story">STORY:</h3>
+                            <p className="image-story">{this.state.imgStory}</p>
                         </div>
                         
 

@@ -63,39 +63,53 @@ div.info-button-parent-box {
         background: color(gradient-bg);
         position: absolute;
         bottom: 0;
-        padding: 30px;
-;
+        padding: 1.2em 0vw 2.2em 3.5vw;
+        width: 100vw;
+
         h2.image-title-main {
-            color: color(primary-blue);
+            color: color(primary-blue-light);
             font-family: $montserrat;
             font-size: 14px;
+            font-weight: bolder;
             display: inline;    
+            text-decoration: underline;
         }
         h3 {
-            color: color(primary-blue);
             font-family: $montserrat;
             font-size: 12px;
         }
         p {
-            color: color(primary-blue);
             font-family: $montserrat;
             font-size: 9px;
         }
         div.image-archtect {
             h3.title-architect {
+                color: color(primary-blue-light);
                 display: inline-block;
+                margin: 0px;
             }
             h3.name-architect {
-                margin-left: 1vw;
+                margin: 0px 0px 0px 1vw;
                 display: inline-block;
+                color: color(primary-blue);
+                a {
+                    text-decoration: none;
+                    color: color(primary-blue);
+                    &:hover {
+                        color: color(primary-red-light);
+                    };
+                }
             }
         }
         div.image-location {
             h3.title-location {
                 display: inline-block;
+                margin: 0px;
+                color: color(primary-blue-light);
             }
             h3.name-location {
-                margin-left: 1vw;
+                color: color(primary-blue);
+                margin: 0px 0px 0px 1vw;
                 display: inline-block;
             }
         }
@@ -103,10 +117,14 @@ div.info-button-parent-box {
         div.image-story {
             h3.image-title-story {
                 display: inline-block;
+                margin: 0px;
+                color: color(primary-blue-light);
             }
             p.image-story {
-                display: block;
-                
+                color: color(primary-blue);
+                margin: 0px 0px 1vh 1vw;
+                display: inline-block;
+                font-size: 11px;
             }
         }
     }

@@ -13,9 +13,10 @@ $colors: (
     accent-green: #788a6c,
     accent-gray: #646C79,
 
-
     // colors lighten
     primary-green-light: lighten(#b8d4bf, 10%),
+    primary-blue-light: lighten(#91f1f9, 10%),
+    primary-red-light: lighten(#c23c3e, 10%),
 
     // colors darkened
     primary-green-dark: darken(#b8d4bf, 20%),
