@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-
+import ImgInfo from './utilities/image.json';
 
 
 export class infoButton extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = {
+  state = {
             opacity: 0,
             isClicked: false,
+            imgIndexValue: this.props.index,
+            archName: ImgInfo.landing[this.props.index]["architect_name"],
+            imgLocation: ImgInfo.landing[this.props.index]["location_city"],
         }
-    }
+    
     handleInfoBtnClick = (e) => {
         e.preventDefault();
         !this.state.isClicked 
@@ -25,10 +25,10 @@ export class infoButton extends Component {
             isClicked: false,
         });
     }
-    componentDidMount() {
-        console.log(this.props);
-    }
+  
     render() {
+        console.log(this.props.index);
+        console.log(this.state.archName);
         return (
 
             <div className="info-button-parent-box" >
@@ -57,7 +57,7 @@ export class infoButton extends Component {
                             opacity: this.state.opacity,
                         }}>
                                 <h3 className="title-architect" >ARCHITECT: </h3>
-                                <h3 className="name-architect" >Cusimano Architects</h3>
+                    <h3 className="name-architect" >{this.state.archName}</h3>
                             </div>
 
                     <div className="image-location"
@@ -66,7 +66,7 @@ export class infoButton extends Component {
                             opacity: this.state.opacity,
                         }}>
                                 <h3 className="title-location" >LOCATION: </h3>
-                                <h3 className="name-location" >Houston, TX</h3>
+                    <h3 className="name-location" >{this.state.imgLocation}</h3>
                         </div>
 
                     <div className="image-story"

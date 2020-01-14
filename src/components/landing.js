@@ -5,9 +5,7 @@ import InfoBtn from './infoButton';
 export class landing extends Component {
 state = {
       imageIndexNumber: Math.floor(Math.random() * (ImgInfo.landing.length)), // manages the randome number for image path
-      imagePath: '',
-      testProp: "I can see the prop",
-      // imageID: this.state.imageIndexNumber,
+      imagePath: '', // dynamically sets the path to the background image
     };
   
 
@@ -19,17 +17,15 @@ componentDidMount() {
       imagePath: require("./utilities/images/landing/" + path),
       // imageID: ImgInfo.landing[this.state.imageIndexNumber]["id"],
     }); 
-   
 }
 
 
   render() {
-    
     return (
       
       <div className="body-box">
         <InfoBtn 
-          id={this.state.testProp}
+          index={this.state.imageIndexNumber}
         />
         <div className="image-coverGreenBox"></div>
         <div className="image-coverBlackBox"></div>
