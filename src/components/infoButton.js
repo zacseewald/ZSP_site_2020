@@ -37,9 +37,9 @@ export class infoButton extends Component {
         return (
 
             <div className="info-button-parent-box" >
-                <button className="into-button-child-border" onClick={this.handleInfoBtnClick} >
-                    <a className="info-button-text" >i</a>
-                </button>
+                <a className="into-button-child-border" onClick={this.handleInfoBtnClick} >
+                    <div className="info-button-text" >i</div>
+                </a>
 
                 <div className="info-container" 
                     style={{

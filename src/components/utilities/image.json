@@ -49,46 +49,46 @@
             }
     ],
 
-    "houses": [
+    "homes": [
         {
             "id": 1,
-            "image": "./utilities/images/landing/One.jpg", 
-            "architect_name": "Cusimano Architect",
-            "architect_site": "www.cusimano-architects.com",    
-            "location_city": "Houston",
-            "location_state": "TX"
+            "image_fileName": "homesOne.jpg", 
+            "architect_name": "Amanda Breummer And Associates",
+            "architect_site": "https://www.amandabruemmer.com/",    
+            "location_city_state": "Austin, TX",
+            "story": "Need something to write here."
         },
         {
             "id": 2,
-            "image": "./utilities/images/landing/Two.jpg", 
-            "architect_name": "Marmon Mok Architect",
-            "architect_site": "www.marmonmokarchitects.com",    
-            "location_city": "San Antonio",
-            "location_state": "TX"
+            "image_fileName": "homesTwo.jpg", 
+            "architect_name": "Amanda Breummer And Associates",
+            "architect_site": "https://www.amandabruemmer.com/",    
+            "location_city_state": "Austin, TX",
+            "story": "Need something else needs to be written here."
         },
         {
             "id": 3,
-            "image": "./utilities/images/landing/Three.jpg", 
-            "architect_name": "Cusimano Architect",
-            "architect_site": "www.cusimano-architects.com",    
-            "location_city": "Houston",
-            "location_state": "TX"
+            "image_fileName": "homesThree.jpg", 
+            "architect_name": "Paul Brow Architect",
+            "architect_site": "https://paulnbrowarchitect.com/",    
+            "location_city_state": "Houston, TX",
+            "story": "Need something to write here. Some stuff thats cool"
         },
         {
             "id": 4,
-            "image": "./utilities/images/landing/Four.jpg", 
-            "architect_name": "Marmon Mok Architect",
-            "architect_site": "www.marmonmokarchitects.com",    
-            "location_city": "San Antonio",
-            "location_state": "TX"
+            "image_fileName": "homesFour.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
         },
         {
             "id": 5,
-            "image": "./utilities/images/landing/Five.jpg", 
-            "architect_name": "Cusimano Architect",
-            "architect_site": "www.cusimano-architects.com",    
-            "location_city": "Houston",
-            "location_state": "TX"
+            "image_fileName": "homesFive.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
         }
     ]
 }

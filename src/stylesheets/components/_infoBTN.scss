@@ -26,7 +26,7 @@ div.info-button-parent-box {
     height: 100vh;
     border: none;
 
-    button.into-button-child-border {
+    a.into-button-child-border {
         position: absolute;
         bottom: 0px;
         border-bottom: 3px solid color(bg);
@@ -37,7 +37,7 @@ div.info-button-parent-box {
         height: 5em;
         animation: fadeIn 5s; // fades in the info button and bar accross the bottom of the viewport
 
-        a.info-button-text {
+        div.info-button-text {
             position: absolute;
             color: color(primary-blue);
             text-align: center;

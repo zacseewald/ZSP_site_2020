@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from './components/landing';
-import Houses from './components/carousel';
+import Landing from './components/landing';
+import Homes from './components/carousel';
 import Nav from './components/nav.js';
-import About from './components/about';
+// import About from './components/about';
 import Footer from './components/footer';
 // import InfoBtn from './components/infoButton';
 
@@ -19,9 +19,8 @@ class App extends Component {
           <Footer />
           
                 <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/houses" component={Houses} />
+                  <Route exact path="/" component={Landing} />
+                  <Route exact path="/homes" component={Homes} />
                 </Switch>
             </Router>
       </div>

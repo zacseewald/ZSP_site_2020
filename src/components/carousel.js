@@ -1,16 +1,28 @@
 // This is the carousel constructor to show images
 import React, { Component } from 'react';
-import HousesImageOne from './utilities/images/homes/one.jpg';
-import HousesImageTwo from './utilities/images/homes/two.jpg';
-import HousesImageThree from './utilities/images/homes/three.jpg';
-import HousesImageFour from './utilities/images/homes/four.jpg';
-import HousesImageFive from './utilities/images/homes/five.jpg';
+import ImgInfo from './utilities/image.json';
+
+
+
+import HousesImageOne from './utilities/images/homes/homesOne.jpg';
+import HousesImageTwo from './utilities/images/homes/homesTwo.jpg';
+import HousesImageThree from './utilities/images/homes/homesThree.jpg';
+import HousesImageFour from './utilities/images/homes/homesFour.jpg';
+import HousesImageFive from './utilities/images/homes/homesFive.jpg';
 
 export class Carousel extends Component {
 
   state = { 
   // array of images for the houses carousel
+ 
+  imageGallery: this.props.location.pathname.split('/').pop(),
+
+  // imageLeft: ImgInfo.this.props.location.pathname.split('/').pop()[4],
+  // imageCenter: ImgInfo.this.props.location.pathname.split('/').pop()[0],
+  // image: ImgInfo.this.props.location.pathname.split('/').pop()[1],
+  
   HousesImage: [ HousesImageOne, HousesImageTwo, HousesImageThree, HousesImageFour, HousesImageFive], 
+
 
   targetPositionLeft: 4,
   targetPositionCenter: 0,
@@ -71,11 +83,10 @@ console.log(this.state.targetPositionRight);
 
 }
 
-  render() {
 
-   console.log("left " + this.state.targetPositionLeft);
-  console.log("center " + this.state.targetPositionCenter); 
-  console.log("right " + this.state.targetPositionRight);
+  render() {
+    console.log(this.state.imageGallery)
+//set the state for the images here with a function.
 
     return (
       
