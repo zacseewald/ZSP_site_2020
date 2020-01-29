@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
 import InfoBtn from './infoButton';
 
+
 export class landing extends Component {
 state = {
       imageIndexNumber: Math.floor(Math.random() * (ImgInfo.landing.length)), // manages the randome number for image path

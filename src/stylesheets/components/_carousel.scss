@@ -26,38 +26,54 @@ body {
         align-items: center;
         background: color(primary-white);
 
-        img.left-img {
-            position: absolute;
-            height: 100vh;
-            left: -250vh;
-        }
-
-        button.btn-left {
+        a.btn-left {
             position: absolute;
             z-index: 900;
             background: transparent;
             height: 100vh;
             width: 45vw;
             left: 0;
+// left arrow
+            div.btn-arrow-container-left {
+            margin-left: 2.45em;
+            margin-top: 49vh;
+            background:white;
+            border-radius: 32%;
+            width: 2.45em;
+            height: 2.45em;
+            text-align: center;
+            
+                h1.btn-arrow-left {
+                    color: blue;
+                    font-family: $confortaa;
+                    text-align: center;
+                }
+            }
         }
         img.visible-img {
             position: absolute;
-            height: 100vh;
+            height: 90vh;
         }
 
-         button.btn-right {
+         a.btn-right {
             position: absolute;
             z-index: 900;
             background: transparent;
             height: 100vh;
             width: 45vw;
             right: 0;
-        }
+            // right arrow
+            div.btn-arrow-container-right {
+                margin-right: 2.45em;
+                margin-top: 49vh;
+                background:white;
 
-        img.right-img {
-             position: absolute;
-            height: 100vh;
-            right: -250vh;
+                h1.btn-arrow-right {
+                    color: magenta;
+                    text-align: right;
+                    font-family: $confortaa;
+                }
+            }
         }
     }
 }

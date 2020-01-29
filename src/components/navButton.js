@@ -26,7 +26,6 @@ handleClick = (e) => {
     lineH: ".3vw",
     lineW: "4vw",
   })
-  console.log(this.state.isClickedBTN)
 }
 
   render() {

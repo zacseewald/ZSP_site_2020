@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export class Nav extends Component {
   state = {
             isClicked: true, //nav
@@ -89,8 +90,8 @@ export class Nav extends Component {
           }}>
            
           <div className="link-body">
-            <h1 className="link-nav-BTN"><a href="/homes">Homes</a></h1>
-            <h1 className="link-nav-BTN"><a href="#">Buildings</a></h1>
+            <h1 className="link-nav-BTN"><a href="homes">Homes</a></h1>
+            <h1 className="link-nav-BTN"><a href="buildings">Buildings</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Drone</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Sky Rise</a></h1>
             <h1 className="link-nav-BTN"><a href="#">About</a></h1>
