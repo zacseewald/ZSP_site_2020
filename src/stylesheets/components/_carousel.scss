@@ -6,6 +6,8 @@
     @return map-get($colors, $color-name)
 };
 
+$amount: 1;
+
 // font family variables
 $rubik: 'Rubik', sans-serif;
 $rubik-mono: 'Rubik Mono One', sans-serif;
@@ -37,16 +39,21 @@ body {
             div.btn-arrow-container-left {
             margin-left: 2.45em;
             margin-top: 49vh;
-            background:white;
-            border-radius: 32%;
+            background: color( translucent-white);
+            border-radius: 50%;
             width: 2.45em;
             height: 2.45em;
             text-align: center;
             
                 h1.btn-arrow-left {
-                    color: blue;
+                    color: color(primary-red);
                     font-family: $confortaa;
                     text-align: center;
+                    padding: 3px;
+                    margin-right: 3px;
+                    &:hover {
+                         color: color(primary-blue)
+                    }
                 }
             }
         }
@@ -64,16 +71,27 @@ body {
             right: 0;
             // right arrow
             div.btn-arrow-container-right {
+                position: absolute;
+                right: 0;
                 margin-right: 2.45em;
                 margin-top: 49vh;
-                background:white;
+                background: color( translucent-white);
+                border-radius: 50%;
+                width: 2.45em;
+                height: 2.45em;
+                text-align: right;
 
-                h1.btn-arrow-right {
-                    color: magenta;
-                    text-align: right;
-                    font-family: $confortaa;
+                    h1.btn-arrow-right {
+                        position: relative;
+                        margin: .055em .255em .055em 0em;
+                        color: color(primary-red);
+                        text-align: right;
+                        font-family: $confortaa;
+                        &:hover {
+                            color: color(primary-blue)
+                       }
+                    }
                 }
-            }
         }
     }
 }
