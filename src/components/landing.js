@@ -7,12 +7,13 @@ export class landing extends Component {
 state = {
       imageIndexNumber: Math.floor(Math.random() * (ImgInfo.landing.length)), // manages the randome number for image path
       imagePath: '', // dynamically sets the path to the background image
+     
     };
+  
   
 
 componentDidMount() {
   const path = ImgInfo.landing[this.state.imageIndexNumber]["image_fileName"]; // finishes the url path for the image
-  // const id = ImgInfo.landing[this.state.imageIndexNumber]["id"]
 
     this.setState( { 
       imagePath: require("./utilities/images/landing/" + path),
@@ -22,6 +23,7 @@ componentDidMount() {
 
 
   render() {
+
     return (
       
       <div className="body-box">
@@ -29,7 +31,7 @@ componentDidMount() {
           index={this.state.imageIndexNumber}
         />
         <div className="image-coverGreenBox"></div>
-        <div className="image-coverBlackBox"></div>
+        {/* <div className="image-coverBlackBox"></div> */}
           {/* This is the static background image. Needs to rotate through a select group of images in thenfinal version. */}
          <img className="bgImage" 
            src={this.state.imagePath}

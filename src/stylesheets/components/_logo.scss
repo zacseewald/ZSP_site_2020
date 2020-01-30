@@ -23,21 +23,22 @@ div.body-box {
 
     div.image-coverGreenBox {
         position: fixed;
-        background: color(gradient-primary-green);
+        background: color(gradient-bg);
         height: 100vh;
         width: 100vw;
         z-index: 2;
-        animation: fadeOut 3.5s;
+        animation: fadeOut 5s;
         opacity: 0;
     }
     div.image-coverBlackBox {
         position: fixed;
-        background: color(bg);
+        background: color(primary-white);
         height: 100vh;
         width: 100vw;
         z-index: 1;
         animation: fadeOut 5.5s;
         opacity: 0;
+        
     }
 // styles for the background image. should rotate through a special selected group in the final version
         img.bgImage {
@@ -52,6 +53,10 @@ div.body-box {
             top: 16vw;
             padding: 10px;
             z-index: 500;
+            border: solid .1px rgba(145, 241, 249, .3);
+            -webkit-box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.67);
+            -moz-box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.67);
+            box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.7);
 
             
             // ZSP logo in plain text
@@ -66,9 +71,6 @@ div.body-box {
                 padding-right: 2.5vw;
                 padding-bottom: 0vw;
                &:hover {
-                    // background: color(translucent-black);
-                    // border-color: color(primary-white);
-                    // color: color(primary-white);
                     opacity: 50%;
                }
                 -webkit-font-smoothing: antialiased;
@@ -81,37 +83,28 @@ div.body-box {
                 text-align: center;
                 letter-spacing: .25vw;
                 font-family: Righteous;
-            
                 -webkit-font-smoothing: antialiased;
             }
             // styles for photography logo text
             div.photography-logo-text {
                 font-size: 4vw;
-                color: color(primary-blue);
+                color: color(primary-white);
                 font-family: Righteous;
                 text-align: center;
                 margin-top: -1.3vw;
                 -webkit-font-smoothing: antialiased;
-                animation: fadeIn 3.5s; /* This sets the duration length of the entire fade sequence */
+                animation: fadeIn 6s; /* This sets the duration length of the entire fade sequence */
             }
             div.architectural-logo-text {
                 font-size: 4vw;
-                color: color(primary-brown);
+                color: color(primary-green);
                 opacity: 0;
                 letter-spacing: -.2vw;
                 font-family: Righteous;
                 text-align: center;
                 margin-top: -5vw;
                 -webkit-font-smoothing: antialiased;
-                animation: fadeOut 2s; /* This sets the duration length of the entire fade sequence */
-            }
-            img.DroneLogo {
-                position: absolute;
-                width: 30vw;
-                margin-top: 3.7vw;
-                left: 9px;
-                opacity: 0;
-                animation: blinkDrone .5s; /* This sets the duration length of the entire fade sequence */
+                animation: fadeOut 5s; /* This sets the duration length of the entire fade sequence */
             }
             
             // Photography logo fade sequence
@@ -125,7 +118,7 @@ div.body-box {
              @keyframes fadeOut { 
                     /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
                 0%{opacity: 1} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-                60%{opacity: 1;}
+                20%{opacity: 1;}
                 100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
             }
                 // word logo blinking

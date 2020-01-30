@@ -29,7 +29,7 @@ $colors: (
      // Gradients:
     buttons: linear-gradient(to bottom, #efc5ca 0%,#d24b5a 60%,#d24b5a 60%,#ba2737 65%,#f18e99 100%), /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-    gradient-bg: linear-gradient(180deg, darken( rgba(109, 178, 187, .5), 10%) 10%, rgba(109, 178, 187, .5) 20%, rgba(31, 48, 68, 1) 95%),
+    gradient-bg: linear-gradient(180deg,  rgba(145, 241, 249, 1) 5%, darken(#91f1f9, 10%) 20%, rgba(31, 48, 68, 1) 95%),
     font-color: rgb(219, 219, 219),
 
     gradient-primary-black: linear-gradient(0deg, color(bg), transparent 80%),

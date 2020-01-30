@@ -32,8 +32,7 @@ export class infoButton extends Component {
     }
   
     render() {
-        console.log(this.props.index);
-        console.log(this.state.archName);
+     
         return (
 
             <div className="info-button-parent-box" >
