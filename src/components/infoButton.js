@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
+import InstagramImg from './utilities/graffics/socialMedia/instagram.png';
+import LinkedInImg from './utilities/graffics/socialMedia/linkedIn.png';
+import TwitterImg from './utilities/graffics/socialMedia/twitter.png';
 
 
 export class infoButton extends Component {
@@ -24,6 +27,12 @@ export class infoButton extends Component {
             position: "94vh auto",
             arrowBottom: "4.5vh",
             gradientHeight: "7vh",
+            
+            // Social media links and button states
+            instagram: "https://www.instagram.com/zsphotog/",
+            linkedin: "#",
+            twitter: "#",
+            socContainerPositionHeight: "13vh",
         }
   
 handleArrowClick = (e) => {
@@ -36,7 +45,7 @@ handleArrowClick = (e) => {
             position: "67vh auto",
             positionInfoBox: "0",
             arrowBottom: "-3.5vh",
-            gradientHeight: "13vh",
+            gradientHeight: "14vh",
         })} else {
             this.setState({
                 isClicked: false,
@@ -54,6 +63,8 @@ handleArrowClick = (e) => {
         return (
 
             <div className="info-button-parent-box" >
+
+                {/* info button arrow up and down */}
                 <div className="arrow-up" 
                     style={{
                         height: this.state.gradientHeight,
@@ -65,6 +76,7 @@ handleArrowClick = (e) => {
                             transition: this.state.trasitionInfoContainer,
                             bottom: this.state.arrowBottom,
                         }}>
+                            <span className="bg-box" ></span>
                             <span className="left-bar" 
                                 style={{
                                     transformOrigin: this.state.transformOrigin,
@@ -80,28 +92,21 @@ handleArrowClick = (e) => {
                         </a>
 
                 </div>
-                {/* <a className="into-button-child-border" onClick={this.handleInfoBtnClick} >
-                    <div className="info-button-text" >i</div>
-                </a> */}
 
+                {/* all the info that lives in info container */}
                 <div className="info-container" 
                     style={{
                         color: this.state.color,
-                        // opacity: this.state.opacity,
                         bottom: this.state.positionInfoBox,
                         transition: this.state.trasitionInfoContainer,
                     }}>
-
                     <h2 className="image-title-main" 
                         style={{
                                 color: this.state.color,
-                                // opacity: this.state.opacity,
                             }}>IMAGE INFO</h2>
-
                     <div className="image-archtect"
                         style={{
                                 color: this.state.color,
-                                // opacity: this.state.opacity,
                             }}>
                                     <h3 className="title-architect" >ARCHITECT: </h3>
                                     <h3 className="name-architect" >
@@ -109,14 +114,10 @@ handleArrowClick = (e) => {
                                             {this.state.archName}
                                             </a>
                                     </h3>
-                    </div>
-
-                   
-
+                        </div>
                     <div className="image-location"
                       style={{
                             color: this.state.color,
-                            // opacity: this.state.opacity,
                         }}>
                             <h3 className="title-location" >LOCATION: </h3>
                             <h3 className="name-location" >{this.state.imgLocation}</h3>
@@ -124,12 +125,28 @@ handleArrowClick = (e) => {
 
                     <div className="image-story"
                         style={{
-                            color: this.state.color,
-                            // opacity: this.state.opacity,
+                             color: this.state.color,
                         }}>
-                            <p className="image-story">©ZAC SEEWALD, 2020. All rights reserved.</p>
+                                <p className="image-story">©ZAC SEEWALD; 2020. All rights reserved.</p>
                         </div>
                         
+                    {/* social media links */}
+
+                    <div className="social-media-container"
+                        style={{
+                            bottom: this.state.socContainerPositionHeight,
+                            // transition: this.state.trasitionInfoContainer,
+                        }}>
+                        <a className="instagram-link" href={this.state.instagram}>
+                            <img className="instagram-logo" src={InstagramImg} alt="View my Instagram page here" />
+                            </a>
+                        <a className="linkedin-link" href={this.state.linkedin}>
+                            <img className="linkedin-logo" src={LinkedInImg} alt="View my LinkedIn page here" />
+                            </a>
+                        <a className="twitter-link" href={this.state.twitter}>
+                            <img className="twitter-logo" src={TwitterImg} alt="View my Twitter page here" />
+                            </a>
+                    </div>
 
                 </div>
             </div>
