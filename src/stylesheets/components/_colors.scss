@@ -20,7 +20,7 @@ $colors: (
 
     // colors darkened
     primary-green-dark: darken(#b8d4bf, 20%),
-
+    primary-blue-dark: darken(#91f1f9, 65%),
     // reduced opacity colors
 
     
@@ -32,14 +32,18 @@ $colors: (
     gradient-bg: linear-gradient(180deg,  rgba(145, 241, 249, 1) 5%, darken(#91f1f9, 10%) 20%, rgba(31, 48, 68, 1) 95%),
     font-color: rgb(219, 219, 219),
 
+  
+
     gradient-primary-black: linear-gradient(0deg, color(bg), transparent 80%),
     gradient-primary-black-info: linear-gradient(0deg, color(bg), transparent 98%),
-    gradient-primary-green: radial-gradient(ellipse at center, color(primary-green-light) 0%, color(primary-green-dark) 100%),
+    gradient-primary-green: linear-gradient(0deg, color(primary-green-light) 0%, color(primary-green-dark) 100%),
 
     //semi-tranlucent colors
     translucent-black: rgba(0,0,0,.3),
     translucent-white: rgba(255, 255, 255, 0.3),
     tranlucent-accent-green: rgba(184, 212, 191, 0.8),
+    transluce-dark-blue: rgba(31, 48, 68, 0.9),
     btnBackground: rgba(0,0,0,.3),
+    btnBackgroundBlue: rgba(145, 241, 249, .4),
 );
 

@@ -16,6 +16,10 @@ $righteous: 'Righteous', cursive;
 $beasNueve: 'Bebas Neue', cursive;
 $confortaa: 'Comfortaa', cursive;
 
+// arrow functions
+
+$easing: cubic-bezier(.25,1.7,.35,.8);
+$duration: 0.5s;
 
 div.info-button-parent-box {
     position: fixed;
@@ -26,13 +30,82 @@ div.info-button-parent-box {
     height: 100vh;
     border: none;
 
+div.arrow-up {
+    background: color(gradient-primary-black);
+    // border-bottom: .1px solid color(primary-blue);
+    // height: 13vh;
+
+        a.arrow-icon {
+            height: 0em;
+            display: block;
+            padding: 0.5em;
+            position: relative;
+            cursor: pointer;
+            z-index: 500;
+      
+
+                span.left-bar {
+                    position: absolute;
+                    background-color: transparent;
+                    top: 38px;
+                    left: 7px;
+                    width: 17px;
+                    height: 1.5px;
+                    display: block;
+                    float: right;
+                    border-radius: 0px;
+                    margin-left: 47.3%;
+                    &:after {
+                        content: "";
+                        background-color: color(primary-blue);
+                        width: 17px;
+                        height: 1.5px;
+                        display: block;
+                        float: right;
+                        border-radius: 0px;
+                        transition: all $duration $easing;
+                        z-index: -1;
+                    }
+                }
+
+                span.right-bar {
+                    position: absolute;
+                    background-color: transparent;
+                    top: 38px;
+                    left: 20px;
+                    width: 17px;
+                    height: 1.5px;
+                    display: block;
+                    //   transform: rotate(-35deg);
+                    float: right;
+                    border-radius: 0px;
+                    margin-left: 47.3%;
+                    &:after {
+                        content:"";
+                        background-color: color(primary-blue);
+                        width: 17px;
+                        height: 1.5px;
+                        display: block;
+                        float: right;
+                        border-radius: 0px;
+                        transition: all $duration $easing;
+                        z-index: -1;
+                    }
+                }
+            }
+}
+
+        
+        
+    
+      
+
     a.into-button-child-border {
         position: absolute;
         bottom: 0px;
         border-bottom: 3px solid color(bg);
         border-left: none;
         border-top: none;
-        background: color(gradient-primary-black);
         width: 100vw;
         height: 5em;
         animation: fadeIn 5s; // fades in the info button and bar accross the bottom of the viewport
@@ -60,14 +133,14 @@ div.info-button-parent-box {
         }
     }
     div.info-container {
-        background: color(gradient-bg);
+        background: color(btnBackgroundBlue);
         position: absolute;
-        bottom: 0;
-        padding: 1.2em 0vw 2.2em 3.5vw;
+        padding: 1em 0vw 1em 3.5vw;
         width: 100vw;
+        border-top: 3px solid color(bg);
 
         h2.image-title-main {
-            color: color(primary-blue-light);
+            color: color(bg);
             font-family: $montserrat;
             font-size: 14px;
             font-weight: bolder;
@@ -84,19 +157,19 @@ div.info-button-parent-box {
         }
         div.image-archtect {
             h3.title-architect {
-                color: color(primary-blue-light);
+                color: color(bg);
                 display: inline-block;
                 margin: 0px;
             }
             h3.name-architect {
                 margin: 0px 0px 0px 1vw;
                 display: inline-block;
-                color: color(primary-blue);
+                color: color(bg);
                 a {
                     text-decoration: none;
-                    color: color(primary-blue);
+                    color: color(bg);
                     &:hover {
-                        color: color(primary-red-light);
+                        color: color(primary-red);
                     };
                 }
             }
@@ -105,10 +178,10 @@ div.info-button-parent-box {
             h3.title-location {
                 display: inline-block;
                 margin: 0px;
-                color: color(primary-blue-light);
+                color: color(bg);
             }
             h3.name-location {
-                color: color(primary-blue);
+                color: color(bg);
                 margin: 0px 0px 0px 1vw;
                 display: inline-block;
             }
@@ -118,11 +191,11 @@ div.info-button-parent-box {
             h3.image-title-story {
                 display: inline-block;
                 margin: 0px;
-                color: color(primary-blue-light);
+                color: color(bg);
             }
             p.image-story {
-                color: color(primary-blue);
-                margin: 0px 0px 1vh 1vw;
+                color: color(bg);
+                margin: 0px 0px 1vh 0px;
                 display: inline-block;
                 font-size: 11px;
             }
