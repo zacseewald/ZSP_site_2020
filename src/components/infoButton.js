@@ -17,7 +17,7 @@ export class infoButton extends Component {
             imgLocation: ImgInfo.landing[this.props.index]["location_city_state"],
             imgStory: ImgInfo.landing[this.props.index]["story"],
 
-            positionInfoBox: "-20.4vh",
+            
        // state  for the up/down arrow button   
             transformOrigin: "center center",
             transformRight: "rotate(35deg)",
@@ -25,8 +25,15 @@ export class infoButton extends Component {
             transition: "all 1.5s cubic-bezier(.5,1.8,.2,.5)",
             trasitionInfoContainer: ".5s",
             position: "94vh auto",
-            arrowBottom: "4.5vh",
+
+            arrowTop: "",
+            arrowBottom: "5vh",
+
             gradientHeight: "7vh",
+            positionInfoBoxTop: "100vh",//top
+            positionInfoBoxBottom: "0",//Bottom
+
+            shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
             
             // Social media links and button states
             instagram: "https://www.instagram.com/zsphotog/",
@@ -36,25 +43,34 @@ export class infoButton extends Component {
         }
   
 handleArrowClick = (e) => {
-    // this.state.toggleClass("open");
+    
     if (!this.state.isClicked){
         this.setState({
             isClicked: true,
             transformRight: "rotate(-35deg)",
             transformLeft: "rotate(35deg)",
             position: "67vh auto",
-            positionInfoBox: "0",
+            positionInfoBoxTop: "74vh",//top
+            positionInfoBoxBottom: "0",
+            arrowTop: "",
             arrowBottom: "-3.5vh",
             gradientHeight: "14vh",
+            trasitionInfoContainer: ".5s",
+            shadow: "7px -3px 47px 24px rgba(0,0,0,0.67)",
+
         })} else {
             this.setState({
                 isClicked: false,
                 transformRight: "rotate(35deg)",
                 transformLeft: "rotate(-35deg)",
                 position: "94vh auto",
-                positionInfoBox: "-20.4vh",
-                arrowBottom: "4.5vh",
+                positionInfoBoxTop: "100vh",//top
+                positionInfoBoxBottom: "0",
+                arrowTop: "",
+                arrowBottom: "5vh",
                 gradientHeight: "7vh",
+                trasitionInfoContainer: ".5s",
+                shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
         })}
 }
 
@@ -70,18 +86,21 @@ handleArrowClick = (e) => {
                         height: this.state.gradientHeight,
                         transition: this.state.transition,
                     }}>
-                    <a className="arrow-icon" onClick={this.handleArrowClick}
+                    <a className="bg-box" onClick={this.handleArrowClick} ></a>
+                    <a className="arrow-icon" 
                         style={{
                             margin: this.state.position,
                             transition: this.state.trasitionInfoContainer,
                             bottom: this.state.arrowBottom,
                         }}>
-                            <span className="bg-box" ></span>
+                            
                             <span className="left-bar" 
                                 style={{
+                                    backgroundColor: this.state.arrowColor,
                                     transformOrigin: this.state.transformOrigin,
                                     transform: this.state.transformLeft,
                                     transition: this.state.transition,
+                                    boxShadow: this.state.shadow,
                                 }}></span>
                             <span className="right-bar"
                                 style={{
@@ -97,7 +116,8 @@ handleArrowClick = (e) => {
                 <div className="info-container" 
                     style={{
                         color: this.state.color,
-                        bottom: this.state.positionInfoBox,
+                        top: this.state.positionInfoBoxTop,
+                        bottom: this.state.positionInfoBoxBottom,
                         transition: this.state.trasitionInfoContainer,
                     }}>
                     <h2 className="image-title-main" 

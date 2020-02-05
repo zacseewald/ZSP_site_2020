@@ -18,7 +18,7 @@ $confortaa: 'Comfortaa', cursive;
 
 // arrow functions
 
-$easing: cubic-bezier(.25,1.7,.35,.8);
+$easing: cubic-bezier(.25,1.7,.25,.8);
 $duration: 0.5s;
 $shadowSocLinks: 0px 0px 25px 4px  rgba(0,0,0,0.67);
 $shadowSocLinksHover: 0px 0px 60px -13px  rgba(255,255,255,0.67);
@@ -37,25 +37,26 @@ div.info-button-parent-box {
     border: none;
 
 div.arrow-up {
-    // background: color(gradient-primary-black);
+
+        a.bg-box {
+            background: transparent;
+            height: 85px;
+            width: 50px;
+            position: absolute;
+            margin-left: 47vw;
+            z-index: 501;
+            cursor: pointer;
+        }
    
         a.arrow-icon {
             height: 0em;
             display: block;
             padding: 0.5em;
             position: relative;
-            cursor: pointer;
+            
             z-index: 500;
       
-                span.bg-box {
-                    position: absolute;
-                    bottom: -7vh;
-                    left: 0;
-                    background: color(gradient-primary-black);
-                    width: 100vw;
-                    height: 50px;
-                    z-index: -1;
-                }
+            
                 span.left-bar {
                     position: absolute;
                     background-color: transparent;
@@ -74,7 +75,7 @@ div.arrow-up {
                         height: 1.5px;
                         display: block;
                         float: right;
-                        border-radius: 0px;
+                        border-radius: 2px;
                         transition: all $duration $easing;
                         z-index: -1;
                     }
@@ -88,7 +89,6 @@ div.arrow-up {
                     width: 17px;
                     height: 1.5px;
                     display: block;
-                    //   transform: rotate(-35deg);
                     float: right;
                     border-radius: 0px;
                     margin-left: 47.3%;
@@ -99,7 +99,7 @@ div.arrow-up {
                         height: 1.5px;
                         display: block;
                         float: right;
-                        border-radius: 0px;
+                        border-radius: 2px;
                         transition: all $duration $easing;
                         z-index: -1;
                     }
@@ -149,7 +149,7 @@ div.arrow-up {
         position: absolute;
         padding: 1em 0vw 1em 3.5vw;
         width: 100vw;
-        border-top: 3px solid color(bg);
+        border-top: .1px solid color(primary-blue);
 
         h2.image-title-main {
             color: color(bg);
