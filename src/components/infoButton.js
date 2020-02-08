@@ -27,12 +27,11 @@ export class infoButton extends Component {
             position: "94vh auto",
 
             arrowTop: "",
-            arrowBottom: "5vh",
+            arrowBottom: "-9px",
 
             gradientHeight: "7vh",
             positionInfoBoxTop: "100vh",//top
-            positionInfoBoxBottom: "0",//Bottom
-
+            positionInfoBoxBottom: "-110px",//Bottom
             shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
             
             // Social media links and button states
@@ -49,25 +48,21 @@ handleArrowClick = (e) => {
             isClicked: true,
             transformRight: "rotate(-35deg)",
             transformLeft: "rotate(35deg)",
-            position: "67vh auto",
-            positionInfoBoxTop: "74vh",//top
-            positionInfoBoxBottom: "0",
+            positionInfoBoxBottom: "-1px",
             arrowTop: "",
-            arrowBottom: "-3.5vh",
+            arrowBottom: "96px",
             gradientHeight: "14vh",
             trasitionInfoContainer: ".5s",
-            shadow: "7px -3px 47px 24px rgba(0,0,0,0.67)",
+            shadow: "7px -3px 47px 24px rgba(230,230,230,0.67)",
 
         })} else {
             this.setState({
                 isClicked: false,
                 transformRight: "rotate(35deg)",
                 transformLeft: "rotate(-35deg)",
-                position: "94vh auto",
-                positionInfoBoxTop: "100vh",//top
-                positionInfoBoxBottom: "0",
+                positionInfoBoxBottom: "-110px",
                 arrowTop: "",
-                arrowBottom: "5vh",
+                arrowBottom: "-9px",
                 gradientHeight: "7vh",
                 trasitionInfoContainer: ".5s",
                 shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
@@ -86,10 +81,11 @@ handleArrowClick = (e) => {
                         height: this.state.gradientHeight,
                         transition: this.state.transition,
                     }}>
-                    <a className="bg-box" onClick={this.handleArrowClick} ></a>
+                    
                     <a className="arrow-icon" 
+                        onClick={this.handleArrowClick} 
                         style={{
-                            margin: this.state.position,
+                            // margin: this.state.position,
                             transition: this.state.trasitionInfoContainer,
                             bottom: this.state.arrowBottom,
                         }}>
@@ -116,7 +112,7 @@ handleArrowClick = (e) => {
                 <div className="info-container" 
                     style={{
                         color: this.state.color,
-                        top: this.state.positionInfoBoxTop,
+                        // top: this.state.positionInfoBoxTop,
                         bottom: this.state.positionInfoBoxBottom,
                         transition: this.state.trasitionInfoContainer,
                     }}>

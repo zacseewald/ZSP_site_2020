@@ -39,7 +39,7 @@ div.info-button-parent-box {
 div.arrow-up {
 
         a.bg-box {
-            background: transparent;
+            background: yellow;
             height: 85px;
             width: 50px;
             position: absolute;
@@ -49,25 +49,26 @@ div.arrow-up {
         }
    
         a.arrow-icon {
-            height: 0em;
+            height: 50px;
+            width: 50px;
+            background: transparent;
             display: block;
-            padding: 0.5em;
-            position: relative;
-            
+            left: 47.5vw;
+            position: absolute;
             z-index: 500;
+            cursor: pointer;
       
             
                 span.left-bar {
                     position: absolute;
                     background-color: transparent;
-                    top: 38px;
-                    left: 7px;
+                    top: 25px;
+                    left: 9px;
                     width: 17px;
-                    height: 1.5px;
+                    height: 2px;
                     display: block;
                     float: right;
                     border-radius: 0px;
-                    margin-left: 47.3%;
                     &:after {
                         content: "";
                         background-color: color(primary-blue);
@@ -75,7 +76,7 @@ div.arrow-up {
                         height: 1.5px;
                         display: block;
                         float: right;
-                        border-radius: 2px;
+                        border-radius: 1.5px;
                         transition: all $duration $easing;
                         z-index: -1;
                     }
@@ -84,14 +85,13 @@ div.arrow-up {
                 span.right-bar {
                     position: absolute;
                     background-color: transparent;
-                    top: 38px;
-                    left: 20px;
+                    top: 25px;
+                    left: 22px;
                     width: 17px;
                     height: 1.5px;
                     display: block;
                     float: right;
                     border-radius: 0px;
-                    margin-left: 47.3%;
                     &:after {
                         content:"";
                         background-color: color(primary-blue);
