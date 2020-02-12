@@ -4,11 +4,13 @@ $colors: (
 
     // Solids
     bg: black,
+    primary-gray: #b1b1b1,
     primary-red: #c23c3e,
     primary-brown: #d85d38,
     primary-green: #b8d4bf,
     primary-white: #fff,
     primary-blue: #91f1f9,
+    accent-blue: #00eaff,
     accent-orange: #f4a647,
     accent-green: #788a6c,
     accent-gray: #646C79,
@@ -39,7 +41,7 @@ $colors: (
     gradient-primary-green: linear-gradient(0deg, color(primary-green-light) 0%, color(primary-green-dark) 100%),
 
     //semi-tranlucent colors
-    translucent-black: rgba(0,0,0,.3),
+    translucent-black: rgba(0,0,0,.15),
     translucent-white: rgba(255, 255, 255, 0.3),
     tranlucent-accent-green: rgba(184, 212, 191, 0.8),
     transluce-dark-blue: rgba(31, 48, 68, 0.9),

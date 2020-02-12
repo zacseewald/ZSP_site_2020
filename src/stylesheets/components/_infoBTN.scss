@@ -37,7 +37,7 @@ div.info-button-parent-box {
     border: none;
 
 div.arrow-up {
-
+    z-index: 1000;
         a.bg-box {
             background: yellow;
             height: 85px;
@@ -131,7 +131,7 @@ div.arrow-up {
             font-family: $confortaa;
             margin: .10em 2.2em;
             padding: .2em .1em 0em .1em;
-            z-index: 800;
+            z-index: 1000;
             border: 2px solid color(primary-blue);
             border-radius: 50%;
             width: 1em;
@@ -151,71 +151,83 @@ div.arrow-up {
         width: 100vw;
         border-top: .1px solid color(primary-blue);
 
-        h2.image-title-main {
-            color: color(bg);
-            font-family: $montserrat;
-            font-size: 14px;
-            font-weight: bolder;
-            display: inline;    
-            text-decoration: underline;
-        }
-        h3 {
-            font-family: $montserrat;
-            font-size: 12px;
-        }
-        p {
-            font-family: $montserrat;
-            font-size: 9px;
-        }
-        div.image-archtect {
-            h3.title-architect {
-                color: color(bg);
-                display: inline-block;
-                margin: 0px;
-            }
-            h3.name-architect {
-                margin: 0px 0px 0px 1vw;
-                display: inline-block;
-                color: color(bg);
-                a {
+
+
+      div.info-container-box {
+          background: rgba(0,0,0,.85);
+          width: 36vw;
+          padding: 12px;
+          border: .1px solid color(primary-blue);
+          z-index: 1000;
+
+                h2.image-title-main {
+                    color: color(accent-blue);
+                    font-family: $dosis;
+                    font-size: 30px;
+                    font-weight: bolder;
+                    display: inline;    
                     text-decoration: none;
-                    color: color(bg);
-                    &:hover {
+                }
+                h3 {
+                    font-family: $montserrat;
+                    font-size: 12px;
+                }
+                p {
+                    font-family: $montserrat;
+                    font-size: 9px;
+                }
+                div.image-archtect {
+                    h3.title-architect {
                         color: color(primary-red);
-                    };
+                        display: inline-block;
+                        margin: 0px;
+                    }
+                    h3.name-architect {
+                        margin: 0px 0px 0px 1vw;
+                        display: inline-block;
+                        color: color(primary-red);
+                        a {
+                            text-decoration: none;
+                            color: color(primary-red);
+                            &:hover {
+                                color: color(primary-blue);
+                            };
+                        }
+                    }
+                }
+                div.image-location {
+                    h3.title-location {
+                        display: inline-block;
+                        margin: 0px;
+                        color: color(primary-red);
+                    }
+                    h3.name-location {
+                        color: color(primary-red);
+                        margin: 0px 0px 0px 1vw;
+                        display: inline-block;
+                    }
+                }
+
+                div.image-story {
+                    h3.image-title-story {
+                        display: inline-block;
+                        margin: 0px;
+                        color: color(primary-red);
+                    }
+                    p.image-story {
+                        color: color(primary-red);
+                        margin: 0px 0px 1vh 0px;
+                        display: inline-block;
+                        font-size: 11px;
+                    }
                 }
             }
-        }
-        div.image-location {
-            h3.title-location {
-                display: inline-block;
-                margin: 0px;
-                color: color(bg);
-            }
-            h3.name-location {
-                color: color(bg);
-                margin: 0px 0px 0px 1vw;
-                display: inline-block;
-            }
-        }
-
-        div.image-story {
-            h3.image-title-story {
-                display: inline-block;
-                margin: 0px;
-                color: color(bg);
-            }
-            p.image-story {
-                color: color(bg);
-                margin: 0px 0px 1vh 0px;
-                display: inline-block;
-                font-size: 11px;
-            }
-        }
-    }
+}
     div.social-media-container {
-        position: relative;
-        left: 73vw;
+        position: absolute;
+        position: absolute;
+        right: 256px;
+        top: 46px;
      
 
         img {

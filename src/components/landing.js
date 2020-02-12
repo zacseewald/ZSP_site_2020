@@ -7,7 +7,10 @@ export class landing extends Component {
 state = {
       imageIndexNumber: Math.floor(Math.random() * (ImgInfo.landing.length)), // manages the randome number for image path
       imagePath: '', // dynamically sets the path to the background image
-     
+      imageGalleryName: "landing",
+      imageArchName: "",
+      imageLocal: "",
+      imageSite: "",
     };
   
   
@@ -17,7 +20,10 @@ componentDidMount() {
 
     this.setState( { 
       imagePath: require("./utilities/images/landing/" + path),
-      // imageID: ImgInfo.landing[this.state.imageIndexNumber]["id"],
+      imageArchName: ImgInfo.landing[this.state.imageIndexNumber]["architect_name"],
+      imageArchName: ImgInfo.landing[this.state.imageIndexNumber]["architect_name"],
+      imageLocal: ImgInfo.landing[this.state.imageIndexNumber]["location_city_state"],
+      imageSite: ImgInfo.landing[this.state.imageIndexNumber]["architect_site"]
     }); 
 }
 
@@ -27,8 +33,12 @@ componentDidMount() {
     return (
       
       <div className="body-box">
-        <InfoBtn 
+         <InfoBtn
           index={this.state.imageIndexNumber}
+          gallery={this.state.imageGalleryName} 
+          name={this.state.imageArchName}
+          location={this.state.imageLocal}
+          site={this.state.imageSite}
         />
         <div className="image-coverGreenBox"></div>
         {/* <div className="image-coverBlackBox"></div> */}

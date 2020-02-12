@@ -6,16 +6,18 @@ import TwitterImg from './utilities/graffics/socialMedia/twitter.png';
 
 
 export class infoButton extends Component {
+
+    // recieves 2 props = gallery and index
   state = {
             opacity: 0,
             isClicked: false,
             // Lets the page know which image is being loaded into the background.
             imgIndexValue: this.props.index, 
             // Image details that get loading into the approproate locations in the page below.
-            archName: ImgInfo.landing[this.props.index]["architect_name"],
-            archSite: ImgInfo.landing[this.props.index]["architect_site"],
-            imgLocation: ImgInfo.landing[this.props.index]["location_city_state"],
-            imgStory: ImgInfo.landing[this.props.index]["story"],
+            archName: ImgInfo[this.props.gallery][this.props.index]["architect_name"],
+            archSite: ImgInfo[this.props.gallery][this.props.index]["architect_site"],
+            imgLocation: ImgInfo[this.props.gallery][this.props.index]["location_city_state"],
+            imgStory: ImgInfo[this.props.gallery][this.props.index]["story"],
 
             
        // state  for the up/down arrow button   
@@ -31,7 +33,7 @@ export class infoButton extends Component {
 
             gradientHeight: "7vh",
             positionInfoBoxTop: "100vh",//top
-            positionInfoBoxBottom: "-110px",//Bottom
+            positionInfoBoxBottom: "-170px",//Bottom
             shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
             
             // Social media links and button states
@@ -54,23 +56,24 @@ handleArrowClick = (e) => {
             gradientHeight: "14vh",
             trasitionInfoContainer: ".5s",
             shadow: "7px -3px 47px 24px rgba(230,230,230,0.67)",
+            archName: ImgInfo[this.props.gallery][this.props.index]["architect_name"],
 
         })} else {
             this.setState({
                 isClicked: false,
                 transformRight: "rotate(35deg)",
                 transformLeft: "rotate(-35deg)",
-                positionInfoBoxBottom: "-110px",
+                positionInfoBoxBottom: "-170px",
                 arrowTop: "",
                 arrowBottom: "-9px",
                 gradientHeight: "7vh",
                 trasitionInfoContainer: ".5s",
                 shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
+                archName: ImgInfo[this.props.gallery][this.props.index]["architect_name"],
         })}
 }
 
     render() {
-     
         return (
 
             <div className="info-button-parent-box" >
@@ -112,39 +115,46 @@ handleArrowClick = (e) => {
                 <div className="info-container" 
                     style={{
                         color: this.state.color,
-                        // top: this.state.positionInfoBoxTop,
                         bottom: this.state.positionInfoBoxBottom,
                         transition: this.state.trasitionInfoContainer,
                     }}>
-                    <h2 className="image-title-main" 
-                        style={{
-                                color: this.state.color,
-                            }}>IMAGE INFO</h2>
-                    <div className="image-archtect"
-                        style={{
-                                color: this.state.color,
-                            }}>
-                                    <h3 className="title-architect" >ARCHITECT: </h3>
-                                    <h3 className="name-architect" >
-                                        <a href={this.state.archSite} >
-                                            {this.state.archName}
-                                            </a>
-                                    </h3>
-                        </div>
-                    <div className="image-location"
-                      style={{
-                            color: this.state.color,
-                        }}>
-                            <h3 className="title-location" >LOCATION: </h3>
-                            <h3 className="name-location" >{this.state.imgLocation}</h3>
-                        </div>
 
-                    <div className="image-story"
-                        style={{
-                             color: this.state.color,
-                        }}>
-                                <p className="image-story">©ZAC SEEWALD; 2020. All rights reserved.</p>
-                        </div>
+
+
+
+
+
+                        <div className="info-container-box">
+                            <h2 className="image-title-main" 
+                                style={{
+                                        color: this.state.color,
+                                    }}>IMAGE INFO</h2>
+                            <div className="image-archtect"
+                                style={{
+                                        color: this.state.color,
+                                    }}>
+                                            <h3 className="title-architect" >ARCHITECT: </h3>
+                                            <h3 className="name-architect" >
+                                                <a href={this.props.site} target={"_blank"} >
+                                                    {this.props.name}
+                                                    </a>
+                                            </h3>
+                                </div>
+                            <div className="image-location"
+                            style={{
+                                    color: this.state.color,
+                                }}>
+                                    <h3 className="title-location" >LOCATION: </h3>
+                                    <h3 className="name-location" >{this.props.location}</h3>
+                                </div>
+
+                            <div className="image-story"
+                                style={{
+                                    color: this.state.color,
+                                }}>
+                                        <p className="image-story">©ZAC SEEWALD; 2020. All rights reserved.</p>
+                                </div>
+                             </div>
                         
                     {/* social media links */}
 
