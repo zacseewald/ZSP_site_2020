@@ -85,6 +85,11 @@ div.body-box {
                 -moz-box-shadow: -1px 19px 42px 4px rgba(0,0,0,0);
                 box-shadow: -1px 19px 42px 4px rgba(0,0,0,0);
              }
+             @include breakpoint-tablet-port {
+                
+                left: 15vw;
+                top: 37vw;
+             }
 
             
             // ZSP logo in plain text
@@ -105,39 +110,61 @@ div.body-box {
                 @include breakpoint-phone  {    
                     font-size: 30vw;
                  }
+                 @include breakpoint-tablet-port {
+                    font-size: 30vw;
+                 }
             }
 
             // zac seewald logo in plain text 
             div.ZS-Logo-text {
                 font-size: 4vw;
-                color: color(primary-blue);
                 text-align: center;
                 letter-spacing: .25vw;
                 font-family: Righteous;
                 letter-spacing: none;
                 -webkit-font-smoothing: antialiased;
                 animation: easeTextColorIn 3.5s;
+                -webkit-text-fill-color: color(primary-blue); /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: .4px;
+                -webkit-text-stroke-color: color(primary-red);
                 @include breakpoint-phone  {
                     color: color(primary-blue);
                     font-size: 9vw;
                     letter-spacing: .2vw;
                 }
+                @include breakpoint-tablet-port {
+                    color: color(primary-blue);
+                    font-size: 9vw;
+                    letter-spacing: .5vw;
+                    -webkit-text-fill-color:none; 
+                    -webkit-text-stroke-width: 0px;
+                    -webkit-text-stroke-color: none;
+                    
+                 }
                 
             }
             // styles for photography logo text
             div.photography-logo-text {
                 font-size: 4vw;
-                color: color(primary-blue);
                 font-family: Righteous;
                 text-align: center;
                 margin-top: -1.3vw;
                 -webkit-font-smoothing: antialiased;
                 animation: easeTextColorIn 3.5s;
+                -webkit-text-fill-color: color(primary-blue); /* Will override color (regardless of order) */
+                -webkit-text-stroke-width: .4px;
+                -webkit-text-stroke-color: color(primary-red);
                 @include breakpoint-phone  {
                     color: color(primary-blue);
                     font-size: 8vw;
-                    letter-spacing: .2vw;
                 }
+                @include breakpoint-tablet-port {
+                    color: color(primary-blue);
+                    font-size: 9vw;
+                    -webkit-text-fill-color:none; 
+                    -webkit-text-stroke-width: 0px;
+                    -webkit-text-stroke-color: none;
+                 }
             }
             // div.architectural-logo-text {
             //     font-size: 4vw;
@@ -206,11 +233,15 @@ div.body-box {
                  
                   0%{  
                     color: color(primary-white); 
+                    -webkit-text-fill-color: color(primary-white);
+                    -webkit-text-stroke-color: color(primary-white)
                 
                     }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
                     
                     100%{  
                         color: color(primary-blue);
+                        -webkit-text-fill-color: color(primary-blue);
+                        -webkit-text-stroke-color: color(primary-red);
                     }
                 }
         

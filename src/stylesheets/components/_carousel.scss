@@ -1,6 +1,17 @@
 // Imports the global colors
 @import './_colors.scss';
 
+// Media queries
+@mixin breakpoint-phone {
+    @media (max-width: 600px) { @content };
+}
+@mixin breakpoint-tablet-port {
+    @media (max-width: 900px) { @content };
+}
+@mixin breakpoint-tablet-land {
+    @media (max-width: 1200px) { @content };
+}
+
 // Function that maps throught the global color object to make the color designation simpler below.
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -33,111 +44,165 @@ body {
 
 
         div.my-name-container {
-            top: -2px;
-            position: absolute;
-            right: 6px;
-            width: 100vw;
-            display: block;
-            z-index: 1000;
-            h1.my-name-text {
-                position: absolute;
-                font-family: $dosis;
-                font-size: 22px;
-                margin: 0;
-                color: color(primary-gray);
-                right: 0px;
-            }
+            display: none;
+            @include breakpoint-phone {
+                    top: 17px;
+                    position: absolute;
+                    right: 6px;
+                    width: 100vw;
+                    display: block;
+                    z-index: 1000;
+                    h1.my-name-text {
+                        position: absolute;
+                        font-family: $dosis;
+                        font-size: 26px;
+                        margin: 0;
+                        color: color(primary-gray);
+                        right: 15px;
+                    }
+                }
         }
 
         div.img-counter-container {
             position: absolute;
-            left: 49vw;
-            top: -1.45vh;
+            top: -.45vh;
             z-index: 1000;
-            width: 50px;
+            width: 100vw;
             p.img-counter-text {
                 position: absolute;
                 color: color(primary-gray);
                 font-family: $dosis;
                 font-size: 12px;
+                text-align: left;
+                left: 49%;
+            }
+            @include breakpoint-phone {
+                top: 35px;
+                width: 100px;
+                right: 5px;
+                p.img-counter-text {
+                    font-size: 18px;
+                    color: color(primary-red);
+                }
             }
         }
 
         a.btn-left {
             position: absolute;
-            z-index: 900;
+            z-index: 800;
             background: transparent;
             height: 200px;
             width: 45vw;
             left: 0;
+            @include breakpoint-phone {
+                bottom: 20px;
+                left: -5px;
+            }
 
 // left arrow
             div.btn-arrow-container-left {
                 position: absolute;
-                margin-left: 2.45em;
-                top: 40%;
-                background: none;
-                border-radius: 50%;
+                left: 30px;
+                top: 30%;
+                background: transparent;
                 width: 2.45em;
                 height: 2.45em;
-                text-align: center;
+                text-align: left;
                 cursor: pointer;
             
                 h1.btn-arrow-left {
-                    position: relative;
+                    position: absolute;
+                    display: inline;
                     color: color(primary-gray);
                     font-family: $confortaa;
-                    text-align: center;
-                    margin: .055em .255em .055em 0em;
+                    left: 0;
                     &:hover {
                          color: color(primary-blue)
+                    }
+                    p.btn-arrow-left-prev {
+                        position: absolute;
+                        display: inline;
+                        font-family: $dosis;
+                        font-size: 13px;
+                        left: 20px;
+                        bottom: -3px
+                        
                     }
                 }
             }
         }
         img.visible-img {
             position: absolute;
-            height: 90vh;
+            height: 85vh;
             width: none;
+            top: 30px;
             border: 1px solid color(primary-gray);
             -webkit-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.55);
             -moz-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.55);
             box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.55);
             transition: all $duration $easing;
+            @include breakpoint-phone {
+                width: 90vw;
+                top: 20px;
+                object-fit: contain;
+                border: 0px;
+                -webkit-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0);
+                -moz-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0);
+                box-shadow: 0px 10px 26px -4px rgba(0,0,0,0);
+                
+            }
         }
 
          a.btn-right {
             position: absolute;
-            z-index: 900;
+            z-index: 800;
             background: transparent;
             height: 200px;
             width: 45vw;
+            background: transparent;
             right: 0;
+            @include breakpoint-phone {
+                bottom: 20px;
+            }
             
 
             div.btn-arrow-container-right {
                 position: absolute;
-                right: 0;
-                top: 40%;
-                margin-right: 2.45em;
-                background: color( translucent-white);
-                border-radius: 50%;
+                right: 30px;
+                top: 30%;
+                background: transparent;
                 width: 2.45em;
                 height: 2.45em;
-                text-align: right;
                 cursor: pointer;
+                &:hover {
+                    color: color(primary-blue)
+               }
+               @include breakpoint-phone {
+                right: 0px;
+            }
 
                     h1.btn-arrow-right {
-                        position: relative;
-                        margin: .055em .255em .055em 0em;
+                        position: absolute;
+                        display: inline;
                         color: color(primary-gray);
-                        text-align: right;
                         font-family: $confortaa;
+                        left: 100;
                         &:hover {
                             color: color(primary-blue)
                        }
+                    
+                    p.btn-arrow-right-more {
+                        position: absolute;
+                        display: inline;
+                        font-family: $dosis;
+                        font-size: 13px;
+                        right: 20px;
+                        bottom: -3px;
+                        
+                       }
                     }
                 }
-        }
+            }
+        
     }
 }
