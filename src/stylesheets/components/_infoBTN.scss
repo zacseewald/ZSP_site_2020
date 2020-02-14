@@ -1,6 +1,16 @@
 // Imports the global colors
 @import './_colors.scss';
 
+// Media queries
+@mixin breakpoint-phone {
+    @media (max-width: 600px) { @content };
+}
+@mixin breakpoint-tablet-port {
+    @media (max-width: 900px) { @content };
+}
+@mixin breakpoint-tablet-land {
+    @media (max-width: 1200px) { @content };
+}
 // Function that maps throught the global color object to make the color designation simpler below.
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -39,7 +49,6 @@ div.info-button-parent-box {
 div.arrow-up {
     z-index: 1000;
         a.bg-box {
-            background: yellow;
             height: 85px;
             width: 50px;
             position: absolute;
@@ -49,15 +58,17 @@ div.arrow-up {
         }
    
         a.arrow-icon {
-            height: 50px;
+            height: 120px;
             width: 50px;
-            background: transparent;
+            background: color(translucent-black);
             display: block;
             left: 47.5vw;
             position: absolute;
-            z-index: 500;
+            z-index: 0;
             cursor: pointer;
-      
+            @include breakpoint-phone  {
+                left: 42vw;
+                }
             
                 span.left-bar {
                     position: absolute;
@@ -71,7 +82,7 @@ div.arrow-up {
                     border-radius: 0px;
                     &:after {
                         content: "";
-                        background-color: color(primary-blue);
+                        background-color: color(accent-blue);
                         width: 17px;
                         height: 1.5px;
                         display: block;
@@ -94,7 +105,7 @@ div.arrow-up {
                     border-radius: 0px;
                     &:after {
                         content:"";
-                        background-color: color(primary-blue);
+                        background-color: color(accent-blue);
                         width: 17px;
                         height: 1.5px;
                         display: block;
@@ -145,12 +156,16 @@ div.arrow-up {
         }
     }
     div.info-container {
+        position: absolute;
         background: color(btnBackgroundBlue);
         position: absolute;
         padding: 1em 0vw 1em 3.5vw;
         width: 100vw;
         border-top: .1px solid color(primary-blue);
-
+        @include breakpoint-phone  {
+            width: 100vw;
+            padding: 0vw;
+        }
 
 
       div.info-container-box {
@@ -159,6 +174,12 @@ div.arrow-up {
           padding: 12px;
           border: .1px solid color(primary-blue);
           z-index: 1000;
+
+          @include breakpoint-phone  {
+                width: 89vw;
+                margin: 2vw 2vw 21vw 2vw;
+                height: 27vw;
+                }
 
                 h2.image-title-main {
                     color: color(accent-blue);
@@ -228,7 +249,11 @@ div.arrow-up {
         position: absolute;
         right: 256px;
         top: 46px;
-     
+        @include breakpoint-phone  {
+            right: 77%;
+            top: 37vw;
+            }
+      
 
         img {
             width: 30px;

@@ -55,7 +55,7 @@ componentDidMount() {
               {/* photography logo in plain text */}
               <div className="photography-logo-text">PHOTOGRAPHY</div>
                {/* architectural logo in plain text */}
-              <div className="architectural-logo-text">ARCHITECTURAL</div>
+              {/* <div className="architectural-logo-text">ARCHITECTURAL</div> */}
               
               {/* <div className="imageLocationTest">{this.state.imageLocation[0]}</div> */}
 

@@ -29,11 +29,11 @@ export class infoButton extends Component {
             position: "94vh auto",
 
             arrowTop: "",
-            arrowBottom: "-9px",
+            arrowBottom: "-72px",
 
             gradientHeight: "7vh",
             positionInfoBoxTop: "100vh",//top
-            positionInfoBoxBottom: "-170px",//Bottom
+            positionInfoBoxBottom: "-217px",//Bottom
             shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
             
             // Social media links and button states
@@ -52,7 +52,7 @@ handleArrowClick = (e) => {
             transformLeft: "rotate(35deg)",
             positionInfoBoxBottom: "-1px",
             arrowTop: "",
-            arrowBottom: "96px",
+            arrowBottom: "152px",
             gradientHeight: "14vh",
             trasitionInfoContainer: ".5s",
             shadow: "7px -3px 47px 24px rgba(230,230,230,0.67)",
@@ -63,9 +63,9 @@ handleArrowClick = (e) => {
                 isClicked: false,
                 transformRight: "rotate(35deg)",
                 transformLeft: "rotate(-35deg)",
-                positionInfoBoxBottom: "-170px",
+                positionInfoBoxBottom: "-217px",
                 arrowTop: "",
-                arrowBottom: "-9px",
+                arrowBottom: "-72px",
                 gradientHeight: "7vh",
                 trasitionInfoContainer: ".5s",
                 shadow: "0px 0px 49px 38px rgba(0,0,0,0)",
@@ -99,7 +99,6 @@ handleArrowClick = (e) => {
                                     transformOrigin: this.state.transformOrigin,
                                     transform: this.state.transformLeft,
                                     transition: this.state.transition,
-                                    boxShadow: this.state.shadow,
                                 }}></span>
                             <span className="right-bar"
                                 style={{

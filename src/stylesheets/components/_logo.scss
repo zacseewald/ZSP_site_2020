@@ -59,13 +59,15 @@ div.body-box {
         img.bgImage {
             width: 100vw;
             height: 100vh;
+            top: 0;
+            bottom: 0;
             object-fit: cover;
             position: absolute;
         }
 
         div.logoBox {
             position: absolute;
-            background: transparent;
+            background: rgba(255,255,255, .3);
             left: 35vw;
             top: 16vw;
             padding: 10px;
@@ -108,12 +110,13 @@ div.body-box {
             // zac seewald logo in plain text 
             div.ZS-Logo-text {
                 font-size: 4vw;
-                color: color(primary-white);
+                color: color(primary-blue);
                 text-align: center;
                 letter-spacing: .25vw;
                 font-family: Righteous;
                 letter-spacing: none;
                 -webkit-font-smoothing: antialiased;
+                animation: easeTextColorIn 3.5s;
                 @include breakpoint-phone  {
                     color: color(primary-blue);
                     font-size: 9vw;
@@ -124,42 +127,51 @@ div.body-box {
             // styles for photography logo text
             div.photography-logo-text {
                 font-size: 4vw;
-                color: color(primary-white);
+                color: color(primary-blue);
                 font-family: Righteous;
                 text-align: center;
                 margin-top: -1.3vw;
                 -webkit-font-smoothing: antialiased;
-                animation: fadeIn 6s; 
+                animation: easeTextColorIn 3.5s;
                 @include breakpoint-phone  {
                     color: color(primary-blue);
                     font-size: 8vw;
                     letter-spacing: .2vw;
                 }
             }
-            div.architectural-logo-text {
-                font-size: 4vw;
-                color: color(primary-green);
-                opacity: 0;
-                letter-spacing: -.2vw;
-                font-family: Righteous;
-                text-align: center;
-                margin-top: -5vw;
-                -webkit-font-smoothing: antialiased;
-                animation: fadeOut 5s; 
-                @include breakpoint-phone  {
-                    color: color(primary-blue);
-                    font-size: 8vw;
-                    letter-spacing: -.1vw;
-                    margin-top: -10vw;
-                }
+            // div.architectural-logo-text {
+            //     font-size: 4vw;
+            //     color: color(primary-white);
+            //     opacity: 0;
+            //     letter-spacing: -.2vw;
+            //     font-family: Righteous;
+            //     text-align: center;
+            //     margin-top: -5vw;
+            //     -webkit-font-smoothing: antialiased;
+            //     animation: fadeOut 5s; 
+            //     @include breakpoint-phone  {
+            //         color: color(primary-white);
+            //         font-size: 8vw;
+            //         letter-spacing: -.1vw;
+            //         margin-top: -10vw;
+            //     }
             }
             
             // Photography logo fade sequence
             @keyframes fadeIn { 
                 /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
-              0%{opacity:0} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-              50%{opacity: 0;}/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
-              100%{opacity: 1}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+              0%{
+                  opacity: 0;
+                  color: whitesmoke;
+                } /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+              50%{
+                  opacity: 0;
+                  color: whitesmoke;
+                }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+              100%{
+                  opacity: 1;
+                  color: color(primary-blue);
+                }/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
             }
      // word 2 logo blinking
              @keyframes fadeOut { 
@@ -180,14 +192,27 @@ div.body-box {
                     color: color(primary-white); 
                     background: color(translucent-black);
                     border-color: color(primary-white);
-                }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
-                
-                  100%{  
-                    color: color(primary-blue);
-                    background: color(primary-red);
-                    border-color: color(primary-blue);
-                }/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+                    }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                    
+                    100%{  
+                        color: color(primary-blue);
+                        background: color(primary-red);
+                        border-color: color(primary-blue);
+                    }
                 }
-        }
+
+                @keyframes easeTextColorIn { 
+                    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+                 
+                  0%{  
+                    color: color(primary-white); 
+                
+                    }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                    
+                    100%{  
+                        color: color(primary-blue);
+                    }
+                }
+        
 
 }
