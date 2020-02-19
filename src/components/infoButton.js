@@ -11,6 +11,7 @@ export class infoButton extends Component {
   state = {
             opacity: 0,
             isClicked: false,
+            infoBTNbackground: "rgba(0,0,0,.25)",
             // Lets the page know which image is being loaded into the background.
             imgIndexValue: this.props.index, 
             // Image details that get loading into the approproate locations in the page below.
@@ -44,7 +45,7 @@ export class infoButton extends Component {
         }
   
 handleArrowClick = (e) => {
-    
+  
     if (!this.state.isClicked){
         this.setState({
             isClicked: true,
@@ -72,7 +73,17 @@ handleArrowClick = (e) => {
                 archName: ImgInfo[this.props.gallery][this.props.index]["architect_name"],
         })}
 }
-
+componentDidMount() {
+    if (this.props.gallery === "landing") {
+        this.setState({
+            infoBTNbackground: "rgba(0,0,0,.25)",
+        });
+    } else {
+        this.setState({
+            infoBTNbackground: "transparent",
+        })
+    }
+}
     render() {
         return (
 
@@ -88,7 +99,7 @@ handleArrowClick = (e) => {
                     <a className="arrow-icon" 
                         onClick={this.handleArrowClick} 
                         style={{
-                            // margin: this.state.position,
+                            background: this.state.infoBTNbackground,
                             transition: this.state.trasitionInfoContainer,
                             bottom: this.state.arrowBottom,
                         }}>

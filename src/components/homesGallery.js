@@ -127,30 +127,33 @@ componentDidMount() {
               <p className="img-counter-text">{this.state.galleryCount + " / " + this.state.galleryLength}</p>
           </div>
 
+             <img className="visible-img" 
+              src={this.state.image}
+              alt="placeholder"
+              />
+        
 
+              <div className="arrow-container">
+                    <a className="btn-left" onClick={this.handleClickLeft} >
+                      <div className="btn-arrow-container-left">
+                          <p className="btn-arrow-left">
+                            {"<"}
+                            <p className="btn-arrow-left-prev">PREV</p></p>
+                        </div>
+                      
+                    </a>
+                    
+                  {/* <span className="arrow-divider"></span> */}
 
-          <a className="btn-left" onClick={this.handleClickLeft} >
-            <div className="btn-arrow-container-left">
-                <h1 className="btn-arrow-left">
-                  {"<"}
-                  <p className="btn-arrow-left-prev">PREV</p></h1>
-              </div>
-            
-          </a>
-          
-          <img className="visible-img" 
-          src={this.state.image}
-          alt="placeholder"
-          />
-
-          <a className="btn-right" onClick={this.handleClickRight} >
-            <div className="btn-arrow-container-right">
-                  <h1 className="btn-arrow-right">
-                    <p className="btn-arrow-right-more">MORE</p>
-                    {">"}
-                  </h1>
+                    <a className="btn-right" onClick={this.handleClickRight} >
+                      <div className="btn-arrow-container-right">
+                            <p className="btn-arrow-right">
+                              <p className="btn-arrow-right-more">MORE</p>
+                              {">"}
+                            </p>
+                          </div>
+                      </a>
                 </div>
-            </a>
 
       </div>
     )

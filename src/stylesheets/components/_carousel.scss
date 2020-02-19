@@ -3,14 +3,12 @@
 
 // Media queries
 @mixin breakpoint-phone {
-    @media (max-width: 600px) { @content };
-}
-@mixin breakpoint-tablet-port {
-    @media (max-width: 900px) { @content };
-}
-@mixin breakpoint-tablet-land {
-    @media (max-width: 1200px) { @content };
-}
+    @media (max-width: 415px) { @content };
+      
+  }
+  @mixin breakpoint-phone-horizontal {
+      @media (min-width: 416px) and (max-width: 812px) { @content };
+  }
 
 // Function that maps throught the global color object to make the color designation simpler below.
 @function color($color-name) {
@@ -31,16 +29,20 @@ $confortaa: 'Comfortaa', cursive;
 
 $easing: cubic-bezier(.25,1.7,.25,.8);
 $duration: 0.5s;
+$duration-btn: 0.1s;
+
+//page specific colors for testing
+
 
 body {
     div.carousel-box {
-        position: relative;
+        position: absolute;
         width:  100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: color(primary-white);
+        background: whitesmoke;
 
 
         div.my-name-container {
@@ -82,52 +84,16 @@ body {
                 right: 5px;
                 p.img-counter-text {
                     font-size: 18px;
-                    color: color(primary-red);
+                    color: color(accent-blue);
                 }
             }
-        }
-
-        a.btn-left {
-            position: absolute;
-            z-index: 800;
-            background: transparent;
-            height: 200px;
-            width: 45vw;
-            left: 0;
-            @include breakpoint-phone {
-                bottom: 20px;
-                left: -5px;
-            }
-
-// left arrow
-            div.btn-arrow-container-left {
-                position: absolute;
-                left: 30px;
-                top: 30%;
-                background: transparent;
-                width: 2.45em;
-                height: 2.45em;
-                text-align: left;
-                cursor: pointer;
-            
-                h1.btn-arrow-left {
-                    position: absolute;
-                    display: inline;
-                    color: color(primary-gray);
-                    font-family: $confortaa;
-                    left: 0;
-                    &:hover {
-                         color: color(primary-blue)
-                    }
-                    p.btn-arrow-left-prev {
-                        position: absolute;
-                        display: inline;
-                        font-family: $dosis;
-                        font-size: 13px;
-                        left: 20px;
-                        bottom: -3px
-                        
-                    }
+            @include breakpoint-phone-horizontal {
+                top: 28px;
+                width: 100px;
+                right: 43px;
+                p.img-counter-text {
+                    font-size: 18px;
+                    color: color(primary-red);
                 }
             }
         }
@@ -151,15 +117,89 @@ body {
                 box-shadow: 0px 10px 26px -4px rgba(0,0,0,0);
                 
             }
+            @include breakpoint-phone-horizontal {
+                top: 0px;
+                height: 100vh;
+            }
+        }
+
+        div.arrow-container {
+            position: absolute;
+            width: 135px;
+            left: 60vw;
+            bottom: 60px;
+            @include breakpoint-phone-horizontal {
+                position: absolute;
+                width: 139px;
+                left: 70vw;
+                bottom: 54px;
+            }
+            a.btn-left {
+                position: absolute;
+                z-index: 800;
+                background: transparent;
+                width: 50px;
+                height: 50px;
+                left: 0;
+                @include breakpoint-phone {
+                    bottom: 20px;
+                    left: -5px;
+                }
+
+// left arrow
+            div.btn-arrow-container-left {
+                position: absolute;
+                background: transparent;
+                width: 50px;
+                height: 20px;
+                text-align: left;
+                top: 14px;
+                padding: 2px 0px 0px 2px;
+                transition: $duration-btn;
+                cursor: pointer;
+                
+                p.btn-arrow-left {
+                    position: absolute;
+                    display: inline;
+                    color: color(accent-white);
+                    font-family: $confortaa;
+                    left: 0;
+                    margin: 0px;
+                    background: color(primary-blue-dark);
+                    padding: 3px 50px 2px 8px;
+                    border-radius: 8px 0px 0px 8px;
+                    transition: $duration-btn;
+                    &:hover {
+                         color: color(bg);
+                        
+                    }
+                    &:active {
+                        background: color(primary-gray);
+                        color: color(accent-white);
+                    }
+                  
+                    p.btn-arrow-left-prev {
+                        margin: 0px;
+                        position: absolute;
+                        display: inline;
+                        font-family: $dosis;
+                        font-size: 13px;
+                        left: 20px;
+                        padding: 3px 8px 4px 8px;
+                        top: 0px;
+                        bottom: 0px;
+                        
+                    }
+                }
+            }
         }
 
          a.btn-right {
             position: absolute;
             z-index: 800;
             background: transparent;
-            height: 200px;
-            width: 45vw;
-            background: transparent;
+            height: 50px;
+            width: 50px;
             right: 0;
             @include breakpoint-phone {
                 bottom: 20px;
@@ -168,11 +208,14 @@ body {
 
             div.btn-arrow-container-right {
                 position: absolute;
-                right: 30px;
-                top: 30%;
                 background: transparent;
-                width: 2.45em;
-                height: 2.45em;
+                width: 50px;
+                height: 20px;
+                text-align: right;
+                top: 14px;
+                left: -5px;
+                border-radius: 0px 8px 8px 0px;
+                padding: 2px 2px 0px 2px;
                 cursor: pointer;
                 &:hover {
                     color: color(primary-blue)
@@ -181,28 +224,54 @@ body {
                 right: 0px;
             }
 
-                    h1.btn-arrow-right {
+                    p.btn-arrow-right {
                         position: absolute;
                         display: inline;
-                        color: color(primary-gray);
+                        right: 0;
+                        margin: 0px;
+                        color: color(primary-white);
                         font-family: $confortaa;
                         left: 100;
+                        background: color(primary-blue-dark);
+                        padding: 3px 8px 2px 50px;
+                        border-radius: 0px 8px 8px 0px;
+                        transition: $duration-btn;
                         &:hover {
-                            color: color(primary-blue)
-                       }
+                             color: color(bg);
+                            
+                        }
+                        &:active {
+                            background: color(primary-gray);
+                            color: color(accent-white);
+                        }
                     
                     p.btn-arrow-right-more {
+                        padding: 3px 8px 4px 8px;
+                        top: 0px;
+                        bottom: 0px;
                         position: absolute;
                         display: inline;
                         font-family: $dosis;
                         font-size: 13px;
                         right: 20px;
-                        bottom: -3px;
-                        
+                        margin: 0px;
                        }
                     }
                 }
             }
-        
+        }
     }
+};
+
+@keyframes fadeAnimation { 
+  0%{
+      background: color(primary-blue-dark);
+    }
+  50%{
+      background: color(primary-gray);
+    }
+  100%{
+    background: color(primary-blue-dark);
+  }
+  
 }

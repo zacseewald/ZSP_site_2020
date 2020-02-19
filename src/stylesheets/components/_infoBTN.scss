@@ -3,14 +3,14 @@
 
 // Media queries
 @mixin breakpoint-phone {
-    @media (max-width: 600px) { @content };
-}
-@mixin breakpoint-tablet-port {
-    @media (max-width: 900px) { @content };
-}
-@mixin breakpoint-tablet-land {
-    @media (max-width: 1200px) { @content };
-}
+    @media (max-width: 415px) { @content };
+      
+  }
+  @mixin breakpoint-phone-horizontal {
+      @media (min-width: 416px) and (max-width: 1366px) { @content };
+  }
+
+
 // Function that maps throught the global color object to make the color designation simpler below.
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -178,7 +178,7 @@ div.arrow-up {
           @include breakpoint-phone  {
                 width: 89vw;
                 margin: 2vw 2vw 21vw 2vw;
-                height: 27vw;
+                height: 13vh;
                 }
 
                 h2.image-title-main {
@@ -250,8 +250,8 @@ div.arrow-up {
         right: 256px;
         top: 46px;
         @include breakpoint-phone  {
-            right: 77%;
-            top: 37vw;
+            right: 74%;
+            top: 18vh;
             }
       
 

@@ -11,9 +11,12 @@ $colors: (
     primary-white: #fff,
     primary-blue: #91f1f9,
     accent-blue: #00eaff,
+    accent-skyblue: rgb(163, 212, 221), 
     accent-orange: #f4a647,
     accent-green: #788a6c,
     accent-gray: #646C79,
+    accent-white: #f5f5f5,
+    accent-red:#ff1519,
 
     // colors lighten
     primary-green-light: lighten(#b8d4bf, 10%),
@@ -49,5 +52,20 @@ $colors: (
     transluce-dark-blue: rgba(31, 48, 68, 0.9),
     btnBackground: rgba(0,0,0,.3),
     btnBackgroundBlue: rgba(145, 241, 249, .4),
+    translucent-blue: rgba(189,243,253,.25),
+
+
+// test colors:
+blue: blue,
+yellow: yellow,
+orange: orange,
+pink: pink,
+red: red,
+purple: purple,
+magenta: magenta,
+green: green,
+skyblue: skyblue,
+
+
 );
 
