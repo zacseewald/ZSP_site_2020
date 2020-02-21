@@ -3,21 +3,15 @@ import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
 import InfoBtn from './infoButton';
 
-// -> images
-import OneImg from './utilities/images/homes/homesOne.jpg';
-import TwoImg from './utilities/images/homes/homesTwo.jpg';
-import ThreeImg from './utilities/images/homes/homesThree.jpg';
-import FourImg from './utilities/images/homes/homesFour.jpg';
-import FiveImg from './utilities/images/homes/homesFive.jpg';
-// import SixImg from './utilities/images/homes/homesSix.jpg';
+export class Carousel extends Component {
 
-
-
-export class Homes extends Component {
 state = { 
   imageGalleryName: this.props.location.pathname.split("/").pop(),// => captures the gallery name from the url
-  imageGallery: [OneImg, TwoImg, ThreeImg, FourImg, FiveImg],
-  image: OneImg,
+
+  //dynamic image path states
+
+  imageGallery: [],
+  image: '',
   clickCounter: 0,
   duration: ".3s",
 // counter state
@@ -35,15 +29,14 @@ e.preventDefault();
 const counter = this.state.clickCounter + 1;
 const imgCount = this.state.imageGallery.length;
 
-
   if (this.state.clickCounter > 0) {
   this.setState({
     clickCounter: this.state.clickCounter - 1,
     image: this.state.imageGallery[this.state.clickCounter - 1],
-    galleryLength: counter,
-    galleryCount: imgCount,
+    galleryLength: imgCount,
+    galleryCount: counter,
 
-    //BTN Props
+    //infoBTN Props
     imageSite: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter - 1]["architect_site"],
     imageArchName: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter - 1]["architect_name"],
     imageLocal: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter - 1]["location_city_state"],
@@ -52,8 +45,8 @@ const imgCount = this.state.imageGallery.length;
       this.setState({
         clickCounter: this.state.imageGallery.length - 1, // => increasing counter
         image: this.state.imageGallery[this.state.imageGallery.length - 1],
-        galleryLength: counter,
-        galleryCount: imgCount,
+        galleryLength: imgCount,
+        galleryCount: counter,
 
             //BTN Props
         imageSite: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.imageGallery.length - 1]["architect_site"],
@@ -98,15 +91,25 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
 }
 
 componentDidMount() {
-  const imgCount = this.state.imageGallery.length;
+  // const imgCount = this.state.imageGallery.length;
+  const imgCount = ImgInfo[this.state.imageGalleryName].length;
+  const galleryName = this.state.imageGalleryName;
+  const imgFileName = ImgInfo[this.state.imageGalleryName][this.state.clickCounter]["image_fileName"];
+  const imgPath = process.env.PUBLIC_URL  + '/images/' + galleryName + '/';
+  const arrFileName = [];
+
+ 
+  ImgInfo[galleryName].forEach(element => arrFileName.push(imgPath + element["image_fileName"]));
+
   this.setState({
     galleryLength: imgCount,
+    image: imgPath + imgFileName,
+    imageGallery: arrFileName,
   });
 }
 
 
   render() {
-
     return (
       
       <div className="carousel-box">
@@ -121,7 +124,7 @@ componentDidMount() {
 
           <div className="my-name-container">
           <h1 className="my-name-text">ZSP</h1>
-            <p className="my-name-gallery-title">HOMES</p>
+    <p className="my-name-gallery-title">{this.state.imageGalleryName.toUpperCase()}</p>
           </div>
 
           <div className="img-counter-container">
@@ -137,9 +140,9 @@ componentDidMount() {
               <div className="arrow-container">
                     <a className="btn-left" onClick={this.handleClickLeft} >
                       <div className="btn-arrow-container-left">
-                          <p className="btn-arrow-left">
+                          <h1 className="btn-arrow-left">
                             {"<"}
-                            <p className="btn-arrow-left-prev">PREV</p></p>
+                            <p className="btn-arrow-left-prev">PREV</p></h1>
                         </div>
                       
                     </a>
@@ -148,10 +151,10 @@ componentDidMount() {
 
                     <a className="btn-right" onClick={this.handleClickRight} >
                       <div className="btn-arrow-container-right">
-                            <p className="btn-arrow-right">
+                            <h1 className="btn-arrow-right">
                               <p className="btn-arrow-right-more">MORE</p>
                               {">"}
-                            </p>
+                            </h1>
                           </div>
                       </a>
                 </div>
@@ -161,4 +164,4 @@ componentDidMount() {
   }
 }
 
-export default Homes
+export default Carousel

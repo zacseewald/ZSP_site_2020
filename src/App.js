@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from './components/landing';
-import Homes from './components/homesGallery';
-import Buildings from './components/buildingsGallery';
+import Carousel from './components/carousel';
 import Nav from './components/nav.js';
-// import Footer from './components/footer';
-
+// import Test from './components/test.js';
 
 class App extends Component {
 
@@ -15,11 +13,11 @@ class App extends Component {
         
         <Router>
           <Nav />
-          {/* <Footer /> */}
                 <Switch>
                   <Route exact path="/" component={Landing} />
-                  <Route exact path="/homes" component={Homes} />
-                  <Route exact path="/buildings" component={Buildings} />
+                  <Route exact path="/homes" component={Carousel} />
+                  <Route exact path="/buildings" component={Carousel} />
+                  {/* <Route exact path="/test" component={Test} gallery="landing" /> */}
                 </Switch>
             </Router>
       </div>

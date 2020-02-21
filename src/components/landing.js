@@ -17,9 +17,9 @@ state = {
 
 componentDidMount() {
   const path = ImgInfo.landing[this.state.imageIndexNumber]["image_fileName"]; // finishes the url path for the image
-
+  const folderLocation = process.env.PUBLIC_URL  + '/images/landing/' ;
     this.setState( { 
-      imagePath: require("./utilities/images/landing/" + path),
+      imagePath: folderLocation + path,
       imageArchName: ImgInfo.landing[this.state.imageIndexNumber]["architect_name"],
       imageArchName: ImgInfo.landing[this.state.imageIndexNumber]["architect_name"],
       imageLocal: ImgInfo.landing[this.state.imageIndexNumber]["location_city_state"],

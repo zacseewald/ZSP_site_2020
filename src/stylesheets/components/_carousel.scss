@@ -202,11 +202,12 @@ body {
                 transition: $duration-btn;
                 cursor: pointer;
                 
-                p.btn-arrow-left {
+                h1.btn-arrow-left {
                     position: absolute;
                     display: inline;
                     color: color(accent-white);
                     font-family: $confortaa;
+                    font-size: 16px;
                     left: 0;
                     margin: 0px;
                     background: color(primary-blue-dark);
@@ -268,13 +269,14 @@ body {
                 right: 0px;
             }
 
-                    p.btn-arrow-right {
+                    h1.btn-arrow-right {
                         position: absolute;
                         display: inline;
                         right: 0;
                         margin: 0px;
                         color: color(primary-white);
                         font-family: $confortaa;
+                        font-size: 16px;
                         left: 100;
                         background: color(primary-blue-dark);
                         padding: 3px 8px 2px 50px;
