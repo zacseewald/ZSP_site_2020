@@ -90,5 +90,183 @@
             "location_city_state": "Houston, TX",
             "story": "Marble backsplash and countertop designed specifically for this kitchen."
         }
+    ],
+    "buildings": [
+        {
+            "id": 1,
+            "image_fileName": "buildings_00.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here."
+        },
+        {
+            "id": 2,
+            "image_fileName": "buildings_01.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something else needs to be written here."
+        },
+        {
+            "id": 3,
+            "image_fileName": "buildings_02.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 4,
+            "image_fileName": "buildings_03.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 5,
+            "image_fileName": "buildings_04.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 6,
+            "image_fileName": "buildings_05.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here."
+        },
+        {
+            "id": 7,
+            "image_fileName": "buildings_06.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something else needs to be written here."
+        },
+        {
+            "id": 8,
+            "image_fileName": "buildings_07.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 9,
+            "image_fileName": "buildings_08.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 10,
+            "image_fileName": "buildings_09.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 11,
+            "image_fileName": "buildings_10.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here."
+        },
+        {
+            "id": 12,
+            "image_fileName": "buildings_11.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something else needs to be written here."
+        },
+        {
+            "id": 13,
+            "image_fileName": "buildings_12.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 14,
+            "image_fileName": "buildings_13.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 15,
+            "image_fileName": "buildings_14.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 16,
+            "image_fileName": "buildings_15.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here."
+        },
+        {
+            "id": 17,
+            "image_fileName": "buildings_16.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something else needs to be written here."
+        },
+        {
+            "id": 18,
+            "image_fileName": "buildings_17.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 19,
+            "image_fileName": "buildings_18.jpg", 
+            "architect_name": "TBA",
+            "architect_site": "https://www.#.com/",    
+            "location_city_state": "TBA, TX",
+            "story": "Need something to write here. Some stuff thats cool"
+        },
+        {
+            "id": 20,
+            "image_fileName": "buildings_19.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 21,
+            "image_fileName": "buildings_20.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 22,
+            "image_fileName": "buildings_21.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        }
     ]
 }

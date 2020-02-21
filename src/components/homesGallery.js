@@ -120,7 +120,8 @@ componentDidMount() {
        />
 
           <div className="my-name-container">
-            <h1 className="my-name-text">ZAC SEEWALD</h1>
+          <h1 className="my-name-text">ZSP</h1>
+            <p className="my-name-gallery-title">HOMES</p>
           </div>
 
           <div className="img-counter-container">

@@ -22,6 +22,7 @@ $colors: (
     primary-green-light: lighten(#b8d4bf, 10%),
     primary-blue-light: lighten(#91f1f9, 10%),
     primary-red-light: lighten(rgb(195, 60, 62), 10%),
+    accent-gray-dark: rgb(39, 40, 43),
 
     // colors darkened
     primary-red-dark: darken(rgb(195, 60, 62), 30%),
@@ -53,19 +54,5 @@ $colors: (
     btnBackground: rgba(0,0,0,.3),
     btnBackgroundBlue: rgba(145, 241, 249, .4),
     translucent-blue: rgba(189,243,253,.25),
-
-
-// test colors:
-blue: blue,
-yellow: yellow,
-orange: orange,
-pink: pink,
-red: red,
-purple: purple,
-magenta: magenta,
-green: green,
-skyblue: skyblue,
-
-
 );
 

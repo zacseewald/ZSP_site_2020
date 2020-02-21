@@ -40,9 +40,8 @@ componentDidMount() {
           location={this.state.imageLocal}
           site={this.state.imageSite}
         />
-        <div className="image-coverGreenBox"></div>
-        {/* <div className="image-coverBlackBox"></div> */}
-          {/* This is the static background image. Needs to rotate through a select group of images in thenfinal version. */}
+        <div className="landing-fadeInBox"></div>
+          {/* This is the static background image. Rotates through a select group of images in landing image folder. */}
          <img className="bgImage" 
            src={this.state.imagePath}
          />
@@ -54,11 +53,6 @@ componentDidMount() {
               <div className="ZS-Logo-text">ZAC SEEWALD</div>
               {/* photography logo in plain text */}
               <div className="photography-logo-text">PHOTOGRAPHY</div>
-               {/* architectural logo in plain text */}
-              {/* <div className="architectural-logo-text">ARCHITECTURAL</div> */}
-              
-              {/* <div className="imageLocationTest">{this.state.imageLocation[0]}</div> */}
-
         </div>
       </div>
     )

@@ -1,3 +1,5 @@
+/* landing and logo page styling sheet. Uses sass*/
+
 // Imports the global colors
 @import './_colors.scss';
 
@@ -29,21 +31,19 @@ $confortaa: 'Comfortaa', cursive;
 div.body-box {
     display: block;
     position: absolute;
-    background: color(btnBackground);
-
-    div.image-coverGreenBox {
+    background: transparent;
+// the box below is used for loading. it fades in the background image so that there is no loading delay for the user
+    div.landing-fadeInBox {
         position: fixed;
         background: color(gradient-bg);
         height: 100vh;
         width: 100vw;
         z-index: 2;
-        animation: fadeOut 5s;
+        animation: fadeOut 5s; // uses @keyframes fadeOut method at the bottom
         opacity: 0;
         box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.7);
-    
     }
-
-// styles for the background image. should rotate through a special selected group in the final version
+// styles for the static background image. Rotates through this images in the landing folder.
         img.bgImage {
             width: 100vw;
             height: 100vh;
@@ -134,42 +134,25 @@ div.body-box {
             }
             }
             
-            // Photography logo fade sequence
-            @keyframes fadeIn { 
-                /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
-              0%{
-                  opacity: 0;
-                  color: whitesmoke;
-                } /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-              50%{
-                  opacity: 0;
-                  color: whitesmoke;
-                }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
-              100%{
-                  opacity: 1;
-                  color: color(primary-blue);
-                }/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
-            }
-     // word 2 logo blinking
+     // Used in landing-fadeInBox above
              @keyframes fadeOut { 
-                    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
-                0%{opacity: 1} /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
-                20%{opacity: 1;}
-                100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 1 = 100% visible - thus completeing the fade sequence*/
+                 // Adjusts the opacity of the element and percentage of load completion
+                0%{opacity: 1}  //at 0% of the load
+                20%{opacity: 1;} // targets the element at 20% completion
+                100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 0 = 100% visible - thus completeing the fade sequence*/
             }
-                // word logo blinking
-                @keyframes easeColorIn { 
-                    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
+                // Used in ZS-logoBox-text above to fade the logo colors
+             @keyframes easeColorIn { 
                   0%{
-                      color: color(primary-white); 
-                      background: color(translucent-black);
-                      border-color: color(primary-white);
-                    } /* at 0% completion of sequence the opcacity is set to 0 = 0% visible */
+                      color: color(primary-white); // text color
+                      background: color(translucent-black);// element background
+                      border-color: color(primary-white);// element border color
+                     } /* at 0% completion of sequence  */
                   50%{  
                     color: color(primary-white); 
                     background: color(translucent-black);
                     border-color: color(primary-white);
-                    }/* at 30% completion of sequence the opcacity is set to 0 = 0% visible  - the opacity starts the fade in at 30% sequence completion*/
+                    }/* at 30% completion of sequence*/
                     
                     100%{  
                         color: color(primary-blue);
@@ -177,29 +160,16 @@ div.body-box {
                         border-color: color(primary-blue);
                     }
                 }
-
+                // Used in ZS-logo-text and photography-logo-text elements to fade in the color
                 @keyframes easeTextColorIn { 
-                    /* the fadeIn delay is set by adjusting the middle percentage in conjuction with the full sequence duration length above. */
-                 
                   0%{  
-                        color: color(primary-white); 
-                        // -webkit-text-fill-color: color(primary-white);
-                        // -webkit-text-stroke-width: .4px;
-                        // -webkit-text-stroke-color: color(primary-white);/* Will override color (regardless of order) */
+                        color: color(primary-white); // text color
                         }
                     50%{
                         color: color(primary-white);
-                        // -webkit-text-fill-color: color(primary-white);
-                        // -webkit-text-stroke-width: .4px;
-                        // -webkit-text-stroke-color: color(primary-white);
                     }
                     100%{  
                         color: color(primary-blue);
-                        // -webkit-text-fill-color: color(primary-blue);
-                        // -webkit-text-stroke-width: .4px;
-                        // -webkit-text-stroke-color: color(accent-blue);
                     }
                 }
-        
-
 }

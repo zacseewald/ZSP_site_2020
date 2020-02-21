@@ -46,21 +46,63 @@ body {
 
 
         div.my-name-container {
-            display: none;
+            position: relative;
+            z-index: 800;
+            top: -49.5vh;
+            text-align: right;
+            width: 98vw;
+            font-family: $righteous;
+            color: color(primary-blue-dark);
+            h1.my-name-text {
+                position: absolute;
+                margin: 0px;
+                width: 100%;
+                top: 0px;
+                font-size: 25px;
+            }
+            p.my-name-gallery-title {
+                position: absolute;
+                margin: 0px;
+                top: 6px;
+                right: 52px;
+                font-size: 21px;
+                font-family: $confortaa;
+            }
+                    
             @include breakpoint-phone {
                     top: 17px;
                     position: absolute;
                     right: 6px;
                     width: 100vw;
                     display: block;
-                    z-index: 1000;
+                    z-index: 800;
+                    
                     h1.my-name-text {
                         position: absolute;
-                        font-family: $dosis;
+                        font-family: $righteous;
                         font-size: 26px;
                         margin: 0;
-                        color: color(primary-gray);
+                        color: color(primary-blue-dark);
                         right: 15px;
+                    }
+                    p.my-name-gallery-title {
+                        color: color(primary-blue-dark);
+                        right: 72px;
+                    }
+                }
+                @include breakpoint-phone-horizontal {
+                    top: 50px;
+                    position: absolute;
+                    right: 8px;
+                    width: 100vw;
+                    display: block;
+                    z-index: 800;
+                    h1.my-name-text {
+                        right: 0px;
+                        top: 25px;
+                    }
+                    p.my-name-gallery-title {
+                        right: 0px;
                     }
                 }
         }
@@ -68,32 +110,34 @@ body {
         div.img-counter-container {
             position: absolute;
             top: -.45vh;
-            z-index: 1000;
+            z-index: 800;
             width: 100vw;
             p.img-counter-text {
                 position: absolute;
-                color: color(primary-gray);
+                color: color(primary-blue-dark);
                 font-family: $dosis;
+                font-weight: bolder;
                 font-size: 12px;
                 text-align: left;
                 left: 49%;
             }
             @include breakpoint-phone {
+                position: absolute;
                 top: 35px;
-                width: 100px;
-                right: 5px;
+                width: 100vw;
+                right: -19vw;
                 p.img-counter-text {
                     font-size: 18px;
-                    color: color(accent-blue);
+                    color: color(accent-gray-dark);
                 }
             }
             @include breakpoint-phone-horizontal {
-                top: 28px;
-                width: 100px;
-                right: 43px;
+                top: 90px;
+                width: 100vw;
+                right: -35vw;
                 p.img-counter-text {
                     font-size: 18px;
-                    color: color(primary-red);
+                    color: color(accent-gray-dark);
                 }
             }
         }
@@ -101,7 +145,7 @@ body {
             position: absolute;
             height: 85vh;
             width: none;
-            top: 30px;
+            top: 33px;
             border: 1px solid color(primary-gray);
             -webkit-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.55);
             -moz-box-shadow: 0px 10px 26px -4px rgba(0,0,0,0.55);
@@ -142,7 +186,7 @@ body {
                 height: 50px;
                 left: 0;
                 @include breakpoint-phone {
-                    bottom: 20px;
+                    bottom: 120px;
                     left: -5px;
                 }
 
@@ -202,7 +246,7 @@ body {
             width: 50px;
             right: 0;
             @include breakpoint-phone {
-                bottom: 20px;
+                bottom: 120px;
             }
             
 
@@ -213,7 +257,7 @@ body {
                 height: 20px;
                 text-align: right;
                 top: 14px;
-                left: -5px;
+                left: -3px;
                 border-radius: 0px 8px 8px 0px;
                 padding: 2px 2px 0px 2px;
                 cursor: pointer;
