@@ -1,0 +1,247 @@
+// Imports the global colors
+@import './_colors.scss';
+
+// Media queries
+@mixin breakpoint-phone {
+    @media (max-width: 415px) { @content };
+      
+  }
+  @mixin breakpoint-phone-horizontal {
+      @media (min-width: 416px) and (max-width: 812px) { @content };
+  }
+
+// Function that maps throught the global color object to make the color designation simpler below.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+$amount: 1;
+
+// font family variables
+$rubik: 'Rubik', sans-serif;
+$rubik-mono: 'Rubik Mono One', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$overpass: 'Overpass', sans-serif;
+$dosis: 'Dosis', sans-serif;
+$righteous: 'Righteous', cursive;
+$beasNueve: 'Bebas Neue', cursive;
+$confortaa: 'Comfortaa', cursive;
+
+// $easing: cubic-bezier(.25,1.7,.25,.8);
+// $duration: 0.5s;
+// $duration-btn: 0.1s;
+
+div.profile-box {
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   background: transparent;
+    -webkit-font-smoothing: antialiased;
+
+    #link {
+        position: fixed;
+        -webkit-font-smoothing: antialiased;
+        text-decoration: none;
+        right: 0;
+        z-index: 1000;
+        padding: 0vh 20px 0px 0px;
+    }
+
+       h1.about-title {
+        position: fixed;
+        right: 0px;
+        top: 30px;
+        color: color(accent-white);
+        padding: 0vh 20px 0px 0px;
+        font-family: $confortaa;
+         -webkit-font-smoothing: antialiased;
+         z-index: 1000;
+       }
+       h1.client-title {
+        position: fixed;
+        right: 0px;
+        top: 70px;
+        color: color(accent-white);
+        padding: 0vh 20px 0px 0px;
+        font-family: $confortaa;
+         -webkit-font-smoothing: antialiased;
+         z-index: 1000;
+       }
+       h1.services-title {
+        position: fixed;
+        right: 0px;
+        top: 110px;
+        color: color(accent-white);
+        padding: 0vh 20px 0px 0px;
+        font-family: $confortaa;
+         -webkit-font-smoothing: antialiased;
+         z-index: 1000;
+       }
+       div.about-box {
+           position: fixed;
+           text-align: right;
+           right: 0px;
+           clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
+           background: color(primary-blue-dark);
+           height: 100vh;
+           width: 80%;
+          -webkit-font-smoothing: antialiased;
+
+      
+           p.about-text {
+            position: relative;
+            padding: 36vh 20px 0px 20%;
+            color: color(accent-white);
+            font-size: 18px;
+            font-family: $montserrat;
+             -webkit-font-smoothing: antialiased;
+           }
+       }
+  
+    div.clientList-box {
+           position: fixed;
+           text-align: right;
+           clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
+           background: color(primary-red);
+           height: 100vh;
+           width: 80%;
+            -webkit-font-smoothing: antialiased;
+
+          #link {
+            color: color(primary-red-dark);
+            -webkit-font-smoothing: antialiased;
+            text-decoration: none;
+        }
+        h1.clients-title {
+            position: relative;
+            color: color(accent-white);
+            padding: 0vh 20px 0px 0px;
+            font-family: $confortaa;
+             -webkit-font-smoothing: antialiased;
+        }
+        p.clients-article {
+            position: relative;
+            padding: 5vw 20px 0px 25%;
+            color: color(accent-white);
+            font-size: 16px;
+            font-family: $montserrat;
+             -webkit-font-smoothing: antialiased;
+        }
+        ul.clientList-left {
+            position: absolute;
+            display: inline-block;
+            padding: 5vh 20px 0px 20%;
+            color: color(accent-white);
+            font-size: 16px;
+            font-family: $montserrat;
+            right: 58vw;
+             -webkit-font-smoothing: antialiased;
+            li {
+                list-style-type: none;
+                 -webkit-font-smoothing: antialiased;
+            }
+        }
+        ul.clientList-center {
+            position: absolute;
+            display: inline-block;
+            padding: 5vh 20px 0px 20%;
+            color: color(accent-white);
+            font-size: 16px;
+            font-family: $montserrat;
+             right: 20vw;
+              -webkit-font-smoothing: antialiased;
+             li {
+                list-style-type: none;
+                 -webkit-font-smoothing: antialiased;
+            }
+        }
+        ul.clientList-right {
+            position: absolute;
+            display: inline-block;
+            padding: 5vh 20px 0px 20%;
+            color: color(accent-white);
+            font-size: 16px;
+            font-family: $montserrat;
+             right: 0;
+              -webkit-font-smoothing: antialiased;
+             li {
+                list-style-type: none;
+                 -webkit-font-smoothing: antialiased;
+            }
+        }
+    }
+    div.services-box {
+           position: fixed;
+           text-align: right;
+           clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
+           background: color(accent-gray);
+           height: 100vh;
+           width: 80%;
+            -webkit-font-smoothing: antialiased;
+        #link {
+            color: color(primary-gray);
+            -webkit-font-smoothing: antialiased;
+            text-decoration: none;
+        }
+
+           h1.services-title {
+            position: relative;
+            color: color(accent-blue);
+            padding: 0vh 20px 0px 0px;
+            font-family: $confortaa;
+             -webkit-font-smoothing: antialiased;
+           }
+           
+
+        p.services-article {
+            position: relative;
+            padding: 5vw 20px 0px 25%;
+            color: color(accent-blue);
+            font-size: 16px;
+            font-family: $montserrat;
+            -webkit-font-smoothing: antialiased;
+        }
+        ul.services-left {
+            position: absolute;
+            display: inline-block;
+            padding: 5vh 20px 0px 20%;
+            color: color(accent-blue);
+            font-size: 16px;
+            font-family: $montserrat;
+            right: 58vw;
+             -webkit-font-smoothing: antialiased;
+            li {
+                list-style-type: none;
+                 -webkit-font-smoothing: antialiased;
+            }
+        }
+        ul.services-center {
+            position: absolute;
+            display: inline-block;
+            padding: 5vh 20px 0px 20%;
+            color: color(accent-blue);
+            font-size: 16px;
+            font-family: $montserrat;
+             right: 20vw;
+              -webkit-font-smoothing: antialiased;
+             li {
+                list-style-type: none;
+                 -webkit-font-smoothing: antialiased;
+            }
+        }
+        ul.services-right {
+            position: absolute;
+            display: inline-block;
+            padding: 5vh 20px 0px 20%;
+            color: color(accent-blue);
+            font-size: 16px;
+            font-family: $montserrat;
+             right: 0;
+              -webkit-font-smoothing: antialiased;
+             li {
+                list-style-type: none;
+                 -webkit-font-smoothing: antialiased;
+            }
+        }
+    }
+}

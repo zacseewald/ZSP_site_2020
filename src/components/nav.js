@@ -42,8 +42,6 @@ export class Nav extends Component {
         this.setState({ 
           isClicked: true, //nav
           displayNav: "none", // nav
-          // backgroundColor: "transparent",
-          // bgColor: "pink",
           lineH: "1px",
           lineW: "20px",
           isClickedBTN: false,// nav btn
@@ -94,7 +92,7 @@ export class Nav extends Component {
             <h1 className="link-nav-BTN"><a href="buildings">Buildings</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Drone</a></h1>
             <h1 className="link-nav-BTN"><a href="#">Sky Rise</a></h1>
-            <h1 className="link-nav-BTN"><a href="#">About</a></h1>
+            <h1 className="link-nav-BTN"><a href="profile">Profile</a></h1>
             <h1 className="link-nav-BTN"><a href="#">test</a></h1>
             <h1 className="link-nav-BTN"><a href="/">Back</a></h1>
             <h1 className="link-nav-BTN"><a href={"mailto: zac@zacseewaldphotography.com"}>Contact</a></h1>
