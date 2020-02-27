@@ -13,7 +13,7 @@ state = {
       <div className="about-container">
           <div className="about-box"
             style={{
-              zIndex: this.state.zIndex,
+              // zIndex: this.state.zIndex,
               right: this.props.position,
               transition: this.props.duration,
               }}
@@ -24,7 +24,7 @@ state = {
           <span 
                   className="about-span"
                   style={{
-                    background: this.props.spanColor,
+                    // background: this.props.spanColor,
                     right: this.props.spanAboutPosition,
                     transition: this.props.duration,
                     }}></span>

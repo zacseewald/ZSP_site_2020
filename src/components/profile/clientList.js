@@ -4,16 +4,13 @@ import React, { Component } from 'react'
 
 export class clientList extends Component {
 
-  state = {
-      zIndex: 2,
-    }
+  
   render() {
     
     return (
       <div className="client-container">
           <div className="clientList-box"
             style={{
-              zIndex: this.state.zIndex,
               right: this.props.position,
               transition: this.props.duration,
             }}
@@ -59,7 +56,6 @@ export class clientList extends Component {
           <span 
                   className="client-span"
                   style={{
-                    background: this.props.spanColor,
                     right: this.props.spanClientsPosition,
                     transition: this.props.duration,
                     }}></span>

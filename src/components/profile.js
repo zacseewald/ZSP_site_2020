@@ -11,10 +11,12 @@ export class Profile extends Component {
 
   state = {
     colorAbout: "#f5f5f5",
-    spanAboutPosition: "40px",
+    spanAboutPosition: "10px",
+    spanAboutColor: '#91f1f9',
     spanColor: '#91f1f9',
 
     colorClients: '#91f1f9',
+    spanClientsPosition: "10px",
 
     colorServices: '#91f1f9',
     duration: "all 750ms cubic-bezier(0.510, -0.260, 0.400, 1.275)",
@@ -30,20 +32,20 @@ export class Profile extends Component {
     this.setState({
       colorAbout: "#f5f5f5",
       spanAboutColor: '#91f1f9',
-      spanAboutPosition: '40px',
+      spanAboutPosition: '10px',
 
 
       colorClients: '#91f1f9',
-      spanClientsPosition: "40px",
+      spanClientsPosition: "10px",
       
 
       colorServices: '#91f1f9',
-      spanServicesPosition: "40px",
+      spanServicesPosition: "10px",
 
       linkName: "about",
       positionAbout: 0,
       positionClients: 0,
-      spanColor: '#91f1f9',
+      spanServicesPosition: '10px',
       
     });
 }
@@ -60,6 +62,7 @@ handleProfileLinkClients = (e) => {
     positionClients: 0,
     spanColor: '#6b3536',
     spanAboutPosition: '-90vw',
+    spanClientsPosition: "10px",
   });
 }
 
@@ -73,9 +76,8 @@ handleProfileLinkServices = (e) => {
     linkName: "services",
     positionAbout: '-90vw',
     positionClients: '-90vw',
-    spanColor: '"#777',
     spanAboutPosition: '-90vw',
-    spanServicesPosition: '-90vw',
+    spanClientsPosition: "-90vw",
   });
 }
   render() {
@@ -116,7 +118,8 @@ handleProfileLinkServices = (e) => {
               position={this.state.positionAbout}
               duration={this.state.duration}
               spanAboutPosition={this.state.spanAboutPosition}
-              spanColor={this.state.spanAboutPosition} />
+              // spanColor={this.state.spanAboutPosition} 
+              />
               
        
 
@@ -126,13 +129,13 @@ handleProfileLinkServices = (e) => {
               position={this.state.positionClients}
               duration={this.state.duration}
               spanClientsPosition={this.state.spanClientsPosition}
-              spanColor={this.state.spanColor} />
+              />
               
           <Services 
               clickStatus={this.state.isClickedServices} 
               link={this.state.linkName}
               spanServicesPosition={this.state.spanServicesPosition}
-              spanColor={this.state.spanColor}  />
+               />
           <img className='profile-bg-image' src={ImageBG} alt="Image by Kelly Cusimano on-location" />
       </div>
     )

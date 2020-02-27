@@ -56,12 +56,7 @@ state = {
           </div>
 
           <span 
-              className="services-span"
-                style={{
-                  background: this.props.spanColor,
-                  right: this.props.spanServicesPosition,
-                  transition: this.props.duration,
-                  }}></span>
+              className="services-span"></span>
       </div>
     )
   }
