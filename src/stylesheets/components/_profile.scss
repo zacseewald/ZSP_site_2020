@@ -47,7 +47,7 @@ div.profile-box {
         padding: 0vh 20px 0px 0px;
     }
 
-       h1.about-title {
+     h1.about-title {
         position: fixed;
         right: 0px;
         top: 30px;
@@ -56,8 +56,8 @@ div.profile-box {
         font-family: $confortaa;
          -webkit-font-smoothing: antialiased;
          z-index: 1000;
-       }
-       h1.client-title {
+    }
+    h1.client-title {
         position: fixed;
         right: 0px;
         top: 70px;
@@ -66,8 +66,8 @@ div.profile-box {
         font-family: $confortaa;
          -webkit-font-smoothing: antialiased;
          z-index: 1000;
-       }
-       h1.services-title {
+    }
+    h1.services-title {
         position: fixed;
         right: 0px;
         top: 110px;
@@ -76,172 +76,256 @@ div.profile-box {
         font-family: $confortaa;
          -webkit-font-smoothing: antialiased;
          z-index: 1000;
-       }
-       div.about-box {
-           position: fixed;
-           text-align: right;
-           right: 0px;
-           clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
-           background: color(primary-blue-dark);
-           height: 100vh;
-           width: 80%;
-          -webkit-font-smoothing: antialiased;
+     }
+    div.about-container {
+        position: relative;
+        z-index: 3;
+            div.about-box {
+                position: fixed;
+                text-align: right;
+                right: 0px;
+                border-right: 5px solid color(primary-blue);
+                border-top: 5px solid color(primary-blue);
+                border-bottom: 5px solid color(primary-blue);
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+                background: color(primary-blue-dark);
+                height: 98.5vh;
+                width: 80%;
+                -webkit-font-smoothing: antialiased;
+                z-index: 1;
 
-      
-           p.about-text {
-            position: relative;
-            padding: 36vh 20px 0px 20%;
-            color: color(accent-white);
-            font-size: 18px;
-            font-family: $montserrat;
-             -webkit-font-smoothing: antialiased;
-           }
-       }
-  
-    div.clientList-box {
-           position: fixed;
-           text-align: right;
-           clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
-           background: color(primary-red);
-           height: 100vh;
-           width: 80%;
-            -webkit-font-smoothing: antialiased;
-
-          #link {
-            color: color(primary-red-dark);
-            -webkit-font-smoothing: antialiased;
-            text-decoration: none;
-        }
-        h1.clients-title {
-            position: relative;
-            color: color(accent-white);
-            padding: 0vh 20px 0px 0px;
-            font-family: $confortaa;
-             -webkit-font-smoothing: antialiased;
-        }
-        p.clients-article {
-            position: relative;
-            padding: 5vw 20px 0px 25%;
-            color: color(accent-white);
-            font-size: 16px;
-            font-family: $montserrat;
-             -webkit-font-smoothing: antialiased;
-        }
-        ul.clientList-left {
-            position: absolute;
-            display: inline-block;
-            padding: 5vh 20px 0px 20%;
-            color: color(accent-white);
-            font-size: 16px;
-            font-family: $montserrat;
-            right: 58vw;
-             -webkit-font-smoothing: antialiased;
-            li {
-                list-style-type: none;
-                 -webkit-font-smoothing: antialiased;
+            
+                p.about-text {
+                    position: relative;
+                    z-index: 2;
+                    padding: 36vh 20px 0px 20%;
+                    color: color(accent-white);
+                    font-size: 18px;
+                    font-family: $montserrat;
+                    -webkit-font-smoothing: antialiased;
+                }
             }
-        }
-        ul.clientList-center {
-            position: absolute;
-            display: inline-block;
-            padding: 5vh 20px 0px 20%;
-            color: color(accent-white);
-            font-size: 16px;
-            font-family: $montserrat;
-             right: 20vw;
-              -webkit-font-smoothing: antialiased;
-             li {
-                list-style-type: none;
-                 -webkit-font-smoothing: antialiased;
-            }
-        }
-        ul.clientList-right {
-            position: absolute;
-            display: inline-block;
-            padding: 5vh 20px 0px 20%;
-            color: color(accent-white);
-            font-size: 16px;
-            font-family: $montserrat;
-             right: 0;
-              -webkit-font-smoothing: antialiased;
-             li {
-                list-style-type: none;
-                 -webkit-font-smoothing: antialiased;
+            span.about-span {
+                position: fixed;
+                background: color(primary-blue);
+                z-index: 0;
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+                height: 100vh;
+                width: 80%;
+                -webkit-font-smoothing: antialiased;
             }
         }
     }
-    div.services-box {
-           position: fixed;
-           text-align: right;
-           clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
-           background: color(accent-gray);
-           height: 100vh;
-           width: 80%;
-            -webkit-font-smoothing: antialiased;
-        #link {
-            color: color(primary-gray);
-            -webkit-font-smoothing: antialiased;
-            text-decoration: none;
+  div.client-container { 
+        position: relative;
+        z-index: 2;
+            div.clientList-box {
+                    position: fixed;
+                    text-align: right;
+                    right: 0px;
+                    border-right: 5px solid #6b3536;
+                    border-top: 5px solid #6b3536;
+                    border-bottom: 5px solid #6b3536;
+                    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+                    background: color(primary-red);
+                    height: 98.5vh;
+                    width: 80%;
+                    -webkit-font-smoothing: antialiased;
+
+
+                #link {
+                    color: color(primary-red-dark);
+                    -webkit-font-smoothing: antialiased;
+                    text-decoration: none;
+                }
+                h1.clients-title {
+                    position: relative;
+                    color: color(accent-white);
+                    padding: 0vh 20px 0px 0px;
+                    font-family: $confortaa;
+                    -webkit-font-smoothing: antialiased;
+                }
+                p.clients-article {
+                    position: relative;
+                    padding: 5vw 20px 0px 25%;
+                    color: color(accent-white);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    -webkit-font-smoothing: antialiased;
+                }
+                ul.clientList-left {
+                    position: absolute;
+                    display: inline-block;
+                    padding: 5vh 20px 0px 20%;
+                    color: color(accent-white);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    right: 58vw;
+                    -webkit-font-smoothing: antialiased;
+                    li {
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+                ul.clientList-center {
+                    position: absolute;
+                    display: inline-block;
+                    padding: 5vh 20px 0px 20%;
+                    color: color(accent-white);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    right: 20vw;
+                    -webkit-font-smoothing: antialiased;
+                    li {
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+                ul.clientList-right {
+                    position: absolute;
+                    display: inline-block;
+                    padding: 5vh 20px 0px 20%;
+                    color: color(accent-white);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    right: 0;
+                    -webkit-font-smoothing: antialiased;
+                    li {
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+            }
+            span.client-span {
+                position: fixed;
+                background: color(primary-red);
+                z-index: 1;
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+                height: 100vh;
+                width: 80%;
+                -webkit-font-smoothing: antialiased;
+            }
         }
 
-           h1.services-title {
-            position: relative;
-            color: color(accent-blue);
-            padding: 0vh 20px 0px 0px;
-            font-family: $confortaa;
-             -webkit-font-smoothing: antialiased;
-           }
-           
+    div.services-container {
+        position: relative;
+        z-index: 2;
+            div.services-box {
+                position: fixed;
+                text-align: right;
+                border-right: 5px solid gray;
+                border-top: 5px solid gray;
+                border-bottom: 5px solid gray;
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+                background: #36373a;
+                height: 98.5vh;
+                width: 80%;
+                    -webkit-font-smoothing: antialiased;
+                #link {
+                    color: color(primary-gray);
+                    -webkit-font-smoothing: antialiased;
+                    text-decoration: none;
+                }
 
-        p.services-article {
-            position: relative;
-            padding: 5vw 20px 0px 25%;
-            color: color(accent-blue);
-            font-size: 16px;
-            font-family: $montserrat;
-            -webkit-font-smoothing: antialiased;
-        }
-        ul.services-left {
-            position: absolute;
-            display: inline-block;
-            padding: 5vh 20px 0px 20%;
-            color: color(accent-blue);
-            font-size: 16px;
-            font-family: $montserrat;
-            right: 58vw;
-             -webkit-font-smoothing: antialiased;
-            li {
-                list-style-type: none;
-                 -webkit-font-smoothing: antialiased;
+                h1.services-title {
+                    position: relative;
+                    color: color(accent-blue);
+                    padding: 0vh 20px 0px 0px;
+                    font-family: $confortaa;
+                    -webkit-font-smoothing: antialiased;
+                }
+                p.services-article {
+                    position: relative;
+                    padding: 5vw 20px 0px 25%;
+                    color: color(accent-blue);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    -webkit-font-smoothing: antialiased;
+                }
+                ul.services-left {
+                    position: absolute;
+                    display: inline-block;
+                    padding: 5vh 20px 0px 20%;
+                    color: color(accent-blue);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    right: 58vw;
+                    -webkit-font-smoothing: antialiased;
+                    li {
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+                ul.services-center {
+                    position: absolute;
+                    display: inline-block;
+                    padding: 5vh 20px 0px 20%;
+                    color: color(accent-blue);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    right: 20vw;
+                    -webkit-font-smoothing: antialiased;
+                    li {
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+                ul.services-right {
+                    position: absolute;
+                    display: inline-block;
+                    padding: 5vh 20px 0px 20%;
+                    color: color(accent-blue);
+                    font-size: 16px;
+                    font-family: $montserrat;
+                    right: 0;
+                    -webkit-font-smoothing: antialiased;
+                    li {
+                        list-style-type: none;
+                        -webkit-font-smoothing: antialiased;
+                    }
+                }
+            }
+            span.services-span {
+                position: fixed;
+                background: color(primary-gray);
+                z-index: 1;
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+                height: 100vh;
+                width: 80%;
+                -webkit-font-smoothing: antialiased;
             }
         }
-        ul.services-center {
-            position: absolute;
-            display: inline-block;
-            padding: 5vh 20px 0px 20%;
-            color: color(accent-blue);
-            font-size: 16px;
-            font-family: $montserrat;
-             right: 20vw;
-              -webkit-font-smoothing: antialiased;
-             li {
-                list-style-type: none;
-                 -webkit-font-smoothing: antialiased;
-            }
-        }
-        ul.services-right {
-            position: absolute;
-            display: inline-block;
-            padding: 5vh 20px 0px 20%;
-            color: color(accent-blue);
-            font-size: 16px;
-            font-family: $montserrat;
-             right: 0;
-              -webkit-font-smoothing: antialiased;
-             li {
-                list-style-type: none;
-                 -webkit-font-smoothing: antialiased;
-            }
-        }
+    img.profile-bg-image {
+        position: relative;
+        z-index: 0;
+        opacity: .5;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
-}
+    span.profile-span {
+        position: fixed;
+        background: color(primary-blue);
+        text-align: right;
+        right: 0px;
+        z-index: 0;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        height: 100vh;
+        width: 80%;
+        right: 10px;
+       -webkit-font-smoothing: antialiased;
+       animation: ease; 
+    }
+
+
+@keyframes easeTextColorIn { 
+    0%{  
+          transition: none; 
+          }
+      90%{
+        transition: none; 
+      }
+      100%{  
+        transition: .2s; 
+      }
+  }
