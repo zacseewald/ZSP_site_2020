@@ -171,7 +171,6 @@ componentDidMount() {
                     <div className="social-media-container"
                         style={{
                             bottom: this.state.socContainerPositionHeight,
-                            // transition: this.state.trasitionInfoContainer,
                         }}>
                         <a className="instagram-link" href={this.state.instagram}>
                             <img className="instagram-logo" src={InstagramImg} alt="View my Instagram page here" />
