@@ -36,7 +36,7 @@ $duration-btn: 0.1s;
 
 body {
     div.carousel-box {
-        position: absolute;
+        position: relative;
         width:  100vw;
         height: 100vh;
         display: flex;
@@ -76,19 +76,6 @@ body {
                     width: 100vw;
                     display: block;
                     z-index: 800;
-                    
-                    h1.my-name-text {
-                        position: absolute;
-                        font-family: $righteous;
-                        font-size: 26px;
-                        margin: 0;
-                        color: color(primary-blue-dark);
-                        right: 15px;
-                    }
-                    p.my-name-gallery-title {
-                        color: color(primary-blue-dark);
-                        right: 72px;
-                    }
                 }
                 @include breakpoint-phone-horizontal {
                     top: 50px;

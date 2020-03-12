@@ -6,11 +6,14 @@
     @return map-get($colors, $color-name)
 };
 div.nav-btn-parent {
+    position: fixed;
+    z-index: 1000;
    
         div.button-border {
             position: fixed;
-            margin-left: 1.5em;
+            margin-right: 1.5em;
             margin-top: 1.5em;
+            right: 0;
             background: color(translucent-black);
             border-radius: 50%;
             width: 2.6em;

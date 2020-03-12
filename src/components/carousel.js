@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
 import InfoBtn from './infoButton';
+import Carouseling from './carousel/carouselimg';
+import CarouselBox from './carousel/carouselBoxLeft';
 
 export class Carousel extends Component {
 
@@ -121,20 +123,24 @@ componentDidMount() {
         location={this.state.imageLocal}
         site={this.state.imageSite}
        />
-
-          <div className="my-name-container">
-          <h1 className="my-name-text">ZSP</h1>
-    <p className="my-name-gallery-title">{this.state.imageGalleryName.toUpperCase()}</p>
-          </div>
+       <CarouselBox
+          gallery={this.state.imageGalleryName}
+        />
+        <Carouseling 
+          src={this.state.image}
+          name={this.state.imageArchName}
+          location={this.state.imageLocal}
+        />
+          
 
           <div className="img-counter-container">
               <p className="img-counter-text">{this.state.galleryCount + " / " + this.state.galleryLength}</p>
           </div>
-
+{/* 
              <img className="visible-img" 
               src={this.state.image}
               alt="placeholder"
-              />
+              /> */}
         
 
               <div className="arrow-container">

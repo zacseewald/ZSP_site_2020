@@ -1,0 +1,92 @@
+// This scss file is associatied witht eh test.js component. All styles in this section should be relative to this component only.
+
+// Imports the global colors
+@import './_colors.scss';
+
+
+// Imports the global fonts
+@import url('https://fonts.googleapis.com/css?family=Dosis:800|Montserrat:400,900|Overpass:400,900|Rubik+Mono+One|Rubik:400,900');
+
+// font family variables
+// $rubik: 'Rubik', sans-serif;
+// $rubik-mono: 'Rubik Mono One', sans-serif;
+// $montserrat: 'Montserrat', sans-serif;
+// $overpass: 'Overpass', sans-serif;
+// $dosis: 'Dosis', sans-serif;
+$righteous: 'Righteous', cursive;
+$arial: Arial, Helvetica, sans-serif;
+// Function that maps throught the global color object to make the color designation simpler below.
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+// mixin desktop variable
+$desktop: 815px;
+$iphoneSix: 667px;
+// mixin function for desktop
+@mixin desktop {
+    @media screen and (min-width: #{$desktop}) {
+        @content;
+    }
+}
+@mixin iphoneSix {
+    @media screen and (min-width: #{$iphoneSix}) {
+        @content;
+    }
+}
+
+// Component styles start here. Note, the body element is only there as an example of how to nest using scss
+
+div.carouselBox-parent-box {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: rgb(240, 240, 240);
+    h1 {
+            position: absolute;
+            color: #303030;
+            top: 5px;
+            left: 30px;
+            font-family: $righteous;
+            border: 4px solid #303030;
+            padding: 0px 0px 0px 6px;
+            letter-spacing: 5px;
+        }
+   div.carousel-li {
+       position: relative;
+       top: 0px;
+
+       h3.carouselBox-text {
+           position: relative;
+           color: #303030;
+           top: 100px;
+           font-family: $arial;   
+           font-weight: 100;
+           font-size: 14px;
+           letter-spacing: 4px;
+           left: 30px;
+       }
+       h3#zacSeewald {
+           margin-top: 0px;
+           letter-spacing: 5px;
+       }
+       h3#photography {
+            margin-bottom: 30px;
+            color: #303030;
+           span.carouselBox-topSpan {
+                position: absolute;
+                height: 1px;
+                width: 70%;
+                left: 0px;
+                top: 30px;
+                background: #303030;
+            }
+       }
+       h3#galName {
+           font-style: italic;
+           color: #787878;
+       }
+   } 
+}

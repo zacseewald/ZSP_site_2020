@@ -102,7 +102,7 @@ handleProfileLinkServices = (e) => {
     spanClientsPosition: "-90vw",
     colorSocialMedBG: '#777',
     colorLogoZS: "#91f1f9",
-    colorLogoPhotog: "#999",
+    colorLogoPhotog: "#f5f5f5",
   });
 }
   render() {
