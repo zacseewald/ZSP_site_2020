@@ -1,7 +1,8 @@
 {
-  "name": "example-sass-react-app",
+  "name": "Zac Seewald | Photographer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zacseewald.github.io/ZSP_site_2020/",
   "dependencies": {
     "@babel/core": "7.2.2",
     "@svgr/webpack": "4.1.0",
@@ -57,7 +58,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
