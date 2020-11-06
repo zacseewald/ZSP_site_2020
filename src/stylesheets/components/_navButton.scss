@@ -5,26 +5,44 @@
 @function color($color-name) {
     @return map-get($colors, $color-name)
 };
+
+// mixin 
+@mixin breakpoint-desktop {
+    @media (max-width: 800px) { @content };
+      
+  }
+@mixin breakpoint-phone {
+    @media (max-width: 415px) { @content };
+      
+  }
+
+
 div.nav-btn-parent {
     position: fixed;
     z-index: 1000;
+    top: 0;
    
         div.button-border {
             position: fixed;
             margin-right: 1.5em;
             margin-top: 1.5em;
             right: 0;
-            background: color(translucent-black);
+            background: transparent;
             border-radius: 50%;
             width: 2.6em;
             height: 2.6em;
-            border: 1px solid color(primary-blue);
+            // border: 1px solid color(primary-blue);
             z-index: 1000;
             padding: .2em;
             animation: fadeIn 1s;
-            &:hover {
-                border-color: color(primary-red);
-                background: color(primary-red);
+            
+            @include breakpoint-phone {
+                left: 80vw;
+                width: 3.6em;
+                height: 3.6em;
+                border: 2px solid color(primary-blue);
+                background: transparent;
+                border: none;
             }
 
       
@@ -33,23 +51,32 @@ div.nav-btn-parent {
         div.button-line-top {
             position: relative;
             margin: auto;
-            margin-top: 33%;
-            background: color(primary-blue);
-            border-radius: 15%;     
+            margin-top: 30%;
+            background: color(accent-blue);
+            border-radius: 15%;    
+            @include breakpoint-phone {
+                background: #303030;
+            } 
         }
         div.button-line-center {
             position: relative;
             margin: auto;
-            margin-top: .34em;
+            margin-top: .44em;
             border-radius: 15%;
-            background: color(primary-blue);
+            // background: color(primary-blue);
+            @include breakpoint-phone {
+                // background: #303030;
+            } 
         }
         div.button-line-bottum {
             position: relative;
             margin: auto;
-            margin-top: .34em;
+            margin-top: .44em;
             border-radius: 15%;
-            background: color(primary-blue);
+            background: color(accent-blue);
+            @include breakpoint-phone {
+                background: #303030;
+            } 
         }
     }
 };

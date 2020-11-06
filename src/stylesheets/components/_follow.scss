@@ -20,80 +20,83 @@ $arial: Arial, Helvetica, sans-serif;
     @return map-get($colors, $color-name)
 };
 
-// mixin desktop variable
-$desktop: 815px;
-$iphoneSix: 667px;
-// mixin function for desktop
-@mixin desktop {
-    @media screen and (min-width: #{$desktop}) {
-        @content;
-    }
-}
-@mixin iphoneSix {
-    @media screen and (min-width: #{$iphoneSix}) {
-        @content;
-    }
-}
+// mixin 
+@mixin breakpoint-desktop {
+    @media (max-width: 800px) { @content };
+      
+  }
+@mixin breakpoint-phone {
+    @media (max-width: 415px) { @content };
+      
+  }
+
 
 // Component styles start here. Note, the body element is only there as an example of how to nest using scss
 
 div.follow-parent-box {
-    position: absolute;
-    top: 0px;
+    position: fixed;
     left: 0;
-    width: 220px;
-    height: 100%;
-    z-index: 900;
+    bottom: 0;
+    // width: 220px;
+    // height: 100%;
+    z-index: 1000;
+    background: yellow;
+    @include breakpoint-phone {
+        width: 10vw;
+    }
         div.follow-link-container {
             position: absolute;
-            top: 78vh;
+            bottom: 5vh;
             width: 100px;
             background: transparent;
             z-index: 1000;
-            a#instagram {
-                letter-spacing: 3px;
-            }
-            a#twitter {
-                letter-spacing: 5.5px;
-            }
-            a.follow-link {
-                position: relative;
-                margin:  5px 0px;
-                padding: 0px;
-                border: none;
-                color: #303030;
-                font-family: $arial;   
-                font-weight: 100;
-                font-size: 14px;
-                letter-spacing: 4px;
-                left: 40px;
-                text-decoration: none;
-                background: transparent;
-                display: block;
-                text-align: left;
-                &:hover {
-                    font-style: italic;
-                    color: #787878;
-            }
-        }
-        }
-       a.follow-BTN {
-           position: absolute;
-           margin:  0px;
-           padding: 0px;
-           border: none;
-           background: transparent;
-           font-size: 14px;
-           font-weight: bolder;
-           font-family: $arial;
-           letter-spacing:  4px;
-           left: 30px;
-           top: 95vh;
-           color: #303030;
-           z-index: 1000;
-           cursor: pointer;
-           &:hover {
-                    color: #787878;
+       
+                    a.follow-BTN {
+                        position: absolute;
+                        margin:  0px;
+                        padding: 0px;
+                        border: none;
+                        background: transparent;
+                        font-size: 14px;
+                        font-weight: bolder;
+                        font-family: $arial;
+                        letter-spacing:  4px;
+                        left: 30px;
+                        bottom: -3vh;
+                        color: #303030;
+                        z-index: 980;
+                        cursor: pointer;
+                        &:hover {
+                                color: #787878;
+                            }
+                        }
+                    a#instagram {
+                        letter-spacing: 3px;
+                    }
+                    a#twitter {
+                        letter-spacing: 5.5px;
+                    }
+                    a.follow-link {
+                        position: relative;
+                        margin:  15px 0px;
+                        padding: 0px;
+                        border: none;
+                        color: #303030;
+                        font-family: $arial;   
+                        font-weight: 100;
+                        font-size: 14px;
+                        letter-spacing: 4px;
+                        left: 40px;
+                        text-decoration: none;
+                        background: transparent;
+                        display: block;
+                        text-align: left;
+                        &:hover {
+                            font-style: italic;
+                            color: #787878;
+                    }
                 }
-           }
+            
+        }
+       
 }

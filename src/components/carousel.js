@@ -1,9 +1,10 @@
 // This is the carousel constructor to show images
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
-import InfoBtn from './infoButton';
-import Carouseling from './carousel/carouselimg';
+// import InfoBtn from './infoButton';
+import Carouselimg from './carousel/carouselimg';
 import CarouselBox from './carousel/carouselBoxLeft';
+import Nav from './nav.js';
 
 export class Carousel extends Component {
 
@@ -23,7 +24,19 @@ state = {
   imageSite: ImgInfo[this.props.location.pathname.split("/").pop()][0]["architect_site"],
   imageArchName: ImgInfo[this.props.location.pathname.split("/").pop()][0]["architect_name"],
   imageLocal: ImgInfo[this.props.location.pathname.split("/").pop()][0]["location_city_state"],
+
+  // Arrow button animation states:
+  btnBackground: "yellow",
+
 };
+
+handleRightArrowAnimation = (e) => {
+  e.preventDefault();
+  this.setState({
+    btnBackground: "black",
+  })
+}
+
 
 handleClickLeft = (e) => {
 e.preventDefault();
@@ -115,27 +128,23 @@ componentDidMount() {
     return (
       
       <div className="carousel-box">
-       <InfoBtn 
-        // send the props for the infoBTN here
-        index={this.state.clickCounter}
-        gallery={this.state.imageGalleryName}
-        name={this.state.imageArchName}
-        location={this.state.imageLocal}
-        site={this.state.imageSite}
-       />
+       <Nav
+          gallery={this.state.imageGalleryName}
+        />
+
        <CarouselBox
           gallery={this.state.imageGalleryName}
         />
-        <Carouseling 
+        <Carouselimg 
           src={this.state.image}
           name={this.state.imageArchName}
           location={this.state.imageLocal}
         />
           
 
-          <div className="img-counter-container">
+          {/* <div className="img-counter-container">
               <p className="img-counter-text">{this.state.galleryCount + " / " + this.state.galleryLength}</p>
-          </div>
+          </div> */}
 {/* 
              <img className="visible-img" 
               src={this.state.image}
@@ -144,11 +153,13 @@ componentDidMount() {
         
 
               <div className="arrow-container">
+
                     <a className="btn-left" onClick={this.handleClickLeft} >
+
                       <div className="btn-arrow-container-left">
-                          <h1 className="btn-arrow-left">
-                            {"<"}
-                            <p className="btn-arrow-left-prev">PREV</p></h1>
+                          <span className="btn-arrow-top"
+                                onClick={this.handleRightArrowAnimation}></span>
+                            <span className="btn-arrow-bottom"></span>
                         </div>
                       
                     </a>
@@ -156,11 +167,17 @@ componentDidMount() {
                   {/* <span className="arrow-divider"></span> */}
 
                     <a className="btn-right" onClick={this.handleClickRight} >
-                      <div className="btn-arrow-container-right">
-                            <h1 className="btn-arrow-right">
+            
+                      <div className="btn-arrow-container-right"
+                          background={this.state.btnBackground}>
+                            <span className="btn-arrow-top"
+                                onClick={this.handleRightArrowAnimation}></span>
+                            <span className="btn-arrow-bottom"></span>
+
+                            {/* <h1 className="btn-arrow-right">
                               <p className="btn-arrow-right-more">MORE</p>
                               {">"}
-                            </h1>
+                            </h1> */}
                           </div>
                       </a>
                 </div>

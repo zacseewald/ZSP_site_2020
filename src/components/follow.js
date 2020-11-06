@@ -31,28 +31,36 @@ followHandler = (e) => {
     return (
       <div className="follow-parent-box">
         <div className="follow-link-container">
+          <a 
+              className="follow-BTN" 
+              onClick={this.followHandler}
+              style={{color: this.props.color}}
+              >FOLLOW</a>
             <a className="follow-link" id="instagram" href="#" 
               style={{
                 left: this.state.left,
                 transition: this.state.transitionInst,
+                color: this.props.color,
               }}>instagram</a>
             <a className="follow-link" id="linkeIn" href="#"
               style={{
                 left: this.state.left,
                 transition: this.state.transitionLinked,
+                color: this.props.color,
               }}>linkedin</a>
             <a className="follow-link" id="twitter" href="#"
               style={{
                 left: this.state.left,
                 transition: this.state.transitionTwitter,
+                color: this.props.color,
               }}>twitter</a>
             <a className="follow-link" id="contact" href="#"
                 style={{
                   left: this.state.left,
                   transition: this.state.transitionContact,
+                  color: this.props.color,
                 }}>contact</a>
           </div>
-          <a className="follow-BTN" onClick={this.followHandler}>FOLLOW</a>
       </div>
     )
   }

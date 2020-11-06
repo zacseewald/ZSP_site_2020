@@ -33,16 +33,17 @@ div.body-box {
     position: absolute;
     background: transparent;
 // the box below is used for loading. it fades in the background image so that there is no loading delay for the user
-    div.landing-fadeInBox {
-        position: fixed;
-        background: color(gradient-bg);
-        height: 100vh;
-        width: 100vw;
-        z-index: 2;
-        animation: fadeOut 5s; // uses @keyframes fadeOut method at the bottom
-        opacity: 0;
-        box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.7);
-    }
+    // div.landing-fadeInBox {
+    //     position: fixed;
+    //     background: color(gradient-bg);
+    //     height: 100vh;
+    //     width: 100vw;
+    //     z-index: 2;
+    //     animation: fadeIn 5s; 
+    //     // uses @keyframes fadeOut method at the bottom
+    //     opacity: 0;
+    //     box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.7);
+    // }
 // styles for the static background image. Rotates through this images in the landing folder.
         img.bgImage {
             width: 100vw;
@@ -54,6 +55,8 @@ div.body-box {
         }
 
         div.logoBox {
+
+            // opacity: 0;
             position: absolute;
             background: color(translucent-black);
             left: 35vw;
@@ -64,6 +67,7 @@ div.body-box {
             -webkit-box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.8);
             -moz-box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.8);
             box-shadow: -1px 19px 42px 4px rgba(0,0,0,0.9);
+            animation: easeColorIn 3.5s;
             @include breakpoint-phone  {    
                 left: 15vw;
                 top: 28vh;
@@ -87,8 +91,8 @@ div.body-box {
                 font-family: Righteous;
                 font-size: 11vw;
                 color: color(primary-blue);
-                animation: easeColorIn 3.5s;
-                background: color(primary-red);
+                // animation: easeColorIn 3.5s;
+                background: rgba(0, 0, 0, .7);
                 border: 1.2vw solid color(primary-blue);
                 padding-left: 3.55vw;
                 padding-right: 2.5vw;
@@ -110,7 +114,7 @@ div.body-box {
                 font-family: Righteous;
                 letter-spacing: none;
                 -webkit-font-smoothing: antialiased;
-                animation: easeTextColorIn 3.5s;
+                // animation: easeTextColorIn 3.5s;
                 color: color(primary-blue);
                 @include breakpoint-phone  {
                     color: color(primary-blue);
@@ -125,7 +129,7 @@ div.body-box {
                 text-align: center;
                 margin-top: -1.3vw;
                 -webkit-font-smoothing: antialiased;
-                animation: easeTextColorIn 3.5s;
+                // animation: easeTextColorIn 3.5s;
                 color: color(primary-blue);
                 @include breakpoint-phone  {
                     color: color(primary-blue);
@@ -135,29 +139,30 @@ div.body-box {
             }
             
      // Used in landing-fadeInBox above
-             @keyframes fadeOut { 
-                 // Adjusts the opacity of the element and percentage of load completion
-                0%{opacity: 1}  //at 0% of the load
-                20%{opacity: 1;} // targets the element at 20% completion
-                100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 0 = 100% visible - thus completeing the fade sequence*/
-            }
+            //  @keyframes fadeIn { 
+            //      // Adjusts the opacity of the element and percentage of load completion
+            //     0%{opacity: 1}  //at 0% of the load
+            //     20%{opacity: 1} // targets the element at 20% completion
+            //     100%{opacity:0}/* at 100% completion of sequence the opcacity is set to 0 = 100% visible - thus completeing the fade sequence*/
+            // }
                 // Used in ZS-logoBox-text above to fade the logo colors
              @keyframes easeColorIn { 
                   0%{
-                      color: color(primary-white); // text color
-                      background: color(translucent-black);// element background
-                      border-color: color(primary-white);// element border color
+                    //   color: black; // text color
+                    //   background: black;// element background
+                    //   border-color: black;// element border color
+                      opacity: 0;
                      } /* at 0% completion of sequence  */
-                  50%{  
-                    color: color(primary-white); 
-                    background: color(translucent-black);
-                    border-color: color(primary-white);
-                    }/* at 30% completion of sequence*/
+
+                     50%{
+                         opacity: 0;
+                     }
                     
                     100%{  
-                        color: color(primary-blue);
-                        background: color(primary-red);
-                        border-color: color(primary-blue);
+                        // color: color(primary-blue);
+                        // background: rgba(0,0,0,.7);
+                        // border-color: color(primary-blue);
+                        opacity: 1;
                     }
                 }
                 // Used in ZS-logo-text and photography-logo-text elements to fade in the color

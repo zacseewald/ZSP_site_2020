@@ -4,7 +4,7 @@ import Landing from './components/landing';
 import Carousel from './components/carousel';
 import Nav from './components/nav.js';
 import Profile from './components/profile';
-import Follow from './components/follow';
+// import Follow from './components/follow';
 import Test from './components/test';
 
 class App extends Component {
@@ -14,8 +14,8 @@ class App extends Component {
       <div className="App">
         
         <Router>
-          <Nav />
-          <Follow />
+          {/* <Nav /> */}
+          {/* <Follow /> */}
                 <Switch>
                   <Route exact path="/" component={Landing} />
                   <Route exact path="/homes" component={Carousel} />

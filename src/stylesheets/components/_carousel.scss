@@ -6,10 +6,21 @@
     @media (max-width: 415px) { @content };
       
   }
+@mixin breakpoint-desktop {
+    @media (max-width: 1000px) { @content };
+      
+  }
   @mixin breakpoint-phone-horizontal {
       @media (min-width: 416px) and (max-width: 812px) { @content };
   }
-
+@mixin breakpoint-desktop {
+    @media (max-width: 800px) { @content };
+      
+  }
+@mixin breakpoint-phone {
+    @media (max-width: 415px) { @content };
+      
+  }
 // Function that maps throught the global color object to make the color designation simpler below.
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -26,8 +37,10 @@ $dosis: 'Dosis', sans-serif;
 $righteous: 'Righteous', cursive;
 $beasNueve: 'Bebas Neue', cursive;
 $confortaa: 'Comfortaa', cursive;
+$arial: Arial, Helvetica, sans-serif;
 
 $easing: cubic-bezier(.25,1.7,.25,.8);
+$easing-arrows: all .3s cubic-bezier(.0025,.7,.15,1);
 $duration: 0.5s;
 $duration-btn: 0.1s;
 
@@ -42,7 +55,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: whitesmoke;
+        background: transparent;
 
 
         div.my-name-container {
@@ -155,15 +168,20 @@ body {
         }
 
         div.arrow-container {
-            position: absolute;
-            width: 135px;
-            left: 60vw;
-            bottom: 60px;
+            // position: relative;
+            // width: 135px;
+            // left: 30px;
+            // top: 300px;
+            z-index: 1000;
             @include breakpoint-phone-horizontal {
                 position: absolute;
                 width: 139px;
                 left: 70vw;
                 bottom: 54px;
+            }
+            @include breakpoint-phone {
+                top: 0;
+                
             }
             a.btn-left {
                 position: absolute;
@@ -173,55 +191,68 @@ body {
                 height: 50px;
                 left: 0;
                 @include breakpoint-phone {
-                    bottom: 120px;
+                    top: 0px;
                     left: -5px;
                 }
 
 // left arrow
             div.btn-arrow-container-left {
-                position: absolute;
-                background: transparent;
+                position: fixed;
+                background-color: transparent;
                 width: 50px;
-                height: 20px;
-                text-align: left;
-                top: 14px;
-                padding: 2px 0px 0px 2px;
-                transition: $duration-btn;
+                height: 100px;
+                top: 43vh;
+                left: 40px;
                 cursor: pointer;
-                
-                h1.btn-arrow-left {
-                    position: absolute;
-                    display: inline;
-                    color: color(accent-white);
-                    font-family: $confortaa;
-                    font-size: 16px;
+                &:hover {
+                    span.btn-arrow-top {
+                        left: 0px;
+                        top: 45px;
+                        transition: $easing-arrows;
+                        background: color(bg);
+                        width: 38px;
+                        transform: rotate(0deg);
+                    }
+                    span.btn-arrow-bottom {   
+                        left: 0px; 
+                        transition: $easing-arrows;
+                        background:color(bg);
+                        width: 38px;
+                        transform: rotate(0deg);
+                        top: 45px;
+                    }
+                }
+                &:active {
+                    span.btn-arrow-top {
+                        background: color(arrow-activeColor);
+                        transform: scale(0.85);
+                    }
+                    span.btn-arrow-bottom { 
+                        background: color(arrow-activeColor);
+                        transform: scale(0.85);
+                    }
+                }
+                span.btn-arrow-top {
+                    transition: $easing-arrows;
+                    height: 2px;
+                    width: 35px;
                     left: 0;
-                    margin: 0px;
-                    background: color(primary-blue-dark);
-                    padding: 3px 50px 2px 8px;
-                    border-radius: 8px 0px 0px 8px;
-                    transition: $duration-btn;
-                    &:hover {
-                         color: color(bg);
-                        
-                    }
-                    &:active {
-                        background: color(primary-gray);
-                        color: color(accent-white);
-                    }
-                  
-                    p.btn-arrow-left-prev {
-                        margin: 0px;
-                        position: absolute;
-                        display: inline;
-                        font-family: $dosis;
-                        font-size: 13px;
-                        left: 20px;
-                        padding: 3px 8px 4px 8px;
-                        top: 0px;
-                        bottom: 0px;
-                        
-                    }
+                    top: 35px;
+                    background: color(primary-green);
+                    z-index: 1000;
+                    position: absolute;
+                    transform: rotate(-50deg);
+                }
+                span.btn-arrow-bottom {
+                    transition: $easing-arrows;
+                    top: 61px;
+                    left: 0;
+                    height: 2px;
+                    width: 35px;
+                    background: color(arrow-bottoms);
+                    z-index: 1000;
+                    position: absolute;
+                    transform: rotate(50deg);
                 }
             }
         }
@@ -234,61 +265,71 @@ body {
             width: 50px;
             right: 0;
             @include breakpoint-phone {
-                bottom: 120px;
+                top: 0px;
             }
             
 
             div.btn-arrow-container-right {
-                position: absolute;
-                background: transparent;
+                position: fixed; 
+                background-color: transparent;
                 width: 50px;
-                height: 20px;
-                text-align: right;
-                top: 14px;
-                left: -3px;
-                border-radius: 0px 8px 8px 0px;
-                padding: 2px 2px 0px 2px;
+                height: 100px;
+                top: 43vh;
+                right: 40px;
                 cursor: pointer;
                 &:hover {
-                    color: color(primary-blue)
-               }
+                    span.btn-arrow-top {
+                        top: 45px;
+                        transition: $easing-arrows;
+                        background: color(bg);
+                        width: 38px;
+                        transform: rotate(0deg);
+                    }
+                    span.btn-arrow-bottom {    
+                        transition: $easing-arrows;
+                        background:color(bg);
+                        width: 38px;
+                        transform: rotate(-90deg);
+                        top: 45px;
+                    }
+
+                }
+                &:active {
+                    span.btn-arrow-top {
+                        background: color(arrow-activeColor);
+                        transform: scale(0.85);
+                    }
+                    span.btn-arrow-bottom { 
+                        background: color(arrow-activeColor);
+                        transform: scale(0.85) rotate(-90deg);
+                    }
+                }
+                
                @include breakpoint-phone {
                 right: 0px;
+                top: 0px;
             }
-
-                    h1.btn-arrow-right {
+                    span.btn-arrow-top {
+                        transition: $easing-arrows;
+                        height: 2px;
+                        width: 35px;
+                        left: 0;
+                        top: 35px;
+                        background: color(primary-green);
+                        z-index: 1000;
                         position: absolute;
-                        display: inline;
-                        right: 0;
-                        margin: 0px;
-                        color: color(primary-white);
-                        font-family: $confortaa;
-                        font-size: 16px;
-                        left: 100;
-                        background: color(primary-blue-dark);
-                        padding: 3px 8px 2px 50px;
-                        border-radius: 0px 8px 8px 0px;
-                        transition: $duration-btn;
-                        &:hover {
-                             color: color(bg);
-                            
-                        }
-                        &:active {
-                            background: color(primary-gray);
-                            color: color(accent-white);
-                        }
-                    
-                    p.btn-arrow-right-more {
-                        padding: 3px 8px 4px 8px;
-                        top: 0px;
-                        bottom: 0px;
+                        transform: rotate(50deg);
+                    }
+                    span.btn-arrow-bottom {
+                        transition: $easing-arrows;
+                        top: 61px;
+                        left: 0;
+                        height: 2px;
+                        width: 35px;
+                        background: color(arrow-bottoms);
+                        z-index: 1000;
                         position: absolute;
-                        display: inline;
-                        font-family: $dosis;
-                        font-size: 13px;
-                        right: 20px;
-                        margin: 0px;
-                       }
+                        transform: rotate(-50deg);
                     }
                 }
             }
@@ -307,4 +348,12 @@ body {
     background: color(primary-blue-dark);
   }
   
+}
+@keyframes btnColorChange {
+    0%{
+        color: color(primary-blue);
+    }
+    100%{
+        color: color(bg);
+      }
 }
