@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 # make sure to add the .gitignore file to this before you apply it to your current app.
