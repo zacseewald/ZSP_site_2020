@@ -26,6 +26,7 @@ componentDidMount() {
       imageLocal: ImgInfo.landing[this.state.imageIndexNumber]["location_city_state"],
       imageSite: ImgInfo.landing[this.state.imageIndexNumber]["architect_site"]
     }); 
+    console.log(this.state.imageIndexNumber);
 }
 
 

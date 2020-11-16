@@ -42,6 +42,7 @@
             },
             {
                 "id": 6,
+                "image_fileName": "LandingSix.jpg", 
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": " https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",
