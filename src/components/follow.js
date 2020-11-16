@@ -36,25 +36,25 @@ followHandler = (e) => {
               onClick={this.followHandler}
               style={{color: this.props.color}}
               >FOLLOW</a>
-            <a className="follow-link" id="instagram" href="#" 
+            <a className="follow-link" id="instagram" href="https://www.instagram.com/zsphotog" target="_blank"
               style={{
                 left: this.state.left,
                 transition: this.state.transitionInst,
                 color: this.props.color,
               }}>instagram</a>
-            <a className="follow-link" id="linkeIn" href="#"
+            <a className="follow-link" id="linkeIn" href="https://www.linkedin.com/in/zacseewald" target="_blank"
               style={{
                 left: this.state.left,
                 transition: this.state.transitionLinked,
                 color: this.props.color,
               }}>linkedin</a>
-            <a className="follow-link" id="twitter" href="#"
+            <a className="follow-link" id="twitter" href="https://twitter.com/zacphotography" target="_blank"
               style={{
                 left: this.state.left,
                 transition: this.state.transitionTwitter,
                 color: this.props.color,
               }}>twitter</a>
-            <a className="follow-link" id="contact" href="#"
+            <a className="follow-link" id="contact" href="mailto:zac@zacseewaldphotography.com"
                 style={{
                   left: this.state.left,
                   transition: this.state.transitionContact,

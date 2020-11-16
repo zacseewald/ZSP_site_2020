@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
-import InfoBtn from './infoButton';
+// import InfoBtn from './infoButton';
 import Nav from './nav.js';
 
 
@@ -39,13 +39,13 @@ componentDidMount() {
           gallery={this.state.imageGalleryName} 
          />
       
-         <InfoBtn
+         {/* <InfoBtn
           index={this.state.imageIndexNumber}
           gallery={this.state.imageGalleryName} 
           name={this.state.imageArchName}
           location={this.state.imageLocal}
           site={this.state.imageSite}
-        />
+        /> */}
         {/* <div className="landing-fadeInBox"></div> */}
           {/* This is the static background image. Rotates through a select group of images in landing image folder. */}
          <img className="bgImage" 

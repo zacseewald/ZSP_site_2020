@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from './components/landing';
 import Carousel from './components/carousel';
-import Nav from './components/nav.js';
+// import Nav from './components/nav.js';
 // import Profile from './components/profile';
 // import Follow from './components/follow';
 import Test from './components/test';

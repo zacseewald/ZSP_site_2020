@@ -165,8 +165,8 @@ export class Nav extends Component {
             {/* <h1 className="link-nav-BTN"><a href="#">Sky Rise</a></h1> */}
             {/* <h1 className="link-nav-BTN"><a href="profile">Profile</a></h1> */}
             {/* <h1 className="link-nav-BTN"><a href="test">test</a></h1> */}
-            <h1 className="link-nav-BTN"><a href="/">Back</a></h1>
-            <h1 className="link-nav-BTN"><a href={"mailto: zac@zacseewaldphotography.com"}>Contact</a></h1>
+            <h1 className="link-nav-BTN"><a href="/">back</a></h1>
+            <h1 className="link-nav-BTN"><a href={"mailto: zac@zacseewaldphotography.com"}>contact</a></h1>
           </div>
         </div>
       </div>
