@@ -29,6 +29,7 @@ div.carouselimg-parent-box {
         position: absolute;
         width:  100vw;
         height: 98vh;
+        left: 7vw;
         top: 1vh;
         margin: 0px;
         padding: 0px;
@@ -39,7 +40,7 @@ div.carouselimg-parent-box {
             height: 100px;
             margin: 0px;
             padding: 0px;
-            left: 250px;
+            left: inherit;
             width: 75vw;
             bottom: 0px;
             object-fit: cover;
@@ -103,7 +104,7 @@ div.carouselimg-parent-box {
         height: 98vh;
         margin: 0px;
         padding: 0px;
-        left: 250px;
+        left: inherit;
         width: 70vw;
         bottom: 0px;
         object-fit: contain;
