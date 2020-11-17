@@ -30,7 +30,7 @@ followHandler = (e) => {
   render() {
     return (
       <div className="follow-parent-box">
-        <div className="follow-link-container">
+        <div className="follow-link-container" >
           <a 
               className="follow-BTN" 
               onClick={this.followHandler}

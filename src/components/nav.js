@@ -11,6 +11,7 @@ export class Nav extends Component {
             display: "block", // nav btn
             centerBarmargin: ".44em",
             background: "",
+            hamburgerBackground: "",
             imageGalleryName: this.props.gallery,
         }
 // Handling the button behavior and the nav behavior
@@ -104,12 +105,14 @@ export class Nav extends Component {
             lineH: "4px",
             lineW: "36px",
             background: "#00eaff",
+            hamburgerBackground: "rgba(0,0,0,0.15)",
           })
         } else {
           this.setState({
             lineH: "4px",
             lineW: "36px",
             background: "#303030",
+            hamburgerBackground: "transparent",
           })
         }
 
@@ -125,6 +128,7 @@ export class Nav extends Component {
 
         <div className="button-border" onClick={this.handleNavButton} style={{
           position: this.state.navBtnPosition,
+          background: this.state.hamburgerBackground,
         }}>
 
             <div  className="button-line-top"style={{ 

@@ -23,15 +23,14 @@ div.nav-btn-parent {
     top: 0;
    
         div.button-border {
+            background: color(translucent-black);
             position: fixed;
             margin-right: 1.5em;
             margin-top: 1.5em;
             right: 0;
-            background: transparent;
-            border-radius: 50%;
+            border-radius: 25%;
             width: 2.6em;
             height: 2.6em;
-            // border: 1px solid color(primary-blue);
             z-index: 1000;
             padding: .2em;
             animation: fadeIn 1s;
@@ -51,7 +50,7 @@ div.nav-btn-parent {
         div.button-line-top {
             position: relative;
             margin: auto;
-            margin-top: 30%;
+            margin-top: 20%;
             background: color(accent-blue);
             border-radius: 15%;    
             @include breakpoint-phone {
