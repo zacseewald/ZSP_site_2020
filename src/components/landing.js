@@ -12,6 +12,7 @@ state = {
       imageArchName: "",
       imageLocal: "",
       imageSite: "",
+      imgAlt: "",
     };
   
   
@@ -24,14 +25,13 @@ componentDidMount() {
       imageArchName: ImgInfo.landing[this.state.imageIndexNumber]["architect_name"],
       imageArchName: ImgInfo.landing[this.state.imageIndexNumber]["architect_name"],
       imageLocal: ImgInfo.landing[this.state.imageIndexNumber]["location_city_state"],
-      imageSite: ImgInfo.landing[this.state.imageIndexNumber]["architect_site"]
+      imageSite: ImgInfo.landing[this.state.imageIndexNumber]["architect_site"],
+      imgAlt: ImgInfo.landing[this.state.imageIndexNumber]["description"],
     }); 
-    console.log(this.state.imageIndexNumber);
 }
 
 
   render() {
-
     return (
       
       <div className="body-box">
@@ -50,6 +50,7 @@ componentDidMount() {
           {/* This is the static background image. Rotates through a select group of images in landing image folder. */}
          <img className="bgImage" 
            src={this.state.imagePath}
+           alt={this.state.imgAlt}
          />
          {/* Box containing the ZSP logo and animated text. */}
           <div className="logoBox">

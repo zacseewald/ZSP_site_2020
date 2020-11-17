@@ -6,7 +6,7 @@
                 "architect_name": "HOK",
                 "architect_site": "http://www.#.com",    
                 "location_city_state": "Austin, TX",
-                "story": "whatever you want to say about the image goes here."
+                "description": "Here is a building designed by HOK Architects. It is showing the current progress state just after sunset."
             },
             {
                 "id": 2,
@@ -14,7 +14,7 @@
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": "https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",
-                "story": "Interior image of the HBGCC west entrance."
+                "description": "Interior image of the HBGCC west entrance. Designed by Marmon Mok Architects."
             },
             {
                 "id": 3,
@@ -22,7 +22,7 @@
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": "https://marmonmok.com/",     
                 "location_city_state": "San Antonio, TX",
-                "story": "Front facade of the Schertz Aquatic Center."
+                "description": "Front facade of the Schertz Aquatic Center.  Designed by Marmon Mok Architects."
             },
             {
                 "id": 4,
@@ -30,7 +30,7 @@
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": "https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",
-                "story": "Original art wall saved during the renovation of the convention center in San Antonio, TX ."
+                "description": "Original art wall saved during the renovation of the convention center in San Antonio, TX .  Designed by Marmon Mok Architects."
             },
             {
                 "id": 5,
@@ -38,7 +38,7 @@
                 "architect_name": "Cusimano Architects",
                 "architect_site": "http://www.cusimano-architects.com",    
                 "location_city_state": "Houston, TX",
-                "story": "Marble backsplash and countertop designed specifically for this kitchen."
+                "description": "Marble backsplash and countertop designed specifically for this kitchen. Designed by residencial architect Kelly Cusimano out of Houston, TX"
             },
             {
                 "id": 6,
@@ -46,7 +46,7 @@
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": " https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",
-                "story": "West entrance of the Henry B. Gonzales Convention Center with the Tower of the Americas in the background."
+                "description": "West entrance of the Henry B. Gonzales Convention Center with the Tower of the Americas in the background. Designed by Marmon Mok Architects."
             }
     ],
 
