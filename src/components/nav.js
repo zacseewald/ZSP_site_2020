@@ -162,9 +162,10 @@ export class Nav extends Component {
             display: this.state.displayNav 
           }}>
            
-          <div className="link-body">
-            <h1 className="link-nav-BTN"><a href="homes">dwellings</a></h1>
+          <div className="link-body">            
             <h1 className="link-nav-BTN"><a href="buildings">buildings</a></h1>
+            <h1 className="link-nav-BTN"><a href="homes">dwellings</a></h1>
+
             {/* <h1 className="link-nav-BTN"><a href="#">Drone</a></h1> */}
             {/* <h1 className="link-nav-BTN"><a href="#">Sky Rise</a></h1> */}
             {/* <h1 className="link-nav-BTN"><a href="profile">Profile</a></h1> */}
