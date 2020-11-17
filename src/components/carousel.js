@@ -1,7 +1,7 @@
 // This is the carousel constructor to show images
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
-// import InfoBtn from './infoButton';
+// import CarouselBlindImg from './carousel/carouselBlindImg';
 import Carouselimg from './carousel/carouselimg';
 import CarouselBox from './carousel/carouselBoxLeft';
 import Nav from './nav.js';
@@ -140,17 +140,11 @@ componentDidMount() {
           name={this.state.imageArchName}
           location={this.state.imageLocal}
         />
-          
-
-          {/* <div className="img-counter-container">
-              <p className="img-counter-text">{this.state.galleryCount + " / " + this.state.galleryLength}</p>
-          </div> */}
-{/* 
-             <img className="visible-img" 
-              src={this.state.image}
-              alt="placeholder"
-              /> */}
         
+        {/* <CarouselBlindImg
+          gallery={this.state.imageGalleryName}
+          /> */}
+
 
               <div className="arrow-container">
 
@@ -164,8 +158,6 @@ componentDidMount() {
                       
                     </a>
                     
-                  {/* <span className="arrow-divider"></span> */}
-
                     <a className="btn-right" onClick={this.handleClickRight} >
             
                       <div className="btn-arrow-container-right"
@@ -173,11 +165,6 @@ componentDidMount() {
                             <span className="btn-arrow-top"
                                 onClick={this.handleRightArrowAnimation}></span>
                             <span className="btn-arrow-bottom"></span>
-
-                            {/* <h1 className="btn-arrow-right">
-                              <p className="btn-arrow-right-more">MORE</p>
-                              {">"}
-                            </h1> */}
                           </div>
                       </a>
                 </div>
