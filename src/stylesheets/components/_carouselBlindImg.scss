@@ -4,4 +4,10 @@ div.carouselBlindImg-parent-box {
         color: yellow;
         z-index: 1000;
     }
+    img {
+        height: 100px;
+        width: 200px;
+        position: relative;
+        z-index: 1000;
+    }
 }

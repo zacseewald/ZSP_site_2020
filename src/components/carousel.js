@@ -1,7 +1,7 @@
 // This is the carousel constructor to show images
 import React, { Component } from 'react';
 import ImgInfo from './utilities/image.json';
-// import CarouselBlindImg from './carousel/carouselBlindImg';
+import CarouselBlindImg from './carousel/carouselBlindImg';
 import Carouselimg from './carousel/carouselimg';
 import CarouselBox from './carousel/carouselBoxLeft';
 import Nav from './nav.js';
@@ -12,7 +12,6 @@ state = {
   imageGalleryName: this.props.location.pathname.split("/").pop(),// => captures the gallery name from the url
 
   //dynamic image path states
-
   imageGallery: [],
   image: '',
   clickCounter: 0,
@@ -28,6 +27,9 @@ state = {
   // Arrow button animation states:
   btnBackground: "yellow",
 
+  // Blind image states
+  blindImgPath: "",
+  blindImgNextCounter: 1,
 };
 
 handleRightArrowAnimation = (e) => {
@@ -89,6 +91,10 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
     imageSite: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter + 1]["architect_site"],
     imageArchName: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter + 1]["architect_name"],
     imageLocal: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter + 1]["location_city_state"],
+
+    // BlindImg props
+    blindImgPath: this.state.image + [this.state.clickCounter + 1],
+
   })}
   else {
       this.setState({
@@ -103,6 +109,7 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
         imageLocal: ImgInfo[this.props.location.pathname.split("/").pop()][0]["location_city_state"],
     });
   }
+  // console.log(this.state.blindImgPath)
 }
 
 componentDidMount() {
@@ -121,10 +128,14 @@ componentDidMount() {
     image: imgPath + imgFileName,
     imageGallery: arrFileName,
   });
+  // console.log(this.state.imageGallery)
 }
 
 
   render() {
+    // console.log(this.state.imageGallery)
+    // console.log(this.state.imageGalleryName)
+
     return (
       
       <div className="carousel-box">
@@ -141,9 +152,10 @@ componentDidMount() {
           location={this.state.imageLocal}
         />
         
-        {/* <CarouselBlindImg
+        <CarouselBlindImg
           gallery={this.state.imageGalleryName}
-          /> */}
+          galleryArrOfImages={this.state.imageGallery}
+          />
 
 
               <div className="arrow-container">
