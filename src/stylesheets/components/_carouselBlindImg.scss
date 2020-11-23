@@ -1,13 +1,18 @@
 div.carouselBlindImg-parent-box {
-    h1.carouselBlindImg {
-        position: relative;
-        color: yellow;
-        z-index: 1000;
-    }
-    img {
-        height: 100px;
-        width: 200px;
-        position: relative;
-        z-index: 1000;
-    }
+    position: fixed;
+    z-index: 1000;
+    top: -110vh;
+    
+    div.carouselBlindImg-child-box{
+        position: fixed;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+
+        img.carouselBlindImg-image-preLoaded {
+            height: 98vh; 
+            position: relative;
+            margin: auto;
+            padding: 0;
+    }}
 }

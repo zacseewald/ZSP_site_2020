@@ -153,6 +153,7 @@ componentDidMount() {
         />
         
         <CarouselBlindImg
+          src={this.state.image}
           gallery={this.state.imageGalleryName}
           galleryArrOfImages={this.state.imageGallery}
           />

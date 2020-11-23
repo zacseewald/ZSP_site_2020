@@ -10,27 +10,45 @@ export class carouselBlindImg extends Component {
      gallery: this.props.gallery,
      image: 0,
      counterBlindImgNext: this.props.imgNum,
-    //  counterBlindImgNextPlusOne: this.props.imgNum + 2,
-}
+     imgPathArr: [],
+};
 
 componentDidMount() {
-    // const imgFileName = ImgInfo[this.state.imageGalleryName][this.state.clickCounter]["image_fileName"];
+
+    const imgPathArr = [];
+    const imgPath = process.env.PUBLIC_URL  + '/images/' + this.state.gallery + '/';
+
+ 
+    ImgInfo[this.state.gallery].forEach(element => imgPathArr.push(imgPath + element["image_fileName"]));
+
     this.setState({
-        image: ImgInfo[this.state.gallery].length,
+        imgPath: "./images/" + this.state.gallery + "/" + ImgInfo[this.state.gallery][1]["image_fileName"],
+        imgPathArr: imgPathArr,
     })
-    
     
 }
 
+imgLoader(imgPathArr) {
+
+    return (
+        <div className="carouselBlindImg-child-box">
+            <img className="carouselBlindImg-image-preLoaded" src={imgPathArr} alt="whatevs" />
+        </div>
+    )
+}
   render() {
-    console.log(this.props.galleryArrOfImages)
+    // console.log(this.state.imgPathArr)
+    // console.log("./images/" + this.state.gallery + "/" + ImgInfo[this.state.gallery][0]["image_fileName"]);
+    // console.log("bottm: " + ImgInfo[this.state.gallery][0]["image_fileName"])
     return (
       <div className="carouselBlindImg-parent-box">
-        <h1 className="carouselBlindImg" >{this.state.gallery}</h1>
-        <img className="carouselBlindImg-invisible-img" src={this.props.galleryArrOfImages[0]}  />
+          {this.state.imgPathArr.map(imageUrl => this.imgLoader(imageUrl))}
+          
         </div>
     )
   }
 }
+
+
 
 export default carouselBlindImg
