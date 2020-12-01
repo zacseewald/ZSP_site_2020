@@ -1,8 +1,7 @@
 
 import React, { Component } from 'react';
 import ImgInfo from "../utilities/image.json";
-// import ImageArray from "./imageLoader.js"
-import App from "../../App"
+
 
 export class carouselBlindImg extends Component {
   
@@ -51,10 +50,8 @@ imgLoader(imgPathArr) {
             {/* // src={this.state.imgPathArr}/> */}
 
         
-          {/* {this.state.imgPathArr.map(imageUrl => this.imgLoader(imageUrl))} */}
-          <App 
-          src={this.state.imgPathArr}
-          />
+          {this.state.imgPathArr.map(imageUrl => this.imgLoader(imageUrl))}
+        
         </div>
     )
   }

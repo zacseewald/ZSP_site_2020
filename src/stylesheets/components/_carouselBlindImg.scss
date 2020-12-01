@@ -1,16 +1,13 @@
 div.carouselBlindImg-parent-box {
     position: fixed;
     z-index: 1000;
-    width: 100vw;
-    height: 100vh;
-    // top: -110vh;
+    top: -100px;
     
     div.carouselBlindImg-child-box{
-        position: relative;
+        position: fixed;
         background: transparent;
         margin: 0;
         padding: 0;
-        display: inline-block;
         height: 100px;
         width: 200px;
 
