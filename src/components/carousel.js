@@ -6,7 +6,7 @@ import CarouselBox from './carousel/carouselBoxLeft';
 import Nav from './nav.js';
 
 const Carouselimg = lazy(() => import('./carousel/carouselimg'));
-const CarouselBlindImg = lazy(() => import('./carousel/carouselBlindImg'));
+// const CarouselBlindImg = lazy(() => import('./carousel/carouselBlindImg'));
 
 export class Carousel extends Component {
 
@@ -157,13 +157,13 @@ componentDidMount() {
             />
         </Suspense>
          
-        <Suspense fallback={<div>Images are Loading ...</div>}>
+        {/* <Suspense fallback={<div>Images are Loading ...</div>}>
           <CarouselBlindImg
             src={this.state.image}
             gallery={this.state.imageGalleryName}
             galleryArrOfImages={this.state.imageGallery}
             />
-          </Suspense>
+          </Suspense> */}
 
 
               <div className="arrow-container">
