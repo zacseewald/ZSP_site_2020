@@ -1,10 +1,12 @@
 // This is the carousel constructor to show images
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import ImgInfo from './utilities/image.json';
-import CarouselBlindImg from './carousel/carouselBlindImg';
-import Carouselimg from './carousel/carouselimg';
+// import CarouselBlindImg from './carousel/carouselBlindImg';
+// import Carouselimg from './carousel/carouselimg';
 import CarouselBox from './carousel/carouselBoxLeft';
 import Nav from './nav.js';
+
+const Carouselimg = lazy(() => import('./carousel/carouselimg'))
 
 export class Carousel extends Component {
 
@@ -146,17 +148,20 @@ componentDidMount() {
        <CarouselBox
           gallery={this.state.imageGalleryName}
         />
-        <Carouselimg 
-          src={this.state.image}
-          name={this.state.imageArchName}
-          location={this.state.imageLocal}
-        />
+
+        <Suspense fallback={<div>Loading ...</div>} >
+            <Carouselimg 
+              src={this.state.image}
+              name={this.state.imageArchName}
+              location={this.state.imageLocal}
+            />
+        </Suspense>
         
-        <CarouselBlindImg
+        {/* <CarouselBlindImg
           src={this.state.image}
           gallery={this.state.imageGalleryName}
           galleryArrOfImages={this.state.imageGallery}
-          />
+          /> */}
 
 
               <div className="arrow-container">

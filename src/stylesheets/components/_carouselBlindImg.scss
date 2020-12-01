@@ -1,18 +1,25 @@
 div.carouselBlindImg-parent-box {
     position: fixed;
     z-index: 1000;
-    top: -110vh;
+    width: 100vw;
+    height: 100vh;
+    // top: -110vh;
     
     div.carouselBlindImg-child-box{
-        position: fixed;
+        position: relative;
         background: transparent;
         margin: 0;
         padding: 0;
+        display: inline-block;
+        height: 100px;
+        width: 200px;
 
         img.carouselBlindImg-image-preLoaded {
-            height: 98vh; 
+
             position: relative;
             margin: auto;
             padding: 0;
+            height: 100%;
+            // width: inherit;
     }}
 }
