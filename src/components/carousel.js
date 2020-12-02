@@ -16,7 +16,6 @@ state = {
   imageGallery: [],
   image: '',
   imageRightOne: "",
-  imageRightTwo: "",
   clickCounter: 0,
   clickCounterRightOne: 1,
   clickCounterRightTwo: 2,
@@ -100,9 +99,6 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
     imageArchName: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter + 1]["architect_name"],
     imageLocal: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter + 1]["location_city_state"],
 
-    // BlindImg props
-    // blindImgPath: this.state.image + [this.state.clickCounter + 1],
-
   })}
   else {
       this.setState({
@@ -143,14 +139,10 @@ componentDidMount() {
     imageRightTwo: imgPath + imgFileNameRightTwo,
     imageGallery: arrFileName,
   });
-  // console.log(this.state.imageGallery)
 }
 
 
   render() {
-    // console.log(this.state.imageGallery)
-    // console.log(this.state.imageGalleryName)
-
     return (
       
       <div className="carousel-box">
@@ -166,21 +158,11 @@ componentDidMount() {
             <Carouselimg 
               src={this.state.image}
               srcRightOne={this.state.imageRightOne}
-              srcRightTwo={this.state.imageRightTwo}
               name={this.state.imageArchName}
               location={this.state.imageLocal}
             />
         </Suspense>
-         
-        {/* <Suspense fallback={<div>Images are Loading ...</div>}>
-          <CarouselBlindImg
-            src={this.state.image}
-            gallery={this.state.imageGalleryName}
-            galleryArrOfImages={this.state.imageGallery}
-            />
-          </Suspense> */}
-
-
+        
               <div className="arrow-container">
 
                     <a className="btn-left" onClick={this.handleClickLeft} >

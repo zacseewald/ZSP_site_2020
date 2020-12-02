@@ -1,19 +1,6 @@
-import React, { Component, lazy , Suspense } from 'react';
-import ImgInfo from './utilities/image.json';
-// import LandingIMGS from '../../public/images/landing/large'
-
-const imgIndexNum = Math.floor(Math.random() * (ImgInfo.landing.length));
-// console.log(imgIndexNum);
-// const imgPathgen = LandingIMGS + "Landing_" + imgIndexNum.toString(); 
-const imgPathgen = "what it is?"
-console.log(imgPathgen);
+import React, { Component } from 'react';
 
 export class landingIMGgen extends Component {
-  
-  state = {
-  
-}
-
   render() {
       
     return (
@@ -28,3 +15,5 @@ export class landingIMGgen extends Component {
 }
 
 export default landingIMGgen
+
+// this component generates the background image based on the props sent down from the landing.js component.

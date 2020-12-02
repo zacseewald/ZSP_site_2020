@@ -9,7 +9,7 @@ export class carouselimg extends Component {
 }
 
   render() {
-    console.log(this.props.srcRightOne + " " + this.props.srcrightTwo)
+
     return (
       <div className="carouselimg-parent-box">
         <div className="carouselimg-info-container">
@@ -20,11 +20,11 @@ export class carouselimg extends Component {
         </div>
         <img className="carouselimg-visible-img" src={this.props.src}  alt="Photos by Zac Seewald [Photographer]"/>
         <img className="carouselimg-rightOne-img" src={this.props.srcRightOne} alt="Photos by Zac Seewald [Photographer]"/>
-        <img className="carouselimg-rightTwo-img" src={this.props.srcRightTwo} alt="Photos by Zac Seewald [Photographer]"/>
-
       </div>
     )
   }
 }
 
 export default carouselimg
+
+// This component feeds the image to the carousel.js based on the props sent from the carousel.js comp.
