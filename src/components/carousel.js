@@ -6,7 +6,6 @@ import CarouselBox from './carousel/carouselBoxLeft';
 import Nav from './nav.js';
 
 const Carouselimg = lazy(() => import('./carousel/carouselimg'));
-// const CarouselBlindImg = lazy(() => import('./carousel/carouselBlindImg'));
 
 export class Carousel extends Component {
 
@@ -16,7 +15,11 @@ state = {
   //dynamic image path states
   imageGallery: [],
   image: '',
+  imageRightOne: "",
+  imageRightTwo: "",
   clickCounter: 0,
+  clickCounterRightOne: 1,
+  clickCounterRightTwo: 2,
   duration: ".3s",
 // counter state
   galleryLength: 0,
@@ -48,10 +51,11 @@ e.preventDefault();
 const counter = this.state.clickCounter + 1;
 const imgCount = this.state.imageGallery.length;
 
-  if (this.state.clickCounter > 0) {
+  if (this.state.clickCounter > 0  || this.state.clickCounter === imgCount) {
   this.setState({
     clickCounter: this.state.clickCounter - 1,
     image: this.state.imageGallery[this.state.clickCounter - 1],
+    imageRightOne: this.state.imageGallery[this.state.clickCounter  - 2],
     galleryLength: imgCount,
     galleryCount: counter,
 
@@ -62,8 +66,9 @@ const imgCount = this.state.imageGallery.length;
   })} 
   else {
       this.setState({
-        clickCounter: this.state.imageGallery.length - 1, // => increasing counter
-        image: this.state.imageGallery[this.state.imageGallery.length - 1],
+        clickCounter: this.state.imageGallery.length, // => decreaseing counter
+        image: this.state.imageGallery[this.state.imageGallery.length -1],
+        // imageRightOne: this.state.imageGallery[this.state.imageGallery.length - 2],
         galleryLength: imgCount,
         galleryCount: counter,
 
@@ -86,6 +91,7 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
   this.setState({
     clickCounter: this.state.clickCounter + 1,
     image: this.state.imageGallery[this.state.clickCounter + 1],
+    imageRightOne: this.state.imageGallery[this.state.clickCounter + 2],
     galleryLength: imgCount,
     galleryCount: counter,
 
@@ -95,13 +101,14 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
     imageLocal: ImgInfo[this.props.location.pathname.split("/").pop()][this.state.clickCounter + 1]["location_city_state"],
 
     // BlindImg props
-    blindImgPath: this.state.image + [this.state.clickCounter + 1],
+    // blindImgPath: this.state.image + [this.state.clickCounter + 1],
 
   })}
   else {
       this.setState({
         clickCounter: 0, 
         image: this.state.imageGallery[0],
+        imageRightOne: this.state.imageGallery[1],
         galleryLength: imgCount,
         galleryCount: counter,
 
@@ -119,6 +126,10 @@ componentDidMount() {
   const imgCount = ImgInfo[this.state.imageGalleryName].length;
   const galleryName = this.state.imageGalleryName;
   const imgFileName = ImgInfo[this.state.imageGalleryName][this.state.clickCounter]["image_fileName"];
+
+  const imgFileNameRightOne = ImgInfo[this.state.imageGalleryName][this.state.clickCounterRightOne]["image_fileName"];
+  const imgFileNameRightTwo = ImgInfo[this.state.imageGalleryName][this.state.clickCounterRightTwo]["image_fileName"];
+
   const imgPath = process.env.PUBLIC_URL  + '/images/' + galleryName + '/';
   const arrFileName = [];
 
@@ -128,6 +139,8 @@ componentDidMount() {
   this.setState({
     galleryLength: imgCount,
     image: imgPath + imgFileName,
+    imageRightOne: imgPath + imgFileNameRightOne,
+    imageRightTwo: imgPath + imgFileNameRightTwo,
     imageGallery: arrFileName,
   });
   // console.log(this.state.imageGallery)
@@ -149,9 +162,11 @@ componentDidMount() {
           gallery={this.state.imageGalleryName}
         />
 
-        <Suspense fallback={<div>Loading ...</div>} >
+        <Suspense fallback={<div>Loading...</div>} >
             <Carouselimg 
               src={this.state.image}
+              srcRightOne={this.state.imageRightOne}
+              srcRightTwo={this.state.imageRightTwo}
               name={this.state.imageArchName}
               location={this.state.imageLocal}
             />

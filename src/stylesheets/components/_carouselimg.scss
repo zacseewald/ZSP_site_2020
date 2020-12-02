@@ -126,4 +126,26 @@ div.carouselimg-parent-box {
             transition: 0s;
         }
     }
+    img.carouselimg-rightOne-img {
+        position: fixed;
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+        right: -100px;
+        width: 200px;
+        bottom: 0px;
+        object-fit: contain;
+        z-index: 1000;
+    }
+    img.carouselimg-rightTwo-img {
+        position: fixed;
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+        right:   40px;
+        width: 200px;
+        bottom: 0px;
+        object-fit: contain;
+        z-index: 1000;
+    }
 }

@@ -3,6 +3,7 @@
             {
                 "id": 1,
                 "image_fileName": "LandingOne.jpg", 
+                "small_image_fileName": "Landing_0.jpg", 
                 "architect_name": "HOK",
                 "architect_site": "http://www.#.com",    
                 "location_city_state": "Austin, TX",
@@ -11,6 +12,7 @@
             {
                 "id": 2,
                 "image_fileName": "LandingTwo.jpg", 
+                "small_image_fileName": "Landing_1.jpg",
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": "https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",
@@ -19,6 +21,7 @@
             {
                 "id": 3,
                 "image_fileName": "LandingThree.jpg", 
+                "small_image_fileName": "Landing_2.jpg",
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": "https://marmonmok.com/",     
                 "location_city_state": "San Antonio, TX",
@@ -27,6 +30,7 @@
             {
                 "id": 4,
                 "image_fileName": "LandingFour.jpg", 
+                "small_image_fileName": "Landing_3.jpg",
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": "https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",
@@ -35,6 +39,7 @@
             {
                 "id": 5,
                 "image_fileName": "LandingFive.jpg", 
+                "small_image_fileName": "Landing_4.jpg",
                 "architect_name": "Cusimano Architects",
                 "architect_site": "http://www.cusimano-architects.com",    
                 "location_city_state": "Houston, TX",
@@ -43,6 +48,7 @@
             {
                 "id": 6,
                 "image_fileName": "LandingSix.jpg", 
+                "small_image_fileName": "Landing_5.jpg",
                 "architect_name": "Marmon Mok Architects",
                 "architect_site": " https://marmonmok.com/",    
                 "location_city_state": "San Antonio, TX",

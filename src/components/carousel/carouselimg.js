@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 
 
-
 export class carouselimg extends Component {
   
   state = {
@@ -10,6 +9,7 @@ export class carouselimg extends Component {
 }
 
   render() {
+    console.log(this.props.srcRightOne + " " + this.props.srcrightTwo)
     return (
       <div className="carouselimg-parent-box">
         <div className="carouselimg-info-container">
@@ -18,7 +18,10 @@ export class carouselimg extends Component {
                 <h5 id="carouselimg-local">{"[" + this.props.location.toLowerCase() + "]"}</h5>
             </div>
         </div>
-        <img className="carouselimg-visible-img" src={this.props.src}  />
+        <img className="carouselimg-visible-img" src={this.props.src}  alt="Photos by Zac Seewald [Photographer]"/>
+        <img className="carouselimg-rightOne-img" src={this.props.srcRightOne} alt="Photos by Zac Seewald [Photographer]"/>
+        <img className="carouselimg-rightTwo-img" src={this.props.srcRightTwo} alt="Photos by Zac Seewald [Photographer]"/>
+
       </div>
     )
   }
