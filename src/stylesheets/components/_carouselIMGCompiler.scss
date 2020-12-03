@@ -1,0 +1,48 @@
+
+div.carouselIMGCompiler-Parent {
+    position: absolute;
+    width:  100vw;
+    height: 98vh;
+    left: 7vw;
+    top: 1vh;
+    margin: 0px;
+    padding: 0px;
+    z-index: 900;
+    background: transparent;
+    img.carouselIMGCompiler-visableIMG {
+        position: inherit;
+        height: 98vh;
+        margin: 0px;
+        padding: 0px;
+        left: inherit;
+        width: 70vw;
+        bottom: 0px;
+        object-fit: contain;
+        // object-position: 10% 90%;
+        z-index: 901;
+        transition: 1s;
+    }
+    // div.carouselIMGCompiler-Child-img {
+    //     // position: inherit;
+    //     // // display: flex;
+    //     // float: left;
+    //     // margin: 10px;
+    //     // padding: 0;
+    //     // z-index: 900;
+    //     img.carouselIMGCompiler-visible-img {
+    //         // position: relative;
+    //         height: 200px;
+    //         margin: 0px;
+    //         padding: 0px;
+    //         left: inherit;
+    //         width: 200px;
+    //         bottom: 0px;
+    //         object-fit: contain;
+    //         // object-position: 10% 90%;
+    //         z-index: 901;
+    //         transition: 1s;
+
+    //     }
+
+    // }
+}

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 
-export class carouselimg extends Component {
+export class carouselimgINFO extends Component {
   
   state = {
   transistion: "1s",
@@ -18,13 +18,11 @@ export class carouselimg extends Component {
                 <h5 id="carouselimg-local">{"[" + this.props.location.toLowerCase() + "]"}</h5>
             </div>
         </div>
-        <img className="carouselimg-visible-img" src={this.props.src}  alt="Photos by Zac Seewald [Photographer]"/>
-        <img className="carouselimg-rightOne-img" src={this.props.srcRightOne} alt="Photos by Zac Seewald [Photographer]"/>
       </div>
     )
   }
 }
 
-export default carouselimg
+export default carouselimgINFO
 
 // This component feeds the image to the carousel.js based on the props sent from the carousel.js comp.

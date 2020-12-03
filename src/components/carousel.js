@@ -2,10 +2,10 @@
 import React, { Component, lazy, Suspense } from 'react';
 import ImgInfo from './utilities/image.json';
 import CarouselBox from './carousel/carouselBoxLeft';
-// import CarouselBlindImg from  './carousel/carouselBlindImg';
+import CarouselimgINFO from './carousel/carouselimgINFO';
 import Nav from './nav.js';
 
-const Carouselimg = lazy(() => import('./carousel/carouselimg'));
+const CarouselIMGCompiler = lazy(() => import('./carousel/carouselIMGCompiler'));
 
 export class Carousel extends Component {
 
@@ -15,7 +15,6 @@ state = {
   //dynamic image path states
   imageGallery: [],
   image: '',
-  imageRightOne: "",
   clickCounter: 0,
   clickCounterRightOne: 1,
   clickCounterRightTwo: 2,
@@ -49,12 +48,18 @@ e.preventDefault();
 
 const counter = this.state.clickCounter + 1;
 const imgCount = this.state.imageGallery.length;
+// console.log(counter);
 
-  if (this.state.clickCounter > 0  || this.state.clickCounter === imgCount) {
+  if (this.state.clickCounter === 0) {
+    this.setState({
+      clickCounter: imgCount -1,
+    });
+  }
+  else if (this.state.clickCounter > 0  || this.state.clickCounter === imgCount) {
   this.setState({
     clickCounter: this.state.clickCounter - 1,
     image: this.state.imageGallery[this.state.clickCounter - 1],
-    imageRightOne: this.state.imageGallery[this.state.clickCounter  - 2],
+
     galleryLength: imgCount,
     galleryCount: counter,
 
@@ -90,7 +95,7 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
   this.setState({
     clickCounter: this.state.clickCounter + 1,
     image: this.state.imageGallery[this.state.clickCounter + 1],
-    imageRightOne: this.state.imageGallery[this.state.clickCounter + 2],
+
     galleryLength: imgCount,
     galleryCount: counter,
 
@@ -104,7 +109,7 @@ if (this.state.clickCounter < this.state.imageGallery.length - 1) {
       this.setState({
         clickCounter: 0, 
         image: this.state.imageGallery[0],
-        imageRightOne: this.state.imageGallery[1],
+
         galleryLength: imgCount,
         galleryCount: counter,
 
@@ -143,6 +148,7 @@ componentDidMount() {
 
 
   render() {
+    console.log(this.state.clickCounter)
     return (
       
       <div className="carousel-box">
@@ -155,14 +161,20 @@ componentDidMount() {
         />
 
         <Suspense fallback={<div>Loading...</div>} >
-            <Carouselimg 
-              src={this.state.image}
-              srcRightOne={this.state.imageRightOne}
+                <CarouselIMGCompiler 
+                  gallery={this.state.imageGalleryName}
+                  counter={this.state.clickCounter}
+                  name={this.state.imageArchName}
+                  location={this.state.imageLocal}
+                  alt={"Images By Zac Seewald [The Photographer]"}
+                /></Suspense>
+
+            <CarouselimgINFO 
               name={this.state.imageArchName}
               location={this.state.imageLocal}
             />
-        </Suspense>
-        
+
+
               <div className="arrow-container">
 
                     <a className="btn-left" onClick={this.handleClickLeft} >
