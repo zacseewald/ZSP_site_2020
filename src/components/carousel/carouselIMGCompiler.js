@@ -30,20 +30,6 @@ export class carouselIMGCompiler extends Component {
     }
 
 
-    handleImgDisplay(imgPathArr) {
-        console.log(imgPathArr)
-        // const visableIMG = imgPathArr[0];
-
-        // return (
-        //     <div className="carouselIMGCompiler-Child-img" >
-        //     <img className="carouselIMGCompiler-visible-img" 
-        //         src={visableIMG} 
-        //         alt="Whatever" 
-        //         style={{display: this.state.displayIMG}} ></img>
-        //     </div>
-        // )
-    }
-  
   componentDidMount() {
         const imgPathArr = []; 
 
