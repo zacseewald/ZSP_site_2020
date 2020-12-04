@@ -102,6 +102,7 @@
         {
             "id": 1,
             "image_fileName": "buildings_00.jpg", 
+            "image_thumbnail": "buildings_00.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -110,6 +111,7 @@
         {
             "id": 2,
             "image_fileName": "buildings_01.jpg", 
+            "image_thumbnail": "buildings_01.jpg", 
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -118,6 +120,7 @@
         {
             "id": 3,
             "image_fileName": "buildings_02.jpg", 
+            "image_thumbnail": "buildings_02.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -126,6 +129,7 @@
         {
             "id": 4,
             "image_fileName": "buildings_03.jpg", 
+            "image_thumbnail": "buildings_03.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -134,6 +138,7 @@
         {
             "id": 5,
             "image_fileName": "buildings_04.jpg", 
+            "image_thumbnail": "buildings_04.jpg",
             "architect_name": "Cusimano Architects",
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
@@ -142,6 +147,7 @@
         {
             "id": 6,
             "image_fileName": "buildings_05.jpg", 
+            "image_thumbnail": "buildings_05.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -150,6 +156,7 @@
         {
             "id": 7,
             "image_fileName": "buildings_06.jpg", 
+            "image_thumbnail": "buildings_06.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -158,6 +165,7 @@
         {
             "id": 8,
             "image_fileName": "buildings_07.jpg", 
+            "image_thumbnail": "buildings_07.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -166,6 +174,7 @@
         {
             "id": 9,
             "image_fileName": "buildings_08.jpg", 
+            "image_thumbnail": "buildings_08.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -174,6 +183,7 @@
         {
             "id": 10,
             "image_fileName": "buildings_09.jpg", 
+            "image_thumbnail": "buildings_09.jpg",
             "architect_name": "Cusimano Architects",
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
@@ -182,6 +192,7 @@
         {
             "id": 11,
             "image_fileName": "buildings_10.jpg", 
+            "image_thumbnail": "buildings_10.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -190,6 +201,7 @@
         {
             "id": 12,
             "image_fileName": "buildings_11.jpg", 
+            "image_thumbnail": "buildings_11.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -198,6 +210,7 @@
         {
             "id": 13,
             "image_fileName": "buildings_12.jpg", 
+            "image_thumbnail": "buildings_12.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -206,6 +219,7 @@
         {
             "id": 14,
             "image_fileName": "buildings_13.jpg", 
+            "image_thumbnail": "buildings_13.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -214,6 +228,7 @@
         {
             "id": 15,
             "image_fileName": "buildings_14.jpg", 
+            "image_thumbnail": "buildings_14.jpg",
             "architect_name": "Cusimano Architects",
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
@@ -222,6 +237,7 @@
         {
             "id": 16,
             "image_fileName": "buildings_15.jpg", 
+            "image_thumbnail": "buildings_15.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -230,6 +246,7 @@
         {
             "id": 17,
             "image_fileName": "buildings_16.jpg", 
+            "image_thumbnail": "buildings_16.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -238,6 +255,7 @@
         {
             "id": 18,
             "image_fileName": "buildings_17.jpg", 
+            "image_thumbnail": "buildings_17.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -246,6 +264,7 @@
         {
             "id": 19,
             "image_fileName": "buildings_18.jpg", 
+            "image_thumbnail": "buildings_18.jpg",
             "architect_name": "TBA",
             "architect_site": "https://www.#.com/",    
             "location_city_state": "TBA, TX",
@@ -254,6 +273,7 @@
         {
             "id": 20,
             "image_fileName": "buildings_19.jpg", 
+            "image_thumbnail": "buildings_19.jpg",
             "architect_name": "Cusimano Architects",
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
@@ -262,6 +282,7 @@
         {
             "id": 21,
             "image_fileName": "buildings_20.jpg", 
+            "image_thumbnail": "buildings_20.jpg",
             "architect_name": "Cusimano Architects",
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
@@ -270,6 +291,7 @@
         {
             "id": 22,
             "image_fileName": "buildings_21.jpg", 
+            "image_thumbnail": "buildings_21.jpg",
             "architect_name": "Cusimano Architects",
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",

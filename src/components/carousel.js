@@ -4,8 +4,9 @@ import ImgInfo from './utilities/image.json';
 import CarouselBox from './carousel/carouselBoxLeft';
 import CarouselimgINFO from './carousel/carouselimgINFO';
 import Nav from './nav.js';
+import CarouselIMGCompiler from'./carousel/carouselIMGCompiler';
 
-const CarouselIMGCompiler = lazy(() => import('./carousel/carouselIMGCompiler'));
+// const CarouselIMGCompiler = lazy(() => import('./carousel/carouselIMGCompiler'));
 
 export class Carousel extends Component {
 
@@ -148,7 +149,7 @@ componentDidMount() {
 
 
   render() {
-    console.log(this.state.clickCounter)
+    // console.log(this.state.clickCounter)
     return (
       
       <div className="carousel-box">
@@ -160,14 +161,15 @@ componentDidMount() {
           gallery={this.state.imageGalleryName}
         />
 
-        <Suspense fallback={<div>Loading...</div>} >
+        {/* <Suspense fallback={<div>From carousel.js</div>} > */}
                 <CarouselIMGCompiler 
                   gallery={this.state.imageGalleryName}
                   counter={this.state.clickCounter}
                   name={this.state.imageArchName}
                   location={this.state.imageLocal}
                   alt={"Images By Zac Seewald [The Photographer]"}
-                /></Suspense>
+                />
+                {/* </Suspense> */}
 
             <CarouselimgINFO 
               name={this.state.imageArchName}
