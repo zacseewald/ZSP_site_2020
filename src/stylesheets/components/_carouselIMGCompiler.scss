@@ -9,6 +9,16 @@ div.carouselIMGCompiler-Parent {
     padding: 0px;
     z-index: 900;
     background: transparent;
+
+    div.carouselIMGCompiler-Fallback {
+        position: absolute;
+        left: 7vw;
+        top: 1vh;
+        margin: 31vw;
+        padding: 0px;
+        z-index: 1000;
+        background: transparent;
+    }
     img.carouselIMGCompiler-visableIMG {
         position: inherit;
         height: 98vh;

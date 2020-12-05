@@ -1,7 +1,7 @@
 import React, { Component, lazy, Suspense } from 'react';
 import ImgInfo from '../utilities/image.json';
 
-// import CarouselThumbsLoader  from './carouselThumbsLoader';
+
 
 const CarouselVISimgGen = lazy(() => import('./carouselVISimgGen'));
 
@@ -36,9 +36,8 @@ export class carouselIMGCompiler extends Component {
                     style={{display: this.state.hiddenIMG}} ></img>
                 </div>
         )
-        // .then(console.log("what?"))
     }
-// ReactDOM.render(element, document.getElementById('root'));
+
 handleStageredImageLoading () {
 
     
@@ -56,7 +55,6 @@ handleStageredImageLoading () {
             thumbnailArr: thumbnailArr,
         });
 
-        // console.log(this.state.thumbnailArr)
     }
 
     render() {
@@ -64,16 +62,10 @@ handleStageredImageLoading () {
       return ( 
         <div className="carouselIMGCompiler-Parent" >
 
-            {/* {this.handleStageredImageLoading()} */}
 
-            {/* <CarouselThumbsLoader 
-                    src={this.state.imgPathThumbs}
-                    array={this.state.thumbnailArr}
-                /> */}
-            {/* This is the visible image */}
             <Suspense fallback={
-                <h1>Loading</h1>
-            // <img src={this.state.thumbnailArr} alt="ewrkjtg"></img>
+                <div className="carouselIMGCompiler-Fallback">Loading...</div>
+            
             }>
                 
                 
@@ -86,15 +78,6 @@ handleStageredImageLoading () {
                     />
 
                     </Suspense>
-
-
-            {/* <Suspense fallback={<div>blind images are loading...</div>}>
-                    <CarouselBlindIMGLoader 
-                    imgPathArr={this.state.imgPathArr}
-                    />
-                    </Suspense> */}
-            {/* These are the images that are loaded but are hidden */}
-            {/* {this.state.imgPathArr.map(imageUrl => this.handleImgLoader(imageUrl))} */}
             </div>
       )
     }
