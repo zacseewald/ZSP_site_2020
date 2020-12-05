@@ -37,8 +37,6 @@ div.follow-parent-box {
     position: fixed;
     left: 0;
     bottom: 0;
-    // width: 220px;
-    // height: 100%;
     z-index: 1000;
     background: yellow;
     @include breakpoint-phone {

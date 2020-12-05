@@ -160,8 +160,6 @@ componentDidMount() {
        <CarouselBox
           gallery={this.state.imageGalleryName}
         />
-
-        {/* <Suspense fallback={<div>From carousel.js</div>} > */}
                 <CarouselIMGCompiler 
                   gallery={this.state.imageGalleryName}
                   counter={this.state.clickCounter}
@@ -169,7 +167,7 @@ componentDidMount() {
                   location={this.state.imageLocal}
                   alt={"Images By Zac Seewald [The Photographer]"}
                 />
-                {/* </Suspense> */}
+
 
             <CarouselimgINFO 
               name={this.state.imageArchName}

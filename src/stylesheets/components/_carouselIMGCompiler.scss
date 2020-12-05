@@ -18,6 +18,7 @@ div.carouselIMGCompiler-Parent {
         padding: 0px;
         z-index: 1000;
         background: transparent;
+        color: transparent;
     }
     img.carouselIMGCompiler-visableIMG {
         position: inherit;
@@ -28,31 +29,11 @@ div.carouselIMGCompiler-Parent {
         width: 70vw;
         bottom: 0px;
         object-fit: contain;
-        // object-position: 10% 90%;
         z-index: 901;
-        transition: 1s;
     }
-    // div.carouselIMGCompiler-Child-img {
-    //     // position: inherit;
-    //     // // display: flex;
-    //     // float: left;
-    //     // margin: 10px;
-    //     // padding: 0;
-    //     // z-index: 900;
-    //     img.carouselIMGCompiler-visible-img {
-    //         // position: relative;
-    //         height: 200px;
-    //         margin: 0px;
-    //         padding: 0px;
-    //         left: inherit;
-    //         width: 200px;
-    //         bottom: 0px;
-    //         object-fit: contain;
-    //         // object-position: 10% 90%;
-    //         z-index: 901;
-    //         transition: 1s;
-
-    //     }
-
-    // }
 }
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity:1;}
+    }

@@ -23,6 +23,8 @@ export class carouselIMGCompiler extends Component {
 
     //image visablility
     hiddenIMG: "none",
+
+
     
   }
 
