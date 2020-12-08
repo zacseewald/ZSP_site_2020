@@ -55,49 +55,6 @@
                 "description": "West entrance of the Henry B. Gonzales Convention Center with the Tower of the Americas in the background. Designed by Marmon Mok Architects."
             }
     ],
-
-    "homes": [
-        {
-            "id": 1,
-            "image_fileName": "homesOne.jpg", 
-            "architect_name": "Amanda Breummer And Associates",
-            "architect_site": "https://www.amandabruemmer.com/",    
-            "location_city_state": "Austin, TX",
-            "story": "Need something to write here."
-        },
-        {
-            "id": 2,
-            "image_fileName": "homesTwo.jpg", 
-            "architect_name": "Amanda Breummer And Associates",
-            "architect_site": "https://www.amandabruemmer.com/",    
-            "location_city_state": "Austin, TX",
-            "story": "Need something else needs to be written here."
-        },
-        {
-            "id": 3,
-            "image_fileName": "homesThree.jpg", 
-            "architect_name": "Paul Brow Architect",
-            "architect_site": "https://paulnbrowarchitect.com/",    
-            "location_city_state": "Houston, TX",
-            "story": "Need something to write here. Some stuff thats cool"
-        },
-        {
-            "id": 4,
-            "image_fileName": "homesFour.jpg", 
-            "architect_name": "Cusimano Architects",
-            "architect_site": "http://www.cusimano-architects.com",    
-            "location_city_state": "Houston, TX",
-            "story": "Marble backsplash and countertop designed specifically for this kitchen."
-        },
-        {
-            "id": 5,
-            "image_fileName": "homesFive.jpg", 
-            "architect_name": "Cusimano Architects",
-            "architect_site": "http://www.cusimano-architects.com",    
-            "location_city_state": "Houston, TX",
-            "story": "Marble backsplash and countertop designed specifically for this kitchen."
-        }
-    ],
     "buildings": [
         {
             "id": 1,
@@ -296,6 +253,185 @@
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
             "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        }
+    ],
+    "dwellings": [
+        {
+            "id": 1,
+            "image_fileName": "dwellings_00.jpg", 
+            "architect_name": "Dick Clarck Architects",
+            "architect_site": "https://dcarch.com/",    
+            "location_city_state": "Austin, TX",
+            "description": "View of the front facade of this home in Lost Creek at sunset, Austin TX. Designed by Dick Clark Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 2,
+            "image_fileName": "dwellings_02.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Chapel Hill, TX",
+            "description": "Beautifully sleek fireplace design. This home nestled in the hills near Chapel Hill TX has the design of an authentic old world feel that you find in the south of France. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 3,
+            "image_fileName": "dwellings_03.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "White marble walls with the gray veins giving the feel of antlers. This kitchen is located in Houston, TX. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 4,
+            "image_fileName": "dwellings_04.jpg", 
+            "architect_name": "Dick Clark Architects",
+            "architect_site": "https://dcarch.com/",    
+            "location_city_state": "Austin, TX",
+            "description": "View of the front facade of this home in Terry Town, Austin TX. Designed by Dick Clark Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 5,
+            "image_fileName": "dwellings_05.jpg", 
+            "architect_name": "Dick Clark Architects",
+            "architect_site": "https://dcarch.com/",    
+            "location_city_state": "Austin, TX",
+            "description": "View looking out into the outdoor living space from the family room. The home is in Terry Town, Austin TX. Designed by Dick Clark Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 6,
+            "image_fileName": "dwellings_06.jpg", 
+            "architect_name": "Dick Clark Architects",
+            "architect_site": "https://dcarch.com/",    
+            "location_city_state": "Austin, TX",
+            "description": "Master bedroom with wood paneling. A mid-century modern feel. The home is in Terry Town, Austin TX. Designed by Dick Clark Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 7,
+            "image_fileName": "dwellings_07.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "An outdoor living space complete with a wood burning fireplace. The master bedroom is located directly above. Located in Houston, TX. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 8,
+            "image_fileName": "dwellings_08.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "Detail photo of the outdoor living space complete with a wood burning fireplace. The master bedroom is located directly above. Located in Houston, TX. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 9,
+            "image_fileName": "dwellings_09.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "Informal gathering space has a very high level feel.  Whitewashed 1x6 poplar walls. Located in Houston, TX. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 10,
+            "image_fileName": "dwellings_10.jpg", 
+            "architect_name": "Amanda Bruemmer & Associates",
+            "architect_site": "http://www.#.com",    
+            "location_city_state": "Austin, TX",
+            "description": "Front door and facade. Located in Austin, TX. Designed by Amanda Bruemmer and Associates. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+
+        {
+            "id": 11,
+            "image_fileName": "dwellings_11.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "Modern contemporary kitchen. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 12,
+            "image_fileName": "dwellings_12.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",    
+            "location_city_state": "Chapel Hill, TX",
+            "description": "Guest bathroom. This home nestled in the hills near Chapel Hill TX has the design of an authentic old world feel that you find in the south of France. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 13,
+            "image_fileName": "dwellings_13.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",   
+            "location_city_state": "Houston, TX",
+            "description": "View of the front facade showing the twin gables on either side of the front porch. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 14,
+            "image_fileName": "dwellings_14.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",   
+            "location_city_state": "Houston, TX",
+            "description": "pool and residing next to the outdoor living space. Designed by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 15,
+            "image_fileName": "dwellings_15.jpg", 
+            "architect_name": "Elev8 Builders",
+            "architect_site": "http://www.elev8builders.com/",    
+            "location_city_state": "Bee Caves, TX",
+            "description": "Powder bathroom, with a view of the fireplace. Construction by Elev8 Builders. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 16,
+            "image_fileName": "dwellings_16.jpg", 
+            "architect_name": "Madera Fine Homes",
+            "architect_site": "http://www.maderafinehomes.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "Hand crafted brass countertops in this wet bar. Construction by Madera Fine Homes. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 17,
+            "image_fileName": "dwellings_17.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",   
+            "location_city_state": "Houston, TX",
+            "description": "Master bathroom with a very impressive free standing copper bathtub. Design by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 18,
+            "image_fileName": "dwellings_18.jpg", 
+            "architect_name": "Madera Fine Homes",
+            "architect_site": "http://www.maderafinehomes.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "Detail of the interior design materials at the fireplace. Shows the wallpaper pattern, shelving and artwork. Construction by Madera Fine Homes. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 19,
+            "image_fileName": "dwellings_19.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",   
+            "location_city_state": "Houston, TX",
+            "description": "Sitting area offshoot from the home office. Design by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 20,
+            "image_fileName": "dwellings_20.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",   
+            "location_city_state": "Houston, TX",
+            "description": "Family room from the kitchen perspective. Shows the interior red brick and steel framed window layout. Design by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 21,
+            "image_fileName": "dwellings_21.jpg", 
+            "architect_name": "Cusimano Architects",
+            "architect_site": "https://www.cusimano-architect.com/",   
+            "location_city_state": "Houston, TX",
+            "description": "Home office detail of the sitting area within. Design by Kelly Cusimano | Cusimano Architects. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
+        },
+        {
+            "id": 22,
+            "image_fileName": "dwellings_22.jpg", 
+            "architect_name": "Madera Fine Homes",
+            "architect_site": "http://www.maderafinehomes.com/",    
+            "location_city_state": "Houston, TX",
+            "description": "Back facade of this home from beyond the swimming pool. You can see the airplane paths in the sky. Taken just before dusk. Construction by Madera Fine Homes. [photo by: Zac Seewald | Photographer]. Zac is based in Texas and specializes in architect photography and cinematography. ©zacseewald2020"
         }
     ]
 }

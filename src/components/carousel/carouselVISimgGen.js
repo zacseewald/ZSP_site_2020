@@ -9,7 +9,7 @@ export class carouselVISimgGen extends Component {
   }
 
   render() {
-      
+    console.log(this.props);
     return (
       <img className="carouselIMGCompiler-visableIMG" 
           src={this.props.src} 
