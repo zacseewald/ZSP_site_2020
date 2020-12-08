@@ -36,12 +36,10 @@ div.nav-btn-parent {
             animation: fadeIn 1s;
             
             @include breakpoint-phone {
-                left: 80vw;
-                width: 3.6em;
-                height: 3.6em;
-                border: 2px solid color(primary-blue);
+                right: 5px;
+                border: 2px solid #303030;
                 background: transparent;
-                border: none;
+                // border: none;
             }
 
       

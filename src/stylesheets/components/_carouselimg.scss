@@ -24,117 +24,134 @@ $arial: Arial, Helvetica, sans-serif;
     @media (max-width: 415px) { @content };
       
   }
-
-div.carouselimg-parent-box {
-        position: absolute;
-        width:  100vw;
-        height: 98vh;
-        left: 7vw;
-        top: 1vh;
-        margin: 0px;
-        padding: 0px;
-        z-index: 900;
-        background: transparent;
-        div.carouselimg-info-container {
+body {
+    width: 100%;
+    div.carouselimg-parent-box {
             position: absolute;
-            height: 100px;
+            width:  100vw;
+            height: 98vh;
+            left: 7vw;
+            top: 1vh;
             margin: 0px;
             padding: 0px;
-            left: inherit;
-            width: 75vw;
-            bottom: 0px;
-            object-fit: cover;
-            object-position: 10% 90%;
+            z-index: 900;
             background: transparent;
-            z-index: 950;
-            div.carouselimg-info-box {
+            @include breakpoint-phone {
+                // background: orange;
+                left: 0px;
+                top: 0px;
+                width: 10px;
+                // z-index: 1;
+            }
+            div.carouselimg-info-container {
                 position: absolute;
-                height: 98vh;
+                height: 100px;
                 margin: 0px;
                 padding: 0px;
-                right: 0px;
-                width: 0vw;
+                left: inherit;
+                width: 75vw;
                 bottom: 0px;
                 object-fit: cover;
                 object-position: 10% 90%;
                 background: transparent;
-                z-index: 900;
-                transition: .5s;
-                h3#carouselimg-archName {
-                    position: relative;
-                    font-family: $arial;
-                    color: #303030;
-                    letter-spacing: 0px;
-                    margin: 20vh 0px 0px 5vw;
-                    opacity: 0;
+                z-index: 950;
+                @include breakpoint-phone {
+                    // background: pink;
+                    // z-index: 1000;
                 }
-                h5#carouselimg-local {
-                    position: relative;
-                    font-family: $arial;
-                    color: #303030;
-                    letter-spacing: 4px;
-                    font-weight: 100;
-                    margin: 2vh 0px 0px 5vw;
-                    opacity: 0;
-                    letter-spacing: 0px;
-                }}
-            &:hover {
-            div.carouselimg-info-box {
+                div.carouselimg-info-box {
+                    position: absolute;
+                    height: 98vh;
+                    margin: 0px;
+                    padding: 0px;
                     right: 0px;
-                    width: 75vw;
-                    background: rgba(240, 240, 240, .8);
-                    transition: .15s;
-                  
+                    width: 0vw;
+                    bottom: 0px;
+                    object-fit: cover;
+                    object-position: 10% 90%;
+                    background: transparent;
+                    z-index: 900;
+                    transition: .5s;
+                    // @include breakpoint-phone {
+                    //     background: blue;
+                    //     z-index: 1000;
+                    // }
                     h3#carouselimg-archName {
-                        opacity: 1;
-                        letter-spacing: 4px;
-                        transition: 2s;
+                        position: relative;
+                        font-family: $arial;
+                        color: #303030;
+                        letter-spacing: 0px;
+                        margin: 20vh 0px 0px 5vw;
+                        opacity: 0;
                     }
                     h5#carouselimg-local {
-                        opacity: 1;
+                        position: relative;
+                        font-family: $arial;
+                        color: #303030;
                         letter-spacing: 4px;
-                        transition: 2s;
+                        font-weight: 100;
+                        margin: 2vh 0px 0px 5vw;
+                        opacity: 0;
+                        letter-spacing: 0px;
+                    }}
+                &:hover {
+                div.carouselimg-info-box {
+                        right: 0px;
+                        width: 75vw;
+                        background: rgba(240, 240, 240, .8);
+                        transition: .15s;
+                    
+                        h3#carouselimg-archName {
+                            opacity: 1;
+                            letter-spacing: 4px;
+                            transition: 2s;
+                        }
+                        h5#carouselimg-local {
+                            opacity: 1;
+                            letter-spacing: 4px;
+                            transition: 2s;
+                        }
                     }
-                }
-                }
-    
-}
-    img.carouselimg-visible-img {
-        position: absolute;
-        height: 98vh;
-        margin: 0px;
-        padding: 0px;
-        left: inherit;
-        width: 70vw;
-        bottom: 0px;
-        object-fit: contain;
-        // object-position: 10% 90%;
-        z-index: 901;
-        transition: 1s;
-
-        @include breakpoint-desktop {
-            width: 98vw;
-            left: 6px;
-            transition: 1s;
-        }
-        @include breakpoint-phone {
-            height: initial;
-            width: 100vw;
-            object-position: none;
-            left: 0;
-            bottom: 35vh;
-            transition: 0s;
-        }
+                    }
+        
     }
-    img.carouselimg-rightOne-img {
-        position: fixed;
-        height: 100px;
-        margin: 0px;
-        padding: 0px;
-        top: -100px;
-        width: 200px;
-        bottom: 0px;
-        object-fit: contain;
-        z-index: 1000;
+        img.carouselimg-visible-img {
+            position: absolute;
+            height: 98vh;
+            margin: 0px;
+            padding: 0px;
+            left: inherit;
+            width: 70vw;
+            bottom: 0px;
+            object-fit: contain;
+            // object-position: 10% 90%;
+            z-index: 901;
+            transition: 1s;
+
+            @include breakpoint-desktop {
+                width: 98vw;
+                left: 6px;
+                transition: 1s;
+            }
+            @include breakpoint-phone {
+                height: initial;
+                width: 100vw;
+                object-position: none;
+                left: 0;
+                bottom: 35vh;
+                transition: 0s;
+            }
+        }
+        // img.carouselimg-rightOne-img {
+        //     position: fixed;
+        //     height: 100px;
+        //     margin: 0px;
+        //     padding: 0px;
+        //     top: -100px;
+        //     width: 200px;
+        //     bottom: 0px;
+        //     object-fit: contain;
+        //     z-index: 1000;
+        // }
     }
 }

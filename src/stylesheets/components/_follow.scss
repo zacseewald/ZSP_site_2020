@@ -32,69 +32,79 @@ $arial: Arial, Helvetica, sans-serif;
 
 
 // Component styles start here. Note, the body element is only there as an example of how to nest using scss
+body {
+    width: 100vw;
+    div.follow-parent-box {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 1000;
 
-div.follow-parent-box {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 1000;
-    background: yellow;
-    @include breakpoint-phone {
-        width: 10vw;
-    }
-        div.follow-link-container {
-            position: absolute;
-            bottom: 5vh;
-            width: 100px;
-            background: transparent;
-            z-index: 1000;
-       
-                    a.follow-BTN {
-                        position: absolute;
-                        margin:  0px;
-                        padding: 0px;
-                        border: none;
-                        background: transparent;
-                        font-size: 20px;
-                        font-weight: bolder;
-                        font-family: $arial;
-                        letter-spacing:  4px;
-                        left: 30px;
-                        bottom: -3vh;
-                        color: #303030;
-                        z-index: 980;
-                        cursor: pointer;
-                        &:hover {
-                                color: #787878;
-                            }
-                        }
-                    a#instagram {
-                        letter-spacing: 3px;
-                    }
-                    a#twitter {
-                        letter-spacing: 5.5px;
-                    }
-                    a.follow-link {
-                        position: relative;
-                        margin:  15px 0px;
-                        padding: 0px;
-                        border: none;
-                        color: #303030;
-                        font-family: $arial;   
-                        font-weight: 100;
-                        font-size: 16px;
-                        letter-spacing: 4px;
-                        left: 40px;
-                        text-decoration: none;
-                        background: transparent;
-                        display: block;
-                        text-align: left;
-                        &:hover {
-                            font-style: italic;
-                            color: #787878;
-                    }
-                }
-            
+        @include breakpoint-phone {
+            width: 10vw;
         }
-       
+            div.follow-link-container {
+                position: absolute;
+                bottom: 5vh;
+                width: 100px;
+                background: transparent;
+                z-index: 1000;
+                @include breakpoint-phone {
+                    // background: orange;
+                    // width: 1000px;
+                    display: none;
+                    height: 100px;
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                }
+                        a.follow-BTN {
+                            position: absolute;
+                            margin:  0px;
+                            padding: 0px;
+                            border: none;
+                            background: transparent;
+                            font-size: 20px;
+                            font-weight: bolder;
+                            font-family: $arial;
+                            letter-spacing:  4px;
+                            left: 30px;
+                            bottom: -3vh;
+                            color: #303030;
+                            z-index: 980;
+                            cursor: pointer;
+                            &:hover {
+                                    color: #787878;
+                                }
+                            }
+                        a#instagram {
+                            letter-spacing: 3px;
+                        }
+                        a#twitter {
+                            letter-spacing: 5.5px;
+                        }
+                        a.follow-link {
+                            position: relative;
+                            margin:  15px 0px;
+                            padding: 0px;
+                            border: none;
+                            color: #303030;
+                            font-family: $arial;   
+                            font-weight: 100;
+                            font-size: 16px;
+                            letter-spacing: 4px;
+                            left: 40px;
+                            text-decoration: none;
+                            background: transparent;
+                            display: block;
+                            text-align: left;
+                            &:hover {
+                                font-style: italic;
+                                color: #787878;
+                        }
+                    }
+                
+            }
+        }
 }

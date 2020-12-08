@@ -13,13 +13,12 @@ export class carouselBlindIMGLoader extends Component {
     handleImgLoader(imgPathArr) {
         return (
             <div className="carouselIMGCompiler-Child-img" >
-                <img className="carouselIMGCompiler-visible-img" 
+                <img className="carouselIMGCompiler-blind-img" 
                     src={imgPathArr} 
-                    alt="Whatever" 
-                    style={{display: this.state.hiddenIMG}} ></img>
+                    alt="Whatever" >
+                    </img>
                 </div>
         )
-        // .then(console.log("what?"))
     }
 
 
@@ -28,6 +27,7 @@ export class carouselBlindIMGLoader extends Component {
     return (
       <div>
           {this.props.imgPathArr.map(imageUrl => this.handleImgLoader(imageUrl))}
+          {/* <span className="carouselIMGCompiler-span-img"></span> */}
       </div>
     )
   }
