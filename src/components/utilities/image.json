@@ -253,6 +253,69 @@
             "architect_site": "http://www.cusimano-architects.com",    
             "location_city_state": "Houston, TX",
             "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 23,
+            "image_fileName": "buildings_22.jpg", 
+            "image_thumbnail": "buildings_22.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 24,
+            "image_fileName": "buildings_23.jpg", 
+            "image_thumbnail": "buildings_23.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 25,
+            "image_fileName": "buildings_24.jpg", 
+            "image_thumbnail": "buildings_24.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 26,
+            "image_fileName": "buildings_25.jpg", 
+            "image_thumbnail": "buildings_25.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 27,
+            "image_fileName": "buildings_26.jpg", 
+            "image_thumbnail": "buildings_26.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 28,
+            "image_fileName": "buildings_27.jpg", 
+            "image_thumbnail": "buildings_27.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
+        },
+        {
+            "id": 29,
+            "image_fileName": "buildings_28.jpg", 
+            "image_thumbnail": "buildings_28.jpg",
+            "architect_name": "Cusimano Architects",
+            "architect_site": "http://www.cusimano-architects.com",    
+            "location_city_state": "Houston, TX",
+            "story": "Marble backsplash and countertop designed specifically for this kitchen."
         }
     ],
     "dwellings": [
